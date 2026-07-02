@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /code-review-report.html
+Disallow: /fix_all.py
+Disallow: /fix_aria.py
+Disallow: /download_jquery.py
+
+Sitemap: https://www.huayiteng.com/sitemap.xml

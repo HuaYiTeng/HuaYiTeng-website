@@ -1,0 +1,341 @@
+/* Extracted from HTML - page specific styles */
+
+        /* ===== 1. Hero Banner (背景渐变专属) ===== */
+        .detail-hero {
+            background: linear-gradient(135deg, #0B2545 0%, #1a4a6e 100%);
+            padding: 160px 0 60px 0;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .detail-hero .meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .detail-hero .meta .date {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .detail-hero .meta .tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1e7470;
+            background: rgba(255,255,255,0.9);
+            padding: 4px 14px;
+            border-radius: 20px;
+        }
+
+        .detail-hero h1 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .detail-hero .excerpt {
+            font-size: 18px;
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ===== 2. 容器 ===== */
+        .detail-container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== 3. Article Content ===== */
+        .article-section {
+            padding: 50px 0 20px 0;
+            background: #FFFFFF;
+        }
+
+        .article-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #1F2937;
+        }
+
+        .article-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0B2545;
+            margin: 36px 0 16px 0;
+        }
+
+        .article-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0B2545;
+            margin: 28px 0 12px 0;
+        }
+
+        .article-content p {
+            margin-bottom: 18px;
+        }
+
+        .article-content .feature-image {
+            margin: 30px 0 30px 0;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #F8FAFC;
+            border: 1px solid #E8EDF2;
+        }
+
+        .article-content .feature-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .article-content .feature-image .caption {
+            padding: 12px 20px;
+            font-size: 13px;
+            color: #6B7A8F;
+            background: #F8FAFC;
+            border-top: 1px solid #E8EDF2;
+            text-align: center;
+        }
+
+        .article-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0 20px 0;
+        }
+
+        .article-content ul li {
+            padding: 6px 0 6px 28px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .article-content ul li:before {
+            content: "✓";
+            color: #1e7470;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 6px;
+        }
+
+        .article-content .highlight-box {
+            background: #F8FAFC;
+            border-left: 4px solid #1e7470;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+
+        .article-content .highlight-box strong {
+            color: #0B2545;
+        }
+
+        .article-content .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* ===== 4. Back Link ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #1e7470;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            color: #155a57;
+            gap: 12px;
+        }
+
+        /* ===== 5. Prev / Next Navigation ===== */
+        .prev-next-section {
+            padding: 30px 0 50px 0;
+            background: #FFFFFF;
+            border-top: 1px solid #E8EDF2;
+            margin-top: 10px;
+        }
+
+        .prev-next-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .prev-next-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #0B2545;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            border: 1px solid #E8EDF2;
+            transition: all 0.3s ease;
+            max-width: 45%;
+        }
+
+        .prev-next-nav a:hover {
+            border-color: #1e7470;
+            color: #1e7470;
+            background: rgba(30, 116, 112, 0.04);
+        }
+
+        .prev-next-nav a .direction {
+            font-size: 12px;
+            color: #6B7A8F;
+            font-weight: 400;
+        }
+
+        .prev-next-nav a .title {
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .prev-next-nav a.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .prev-next-nav .prev {
+            text-align: left;
+        }
+
+        .prev-next-nav .next {
+            text-align: right;
+        }
+
+        /* ===== 6. CTA Section (使用 global.css 中的 .btn-secondary) ===== */
+        .cta-section {
+            padding: 50px 0 60px 0;
+            background: #F8FAFC;
+            text-align: center;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .cta-section h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0B2545;
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            font-size: 15px;
+            color: #4A5568;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+            line-height: 1.6;
+        }
+
+        /* ===== 7. 响应式适配 (News-Detail-18Years 专属) ===== */
+        @media (max-width: 768px) {
+            .detail-hero {
+                padding: 120px 0 40px 0;
+            }
+
+            .detail-hero h1 {
+                font-size: 28px;
+            }
+
+            .detail-hero .excerpt {
+                font-size: 15px;
+            }
+
+            .article-section {
+                padding: 30px 0 10px 0;
+            }
+
+            .article-content {
+                font-size: 15px;
+            }
+
+            .article-content h2 {
+                font-size: 20px;
+            }
+
+            .article-content .feature-image {
+                margin: 20px 0;
+            }
+
+            .prev-next-nav a {
+                font-size: 13px;
+                padding: 8px 12px;
+                max-width: 48%;
+            }
+
+            .prev-next-nav a .title {
+                max-width: 80px;
+            }
+
+            .prev-next-section {
+                padding: 20px 0 30px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .prev-next-nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .prev-next-nav a {
+                max-width: 100%;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .prev-next-nav a .title {
+                max-width: 120px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .detail-hero {
+                padding: 100px 0 30px 0;
+            }
+
+            .detail-hero h1 {
+                font-size: 24px;
+            }
+
+            .detail-hero .excerpt {
+                font-size: 14px;
+            }
+
+            .cta-section h3 {
+                font-size: 20px;
+            }
+
+            .cta-section p {
+                font-size: 14px;
+            }
+        }
+    

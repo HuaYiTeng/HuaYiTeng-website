@@ -1,0 +1,16 @@
+{
+    "name": "Hua Yi Teng - Power Adapter Manufacturer",
+    "short_name": "Hua Yi Teng",
+    "description": "ISO9001 certified power adapter manufacturer. CE, ETL, FCC, GS, UKCA, RCM certified. OEM/ODM customization.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1e7470",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "32x32",
+            "type": "image/x-icon"
+        }
+    ]
+}
