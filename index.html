@@ -315,9 +315,20 @@
                             <label for="hyt-message" class="hyt-form-label">Message / Requirements <span class="hyt-required-star">*</span></label>
                             <textarea id="hyt-message" name="message" class="hyt-form-textarea" rows="4" placeholder="Please describe your detailed purchasing requirements (e.g. products, specs, estimated quantity, destination port, certification requirements, etc.)" required></textarea>
                         </div>
-                        <div class="hyt-form-action">
-                            <button type="submit" class="hyt-submit-btn">Submit Inquiry</button>
-                        </div>
+                        <!-- GDPR 同意复选框 -->
+<div class="hyt-form-group" style="margin-top:16px;">
+    <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#4A5568;cursor:pointer;">
+        <input type="checkbox" name="consent" required style="margin-top:3px;width:16px;height:16px;flex-shrink:0;">
+        <span>
+            I agree to the
+            <a href="privacy-policy.html" target="_blank" style="color:#1e7470;font-weight:600;">Privacy Policy</a>
+            and consent to the processing of my personal data for inquiry purposes.
+        </span>
+    </label>
+</div>
+<div class="hyt-form-action">
+    <button type="submit" class="hyt-submit-btn">Submit Inquiry</button>
+</div>
                     </form>
                 </div>
             </div>

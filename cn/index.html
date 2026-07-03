@@ -348,9 +348,20 @@
                             <textarea id="hyt-message" name="message" class="hyt-form-textarea" rows="4" placeholder="请详细描述您的采购需求（如：产品、规格、预估数量、目的港、认证要求等）" required></textarea>
                         </div>
 
-                        <div class="hyt-form-action">
-                            <button type="submit" class="hyt-submit-btn">提交询盘</button>
-                        </div>
+                        <!-- GDPR 同意复选框 -->
+<div class="hyt-form-group" style="margin-top:16px;">
+    <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#4A5568;cursor:pointer;">
+        <input type="checkbox" name="consent" required style="margin-top:3px;width:16px;height:16px;flex-shrink:0;">
+        <span>
+            我已阅读并同意
+            <a href="../cn/privacy-policy.html" target="_blank" style="color:#1e7470;font-weight:600;">隐私政策</a>，
+            同意我的个人信息被用于处理询价。
+        </span>
+    </label>
+</div>
+<div class="hyt-form-action">
+    <button type="submit" class="hyt-submit-btn">提交询盘</button>
+</div>
                     </form>
                 </div>
             </div>

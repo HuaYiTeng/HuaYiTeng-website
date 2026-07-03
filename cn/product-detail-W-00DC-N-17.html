@@ -291,12 +291,22 @@
                 <p><i class="fa fa-map-marker"></i> 中国深圳市龙岗区坪地街道六联社区鹅公岭3号2楼</p>
             </div>
             <form class="compact-form" action="https://formspree.io/f/mykapkbz" method="POST">
-                <input type="hidden" name="product" value="W-00DC-N-17">
-                <input type="text" name="name" placeholder="您的姓名" required>
-                <input type="email" name="email" placeholder="您的邮箱" required>
-                <textarea name="message" rows="2" placeholder="您的留言..."></textarea>
-                <button type="submit">提交询盘 <i class="fa fa-paper-plane"></i></button>
-            </form>
+    <input type="hidden" name="product" value="xxx">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="2" placeholder="Your Message..."></textarea>
+
+    <!-- GDPR 同意复选框 -->
+    <div style="display:flex;align-items:flex-start;gap:0px;width:100%;margin:4px 0;">
+        <input type="checkbox" name="consent" required style="margin:0px;width:14px;height:14px;flex-shrink:0;">
+        <label style="font-size:11px;color:#4A5568;cursor:pointer;line-height:1.4;margin:0px;">
+            我已阅读并同意
+            <a href="../cn/privacy-policy.html" target="_blank" style="color:#1e7470;font-weight:600;">隐私政策</a>.
+        </label>
+    </div>
+
+    <button type="submit">提交询盘 <i class="fa fa-paper-plane"></i></button>
+</form>
         </div>
     </div>
 
