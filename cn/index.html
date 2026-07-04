@@ -9,14 +9,13 @@
     <meta name="description" content="ISO9001认证制造商，成立于2008年，月产能90万台。专注于IP20室内电源适配器（1W-180W）及IP44户外防溅水电源（1W-60W）。拥有CE、ETL、FCC、GS、UKCA、RCM等16+全球认证。支持OEM/ODM定制。">
     <meta name="keywords" content="AC DC电源适配器, IP44户外电源, 防水电源, 圣诞电源, 定制电源, 插墙式适配器, 桌面式电源, LED驱动电源, CE ETL FCC认证, 中国制造商, 华亿腾">
 
-    <!-- ===== 通用样式表 (按顺序加载) ===== -->
-    <link href="../css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="../css/global.css" rel="stylesheet" type="text/css" />
-    <link href="../css/style.css" rel="stylesheet" type="text/css" />
-    <link href="../css/media.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/idangerous.swiper.css">
+    <!-- ============================================================
+         整合后的 CSS 样式表
+     ============================================================ -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/pages-core.css">
 
     <!-- ===== 核心 JS (必须同步加载，不能 defer) ===== -->
     <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
@@ -26,7 +25,7 @@
     <script defer type="text/javascript" src="../js/wow.min.js"></script>
     <script defer type="text/javascript" src="../js/main.js"></script>
 
-    <link href="../css/index-style.css" rel="stylesheet" type="text/css" />
+
     <!-- ===== Open Graph / Social Media ===== -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="华亿腾 | 专业电源适配器制造商">
@@ -61,7 +60,7 @@
 
     <!-- ================= 头部导航 ================= -->
     <div class="header">
-        <a href="index.html"><div class="logo"><img src="../images/logo.png" alt="华亿腾 Logo" loading="lazy"></div></a>
+        <a href="index.html"><div class="logo"><img src="../images/logo.webp" alt="华亿腾 Logo" loading="lazy"></div></a>
         <div class="nav_handle" role="button" aria-label="Toggle navigation menu" aria-expanded="false"><em class="middle_holder"></em><b class="middle"><i class="l_1"></i><i class="l_2"></i></b></div>
         <div class="clean"></div>
         <div class="inmuen">
@@ -108,9 +107,9 @@
     <!-- ================= Banner 轮播 ================= -->
     <div class="banner">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="#"><img src="../images/banner1.png" alt="华亿腾 Banner 1" loading="lazy"></a></div>
-            <div class="swiper-slide"><a href="#"><img src="../images/banner2.jpg" alt="华亿腾 Banner 2" loading="lazy"></a></div>
-            <div class="swiper-slide"><a href="#"><img src="../images/banner3.jpg" alt="华亿腾 Banner 3" loading="lazy"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../images/banner1.webp" alt="华亿腾 Banner 1" loading="lazy"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../images/banner2.webp" alt="华亿腾 Banner 2" loading="lazy"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../images/banner3.webp" alt="华亿腾 Banner 3" loading="lazy"></a></div>
         </div>
         <div class="pagination"></div>
     </div>
@@ -126,31 +125,31 @@
         <div class="product-grid-5">
             <a href="products-plug.html" class="product-card-link">
                 <div class="product-img-wrapper">
-                    <img src="../images/plug-icon.png" alt="插墙式电源适配器" loading="lazy">
+                    <img src="../images/plug-icon.webp" alt="插墙式电源适配器" loading="lazy">
                 </div>
                 <div class="product-name">插墙式电源适配器</div>
             </a>
             <a href="products-desktop.html" class="product-card-link">
                 <div class="product-img-wrapper">
-                    <img src="../images/desktop-icon.png" alt="桌面式电源适配器" loading="lazy">
+                    <img src="../images/desktop-icon.webp" alt="桌面式电源适配器" loading="lazy">
                 </div>
                 <div class="product-name">桌面式电源适配器</div>
             </a>
             <a href="products-ip44.html" class="product-card-link">
                 <div class="product-img-wrapper">
-                    <img src="../images/ip44-icon.png" alt="IP44 防水电源" loading="lazy">
+                    <img src="../images/ip44-icon.webp" alt="IP44 防水电源" loading="lazy">
                 </div>
                 <div class="product-name">IP44 防水电源</div>
             </a>
             <a href="products-usb.html" class="product-card-link">
                 <div class="product-img-wrapper">
-                    <img src="../images/usb-icon.png" alt="USB 充电器" loading="lazy">
+                    <img src="../images/usb-icon.webp" alt="USB 充电器" loading="lazy">
                 </div>
                 <div class="product-name">USB 充电器</div>
             </a>
             <a href="products-inter.html" class="product-card-link">
                 <div class="product-img-wrapper">
-                    <img src="../images/interchangeable-icon.png" alt="转换头电源适配器" loading="lazy">
+                    <img src="../images/interchangeable-icon.webp" alt="转换头电源适配器" loading="lazy">
                 </div>
                 <div class="product-name">转换头电源适配器</div>
             </a>
@@ -162,7 +161,7 @@
 
         <div class="hyt-about-row">
             <div class="hyt-about-image">
-                <img src="../images/factory.jpg" alt="华亿腾工厂 - 深圳" loading="lazy">
+                <img src="../images/factory.webp" alt="华亿腾工厂 - 深圳" loading="lazy">
             </div>
             <div class="hyt-story">
                 <div class="hyt-story-tagline">关于华亿腾</div>
@@ -228,20 +227,20 @@
             </div>
 
             <div class="hyt-cert-grid">
-                <div class="hyt-cert-item"><img src="../images/cert/ce-lvd.jpg" alt="CE" loading="lazy"><span>CE</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/etl.jpg" alt="ETL" loading="lazy"><span>ETL</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/fcc.jpg" alt="FCC" loading="lazy"><span>FCC</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/gs.jpg" alt="GS" loading="lazy"><span>GS</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/cb.jpg" alt="CB" loading="lazy"><span>CB</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/ukca.jpg" alt="UKCA" loading="lazy"><span>UKCA</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/rcm.jpg" alt="RCM" loading="lazy"><span>RCM</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/saa.jpg" alt="SAA" loading="lazy"><span>SAA</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/ccc.jpg" alt="CCC" loading="lazy"><span>CCC</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/kc.jpg" alt="KC" loading="lazy"><span>KC</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/pse.jpg" alt="PSE" loading="lazy"><span>PSE</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/ices.jpg" alt="ICES" loading="lazy"><span>ICES</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/rohs.jpg" alt="RoHS" loading="lazy"><span>RoHS</span></div>
-                <div class="hyt-cert-item"><img src="../images/cert/iso9001.jpg" alt="ISO9001" loading="lazy"><span>ISO9001</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/ce-lvd.webp" alt="CE" loading="lazy"><span>CE</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/etl.webp" alt="ETL" loading="lazy"><span>ETL</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/fcc.webp" alt="FCC" loading="lazy"><span>FCC</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/gs.webp" alt="GS" loading="lazy"><span>GS</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/cb.webp" alt="CB" loading="lazy"><span>CB</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/ukca.webp" alt="UKCA" loading="lazy"><span>UKCA</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/rcm.webp" alt="RCM" loading="lazy"><span>RCM</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/saa.webp" alt="SAA" loading="lazy"><span>SAA</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/ccc.webp" alt="CCC" loading="lazy"><span>CCC</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/kc.webp" alt="KC" loading="lazy"><span>KC</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/pse.webp" alt="PSE" loading="lazy"><span>PSE</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/ices.webp" alt="ICES" loading="lazy"><span>ICES</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/rohs.webp" alt="RoHS" loading="lazy"><span>RoHS</span></div>
+                <div class="hyt-cert-item"><img src="../images/cert/iso9001.webp" alt="ISO9001" loading="lazy"><span>ISO9001</span></div>
             </div>
 
             <div class="hyt-cert-footer">

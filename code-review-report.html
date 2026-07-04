@@ -627,7 +627,7 @@ document.getElementById('emailDisplay').innerHTML =
                 缺少 Web App Manifest 和多尺寸 favicon
             </div>
             <div class="issue-desc">
-                仅有 <code>favicon.ico</code>，缺少 <code>site.webmanifest</code>、Apple Touch Icon (<code>apple-touch-icon.png</code>)、以及 192x192 / 512x512 的 PNG favicon。在移动设备添加到主屏幕时无法正确显示图标。
+                仅有 <code>favicon.ico</code>，缺少 <code>site.webmanifest</code>、Apple Touch Icon (<code>apple-touch-icon.webp</code>)、以及 192x192 / 512x512 的 PNG favicon。在移动设备添加到主屏幕时无法正确显示图标。
             </div>
             <div class="issue-fix"><strong>修复方案：</strong>使用 favicon 生成工具（如 realfavicongenerator.net）生成全套 favicon，添加 <code>&lt;link rel="manifest"&gt;</code>、<code>&lt;link rel="apple-touch-icon"&gt;</code> 等标签。</div>
         </div>

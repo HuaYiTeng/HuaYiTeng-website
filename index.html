@@ -9,27 +9,14 @@
     <meta name="description" content="ISO9001 certified manufacturer established in 2008, producing 900,000 units monthly. We specialize in premium IP20 indoor power adapters (1W-180W) & splashproof IP44 outdoor seasonal lighting power supplies. 16+ global certifications (CE, ETL, FCC, GS, UKCA, RCM). OEM/ODM customization available.">
     <meta name="keywords" content="AC DC power adapter, IP44 outdoor power supply, waterproof power adapter, custom power supply, wall adapter, desktop power supply, LED driver, CE ETL FCC certified, China manufacturer, Hua Yi Teng">
 
-    <!-- ===== 通用样式表 (按顺序加载) ===== -->
-    <link href="css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="css/global.css" rel="stylesheet" type="text/css" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="css/media.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
-
-    <!-- ===== 核心 JS (必须同步加载，不能 defer) ===== -->
-    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
-    <script defer type="text/javascript" src="js/idangerous.swiper.min.js"></script>
-
-    <!-- ===== 非核心 JS (添加 defer，不阻塞页面渲染) ===== -->
-    <script defer type="text/javascript" src="js/wow.min.js"></script>
-    <script defer type="text/javascript" src="js/main.js"></script>
-
     <!-- ============================================================
-         INDEX 页面专属样式
+         整合后的 CSS（按顺序加载）
          ============================================================ -->
-    <link href="css/index-style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/pages-core.css">
+
     <!-- ===== Open Graph / Social Media ===== -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Hua Yi Teng | Professional Power Adapter Manufacturer">
@@ -40,8 +27,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hua Yi Teng | Professional Power Adapter Manufacturer">
     <meta name="twitter:description" content="ISO9001 certified manufacturer established in 2008, producing 900,000 units monthly. We specialize in premium IP20 indoor power adapters (1W-180W) & splashproof IP44 outdoor seasonal lighting power supplies. 16+ global certifications (CE, ETL, FCC, GS, UKCA, RCM). OEM/ODM customization available.">
+
     <!-- ===== Canonical URL ===== -->
     <link rel="canonical" href="https://www.huayiteng.com/">
+
     <!-- ===== Structured Data (JSON-LD) ===== -->
     <script type="application/ld+json">
     {
@@ -64,7 +53,7 @@
 
     <!-- ================= 头部导航 (左侧固定) ================= -->
     <div class="header">
-        <a href="index.html"><div class="logo"><img src="images/logo.png" alt="Hua Yi Teng Logo" loading="lazy"></div></a>
+        <a href="index.html"><div class="logo"><img src="images/logo.webp" alt="Hua Yi Teng Logo" loading="lazy"></div></a>
         <div class="nav_handle" role="button" aria-label="Toggle navigation menu" aria-expanded="false"><em class="middle_holder"></em><b class="middle"><i class="l_1"></i><i class="l_2"></i></b></div>
         <div class="clean"></div>
         <div class="inmuen">
@@ -111,9 +100,9 @@
     <!-- ================= Banner 轮播 ================= -->
     <div class="banner">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="#"><img src="images/banner1.png" alt="Hua Yi Teng Banner 1" loading="lazy"></a></div>
-            <div class="swiper-slide"><a href="#"><img src="images/banner2.jpg" alt="Hua Yi Teng Banner 2" loading="lazy"></a></div>
-            <div class="swiper-slide"><a href="#"><img src="images/banner3.jpg" alt="Hua Yi Teng Banner 3" loading="lazy"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/banner1.webp" alt="Hua Yi Teng Banner 1" loading="lazy"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/banner2.webp" alt="Hua Yi Teng Banner 2" loading="lazy"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/banner3.webp" alt="Hua Yi Teng Banner 3" loading="lazy"></a></div>
         </div>
         <div class="pagination"></div>
     </div>
@@ -129,31 +118,31 @@
         <div class="product-grid-5">
             <a href="products-plug.html" class="product-card-link">
                 <div class="product-img-wrapper">
-                    <img src="images/plug-icon.png" alt="Plug in Power Adapters" loading="lazy">
+                    <img src="images/plug-icon.webp" alt="Plug in Power Adapters" loading="lazy">
                 </div>
                 <div class="product-name">Plug in Power Adapters</div>
             </a>
             <a href="products-desktop.html" class="product-card-link">
                 <div class="product-img-wrapper">
-                    <img src="images/desktop-icon.png" alt="Desktop Power Adapters" loading="lazy">
+                    <img src="images/desktop-icon.webp" alt="Desktop Power Adapters" loading="lazy">
                 </div>
                 <div class="product-name">Desktop Power Adapters</div>
             </a>
             <a href="products-ip44.html" class="product-card-link">
                 <div class="product-img-wrapper">
-                    <img src="images/ip44-icon.png" alt="IP44 Water-Resistant Adapters" loading="lazy">
+                    <img src="images/ip44-icon.webp" alt="IP44 Water-Resistant Adapters" loading="lazy">
                 </div>
                 <div class="product-name">IP44 Water-Resistant Adapters</div>
             </a>
             <a href="products-usb.html" class="product-card-link">
                 <div class="product-img-wrapper">
-                    <img src="images/usb-icon.png" alt="USB Chargers" loading="lazy">
+                    <img src="images/usb-icon.webp" alt="USB Chargers" loading="lazy">
                 </div>
                 <div class="product-name">USB Chargers</div>
             </a>
             <a href="products-inter.html" class="product-card-link">
                 <div class="product-img-wrapper">
-                    <img src="images/interchangeable-icon.png" alt="Interchangeable Adapter" loading="lazy">
+                    <img src="images/interchangeable-icon.webp" alt="Interchangeable Adapter" loading="lazy">
                 </div>
                 <div class="product-name">Interchangeable Adapter</div>
             </a>
@@ -164,7 +153,7 @@
     <div class="hyt-about-section">
         <div class="hyt-about-row">
             <div class="hyt-about-image">
-                <img src="images/factory.jpg" alt="Hua Yi Teng Factory - Shenzhen" loading="lazy">
+                <img src="images/factory.webp" alt="Hua Yi Teng Factory - Shenzhen" loading="lazy">
             </div>
             <div class="hyt-story">
                 <div class="hyt-story-tagline">ABOUT HUA YI TENG</div>
@@ -221,20 +210,20 @@
             </div>
 
             <div class="hyt-cert-grid">
-                <div class="hyt-cert-item"><img src="images/cert/ce-lvd.jpg" alt="CE" loading="lazy"><span>CE</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/etl.jpg" alt="ETL" loading="lazy"><span>ETL</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/fcc.jpg" alt="FCC" loading="lazy"><span>FCC</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/gs.jpg" alt="GS" loading="lazy"><span>GS</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/cb.jpg" alt="CB" loading="lazy"><span>CB</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/ukca.jpg" alt="UKCA" loading="lazy"><span>UKCA</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/rcm.jpg" alt="RCM" loading="lazy"><span>RCM</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/saa.jpg" alt="SAA" loading="lazy"><span>SAA</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/ccc.jpg" alt="CCC" loading="lazy"><span>CCC</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/kc.jpg" alt="KC" loading="lazy"><span>KC</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/pse.jpg" alt="PSE" loading="lazy"><span>PSE</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/ices.jpg" alt="ICES" loading="lazy"><span>ICES</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/rohs.jpg" alt="RoHS" loading="lazy"><span>RoHS</span></div>
-                <div class="hyt-cert-item"><img src="images/cert/iso9001.jpg" alt="ISO9001" loading="lazy"><span>ISO9001</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/ce-lvd.webp" alt="CE" loading="lazy"><span>CE</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/etl.webp" alt="ETL" loading="lazy"><span>ETL</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/fcc.webp" alt="FCC" loading="lazy"><span>FCC</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/gs.webp" alt="GS" loading="lazy"><span>GS</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/cb.webp" alt="CB" loading="lazy"><span>CB</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/ukca.webp" alt="UKCA" loading="lazy"><span>UKCA</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/rcm.webp" alt="RCM" loading="lazy"><span>RCM</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/saa.webp" alt="SAA" loading="lazy"><span>SAA</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/ccc.webp" alt="CCC" loading="lazy"><span>CCC</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/kc.webp" alt="KC" loading="lazy"><span>KC</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/pse.webp" alt="PSE" loading="lazy"><span>PSE</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/ices.webp" alt="ICES" loading="lazy"><span>ICES</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/rohs.webp" alt="RoHS" loading="lazy"><span>RoHS</span></div>
+                <div class="hyt-cert-item"><img src="images/cert/iso9001.webp" alt="ISO9001" loading="lazy"><span>ISO9001</span></div>
             </div>
 
             <div class="hyt-cert-footer">
@@ -316,19 +305,19 @@
                             <textarea id="hyt-message" name="message" class="hyt-form-textarea" rows="4" placeholder="Please describe your detailed purchasing requirements (e.g. products, specs, estimated quantity, destination port, certification requirements, etc.)" required></textarea>
                         </div>
                         <!-- GDPR 同意复选框 -->
-<div class="hyt-form-group" style="margin-top:16px;">
-    <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#4A5568;cursor:pointer;">
-        <input type="checkbox" name="consent" required style="margin-top:3px;width:16px;height:16px;flex-shrink:0;">
-        <span>
-            I agree to the
-            <a href="privacy-policy.html" target="_blank" style="color:#1e7470;font-weight:600;">Privacy Policy</a>
-            and consent to the processing of my personal data for inquiry purposes.
-        </span>
-    </label>
-</div>
-<div class="hyt-form-action">
-    <button type="submit" class="hyt-submit-btn">Submit Inquiry</button>
-</div>
+                        <div class="hyt-form-group" style="margin-top:16px;">
+                            <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#4A5568;cursor:pointer;">
+                                <input type="checkbox" name="consent" required style="margin-top:3px;width:16px;height:16px;flex-shrink:0;">
+                                <span>
+                                    I agree to the
+                                    <a href="privacy-policy.html" target="_blank" style="color:#1e7470;font-weight:600;">Privacy Policy</a>
+                                    and consent to the processing of my personal data for inquiry purposes.
+                                </span>
+                            </label>
+                        </div>
+                        <div class="hyt-form-action">
+                            <button type="submit" class="hyt-submit-btn">Submit Inquiry</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -343,25 +332,40 @@
     <a href="terms.html" style="color:#999;">Terms of Use</a></div>
     <div class="page-down"><i class="fa fa-angle-up"></i></div>
 
-    <!-- ===== 底部 JS ===== -->
+    <!-- ============================================================
+         底部 JS（按顺序加载）
+         ============================================================ -->
+
+    <!-- 1. 核心 JS（必须同步加载） -->
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- 2. Swiper（defer 不阻塞渲染，但确保在 DOM 解析后执行） -->
+    <script defer type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+
+    <!-- 3. 网站主 JS（包含 Swiper 初始化） -->
+    <script defer type="text/javascript" src="js/main.js"></script>
+
+    <!-- 4. WOW 动画 -->
+    <script defer type="text/javascript" src="js/wow.min.js"></script>
+
+    <!-- 5. 通用工具 JS -->
     <script defer type="text/javascript" src="js/web.js"></script>
-    <script>
+
+    <!-- 6. WOW 初始化 -->
+    <script defer>
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof WOW !== 'undefined') {
                 new WOW().init();
             }
         });
-        if (document.readyState === 'complete' || document.readyState === 'interactive') {
-            if (typeof WOW !== 'undefined') {
-                new WOW().init();
-            }
-        }
     </script>
-    <script>
-document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + 'info' + '@' + 'hyteng.com" style="color:#FFFFFF;">info@hyteng.com</a>';
-</script>
 
-</div><!-- web main end -->
+    <!-- 7. 邮箱显示 -->
+    <script>
+        document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + 'info' + '@' + 'hyteng.com" style="color:#FFFFFF;">info@hyteng.com</a>';
+    </script>
+
+</div><!-- webmain end -->
 
 </body>
 </html>
