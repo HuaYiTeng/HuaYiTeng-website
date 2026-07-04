@@ -3,7 +3,7 @@
  *  Hua Yi Teng - 核心页面样式（始终加载）
  *  整合自: index-style.css, about-style.css, certifications-style.css,
  *          contact-style.css, legal.css, 以及各页面的通用布局
- *  最后更新: 2026-07-03
+ *  最后更新: 2026-07-04
  * ============================================================
  */
 
@@ -2224,86 +2224,5 @@
     }
     .header .inmuen .mobile-lang-switch {
         display: none !important;
-    }
-}
-
-/* 窄屏桌面导航适配 */
-@media (max-width: 1200px) {
-    .header {
-        width: 100%;
-        height: 70px;
-        padding: 10px 20px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        box-shadow: 0 0 20px rgba(0,0,0,.2);
-    }
-    .webmain {
-        padding-left: 0;
-        margin-top: 70px;
-    }
-    .header .logo img {
-        height: 50px;
-    }
-    .header .nav_handle {
-        margin-top: 8px;
-        display: block;
-    }
-    .header .header-lang-switch {
-        display: none !important;
-    }
-    .header .inmuen .mobile-lang-switch {
-        display: block !important;
-    }
-    .header .inmuen {
-        overflow: hidden;
-        opacity: 0;
-        transition: all .5s;
-        position: fixed;
-        background: #fff;
-        width: 0;
-        height: 0;
-        padding-top: 30px;
-        margin-top: 0px;
-        left: 50%;
-        top: 50%;
-        text-align: center;
-    }
-    .header .inmuen ul {
-        display: inline-block;
-    }
-    .header .inmuen .erji .li {
-        padding: 0;
-    }
-    .header .inmuen.kai {
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 70px;
-        opacity: 1;
-        overflow-y: auto;
-        padding-bottom: 40px;
-    }
-}
-
-@media (max-width: 640px) {
-    .header {
-        height: 60px;
-    }
-    .webmain {
-        margin-top: 60px;
-    }
-    .header .logo img {
-        height: 40px;
-    }
-    .header .nav_handle {
-        margin-top: 5px;
-    }
-    .header .inmuen.kai {
-        top: 60px;
-    }
-    .header .inmuen .mobile-lang-switch a {
-        font-size: 14px;
-        padding: 4px 14px;
     }
 }
