@@ -2401,4 +2401,8 @@
     .header .inmuen .mobile-lang-switch {
         display: none !important;
     }
+    /* 新增：PC端隐藏内页的移动语言切换 */
+    .nyheader .mobile-lang-switch {
+        display: none !important;
+    }
 }
