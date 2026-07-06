@@ -1923,14 +1923,198 @@
     .section-header-custom h2 {
         font-size: 26px;
     }
-    .header .header-lang-switch {
+
+    /* ============================================================
+       手机端导航统一样式 (≤768px) — 覆盖 PC 端布局
+       ============================================================ */
+
+    /* 1. 统一隐藏桌面端语言切换（首页和内页） */
+    .header .header-lang-switch,
+    .nyheader .nyheader-right .lang-dropdown {
         display: none !important;
     }
-    .header .inmuen .mobile-lang-switch {
+
+    /* 2. 统一显示移动端语言切换（需要在内页HTML中添加对应块） */
+    .header .mobile-lang-switch,
+    .nyheader .mobile-lang-switch {
+        display: block !important;
+        text-align: center;
+        padding: 18px 0 10px 0;
+        border-top: 1px solid #f0f0f0;
+        margin-top: 15px;
+    }
+    .nyheader .mobile-lang-switch a,
+    .header .mobile-lang-switch a {
+        display: inline-block;
+        padding: 5px 18px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #666;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+    .nyheader .mobile-lang-switch a.active,
+    .header .mobile-lang-switch a.active {
+        color: #1e7470;
+        background: rgba(30, 116, 112, 0.08);
+    }
+    .nyheader .mobile-lang-switch .lang-divider,
+    .header .mobile-lang-switch .lang-divider {
+        color: #ccc;
+        padding: 0 4px;
+    }
+
+    /* 3. 统一菜单容器（全屏遮罩） */
+    .header .inmuen,
+    .nyheader .inmuen {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        background: #ffffff !important;
+        z-index: 999 !important;
+        overflow-y: auto !important;
+        padding: 80px 20px 40px !important;
+        box-sizing: border-box !important;
+        display: none; /* 默认隐藏，由 JS 控制展开 */
+        box-shadow: none !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        opacity: 1 !important;
+    }
+
+    /* 4. 统一菜单列表样式 */
+    .header .inmuen ul,
+    .nyheader .inmuen ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+        gap: 0 !important;
+    }
+
+    .header .inmuen ul li,
+    .nyheader .inmuen ul li {
+        width: 100% !important;
+        text-align: center !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+        line-height: 52px !important;
+        float: none !important;
+    }
+    .header .inmuen ul li:last-child,
+    .nyheader .inmuen ul li:last-child {
+        border-bottom: none !important;
+    }
+
+    .header .inmuen ul li a,
+    .nyheader .inmuen ul li a {
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        line-height: 52px !important;
+        padding: 0 10px !important;
+        display: block !important;
+        color: #333 !important;
+    }
+    .header .inmuen ul li a.on,
+    .nyheader .inmuen ul li a.on {
+        color: #1e7470 !important;
+    }
+
+    /* 5. 统一二级菜单样式（手机端展开/收起） */
+    .header .inmuen .erji,
+    .nyheader .inmuen .erji {
+        position: static !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        left: 0 !important;
+        top: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        background: #f8fafc !important;
+        display: none; /* JS 控制展开 */
+        padding: 4px 0 !important;
+        overflow: hidden !important;
+    }
+
+    .header .inmuen .erji .li,
+    .nyheader .inmuen .erji .li {
+        height: 40px !important;
+        line-height: 40px !important;
+        font-size: 14px !important;
+        color: #4A5568 !important;
+        padding: 0 15px !important;
+        text-align: center !important;
+        border-bottom: 1px solid #eef2f6 !important;
+        display: block !important;
+    }
+    .header .inmuen .erji .li:last-child,
+    .nyheader .inmuen .erji .li:last-child {
+        border-bottom: none !important;
+    }
+    .header .inmuen .erji .li:hover,
+    .nyheader .inmuen .erji .li:hover {
+        background: #1e7470 !important;
+        color: #fff !important;
+    }
+
+    /* 6. 有子菜单的父级显示箭头（JS会自动添加 .has-submenu 类） */
+    .header .inmuen ul li.has-submenu > a::after,
+    .nyheader .inmuen ul li.has-submenu > a::after {
+        content: "\f107";
+        font-family: FontAwesome;
+        font-size: 12px;
+        margin-left: 8px;
+        color: #999;
+        transition: transform 0.3s ease;
+        display: inline-block;
+    }
+    .header .inmuen ul li.has-submenu.open > a::after,
+    .nyheader .inmuen ul li.has-submenu.open > a::after {
+        transform: rotate(180deg);
+        color: #1e7470;
+    }
+
+    /* 7. 统一显示汉堡按钮 */
+    .header .nav_handle,
+    .nyheader .nav_handle {
         display: block !important;
     }
 
-    /* 关于 */
+    /* 8. 首页侧栏强制变为顶栏样式（覆盖 PC 固定侧栏） */
+    .header {
+        width: 100% !important;
+        height: 60px !important;
+        padding: 10px 20px !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.08) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        background: #fff !important;
+        z-index: 999999 !important;
+        box-sizing: border-box !important;
+    }
+    .header .logo {
+        float: none !important;
+    }
+    .header .logo img {
+        height: 40px !important;
+    }
+    .header .nav_handle {
+        margin-top: 0 !important;
+    }
+    .webmain {
+        padding-left: 0 !important;
+        margin-top: 60px !important;
+    }
+
+    /* 原有其它样式（关于、认证、联系、法律等）保持不变 */
     .intro-grid {
         flex-direction: column;
     }
@@ -1947,8 +2131,6 @@
         flex-direction: column;
         align-items: center;
     }
-
-    /* 认证 */
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
@@ -1967,7 +2149,7 @@
         padding: 8px;
     }
     .cert-card {
-        padding: 18px 18px 18px 18px;
+        padding: 18px;
     }
     .additional-section {
         padding: 25px 18px;
@@ -1991,8 +2173,6 @@
         width: 100%;
         box-sizing: border-box;
     }
-
-    /* 联系 */
     .contact-hero {
         padding: 120px 0 40px 0;
     }
@@ -2040,8 +2220,6 @@
     .info-item {
         padding: 8px 10px;
     }
-
-    /* 法律 */
     .legal-hero {
         padding: 120px 0 40px 0;
     }
@@ -2058,8 +2236,6 @@
     .legal-content ul li {
         font-size: 14px;
     }
-
-    /* 压缩联系表单 */
     .compact-contact-inner {
         flex-direction: column;
         text-align: center;
