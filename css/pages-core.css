@@ -1925,16 +1925,17 @@
     }
 
     /* ============================================================
-       手机端导航统一样式 (≤768px) — 覆盖 PC 端布局
+       手机端导航统一样式 (≤768px)
        ============================================================ */
 
-    /* 1. 统一隐藏桌面端语言切换（首页和内页） */
+    /* 1. 隐藏桌面端语言切换和右上角区域 */
     .header .header-lang-switch,
-    .nyheader .nyheader-right .lang-dropdown {
+    .nyheader .nyheader-right .lang-dropdown,
+    .nyheader .nyheader-right {
         display: none !important;
     }
 
-    /* 2. 统一显示移动端语言切换（需要在内页HTML中添加对应块） */
+    /* 2. 显示移动端语言切换 */
     .header .mobile-lang-switch,
     .nyheader .mobile-lang-switch {
         display: block !important;
@@ -1976,9 +1977,9 @@
         background: #ffffff !important;
         z-index: 999 !important;
         overflow-y: auto !important;
-        padding: 80px 20px 40px !important;
+        padding: 70px 20px 40px !important;
         box-sizing: border-box !important;
-        display: none; /* 默认隐藏，由 JS 控制展开 */
+        display: none;
         box-shadow: none !important;
         margin: 0 !important;
         border-radius: 0 !important;
@@ -2024,7 +2025,7 @@
         color: #1e7470 !important;
     }
 
-    /* 5. 统一二级菜单样式（手机端展开/收起） */
+    /* 5. 统一二级菜单样式 */
     .header .inmuen .erji,
     .nyheader .inmuen .erji {
         position: static !important;
@@ -2035,7 +2036,7 @@
         box-shadow: none !important;
         border-radius: 0 !important;
         background: #f8fafc !important;
-        display: none; /* JS 控制展开 */
+        display: none;
         padding: 4px 0 !important;
         overflow: hidden !important;
     }
@@ -2061,7 +2062,7 @@
         color: #fff !important;
     }
 
-    /* 6. 有子菜单的父级显示箭头（JS会自动添加 .has-submenu 类） */
+    /* 6. 有子菜单的父级箭头 */
     .header .inmuen ul li.has-submenu > a::after,
     .nyheader .inmuen ul li.has-submenu > a::after {
         content: "\f107";
@@ -2084,7 +2085,7 @@
         display: block !important;
     }
 
-    /* 8. 首页侧栏强制变为顶栏样式（覆盖 PC 固定侧栏） */
+    /* 8. 首页侧栏强制变为顶栏样式 */
     .header {
         width: 100% !important;
         height: 60px !important;
@@ -2114,7 +2115,7 @@
         margin-top: 60px !important;
     }
 
-    /* 原有其它样式（关于、认证、联系、法律等）保持不变 */
+    /* 原有其它样式 */
     .intro-grid {
         flex-direction: column;
     }
