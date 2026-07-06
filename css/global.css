@@ -1089,3 +1089,104 @@ img { max-width: 100%; }
         padding: 4px 14px;
     }
 }
+/* ============================================================
+   Cookie 同意横幅
+   ============================================================ */
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    background: #0B2545;
+    color: #FFFFFF;
+    padding: 16px 24px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    /* 默认隐藏，JS控制显示 */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px 24px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.cookie-banner.show {
+    display: flex;
+}
+
+.cookie-banner .cookie-text {
+    flex: 1;
+    min-width: 240px;
+    text-align: center;
+}
+
+.cookie-banner .cookie-text a {
+    color: #FFB703;
+    text-decoration: underline;
+}
+
+.cookie-banner .cookie-text a:hover {
+    color: #FFD54F;
+}
+
+.cookie-banner .cookie-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cookie-banner .cookie-btn {
+    padding: 8px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+
+.cookie-banner .cookie-btn.accept {
+    background: #1e7470;
+    color: #FFFFFF;
+}
+
+.cookie-banner .cookie-btn.accept:hover {
+    background: #155a57;
+    transform: translateY(-2px);
+}
+
+.cookie-banner .cookie-btn.decline {
+    background: transparent;
+    color: #9CA3AF;
+    border: 1px solid #4A5568;
+}
+
+.cookie-banner .cookie-btn.decline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #9CA3AF;
+    color: #FFFFFF;
+}
+
+/* 手机端适配 */
+@media (max-width: 640px) {
+    .cookie-banner {
+        padding: 14px 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .cookie-banner .cookie-text {
+        font-size: 12px;
+        text-align: center;
+    }
+    .cookie-banner .cookie-btn {
+        padding: 10px 24px;
+        font-size: 13px;
+        width: 100%;
+        max-width: 200px;
+    }
+}

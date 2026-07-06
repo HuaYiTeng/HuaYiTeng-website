@@ -5,4 +5,4 @@ Disallow: /fix_all.py
 Disallow: /fix_aria.py
 Disallow: /download_jquery.py
 
-Sitemap: https://www.huayiteng.com/sitemap.xml
+Sitemap: https://www.hyteng.com/sitemap.xml

@@ -347,3 +347,156 @@ $(function() {
     })();
 
 });
+// ============================================================
+//  Cookie 同意横幅（GDPR 合规）- 多语言自动切换
+// ============================================================
+
+(function() {
+    'use strict';
+
+    var COOKIE_NAME = 'hyt_cookie_consent';
+    var COOKIE_EXPIRY_DAYS = 365;
+
+    // ===== 多语言文本配置 =====
+    var TEXTS = {
+        en: {
+            title: '🍪 We use cookies to enhance your browsing experience and analyze site traffic.',
+            link: 'Privacy Policy',
+            btn_accept: 'Accept All',
+            btn_decline: 'Necessary Only'
+        },
+        zh: {
+            title: '🍪 我们使用Cookie来提升您的浏览体验、分析网站流量。',
+            link: '隐私政策',
+            btn_accept: '接受所有',
+            btn_decline: '仅必要Cookie'
+        }
+    };
+
+    // ===== 检测当前语言 =====
+    function detectLanguage() {
+        var path = window.location.pathname;
+        // 如果路径包含 /cn/ 或 /cn 或页面是中文版
+        if (path.indexOf('/cn/') !== -1 || path === '/cn' || path === '/cn/') {
+            return 'zh';
+        }
+        // 检查文件名是否以 cn- 开头（中文版新闻/产品详情）
+        var fileName = path.split('/').pop();
+        // 如果没有明确路径，检查页面lang属性或内容
+        var htmlLang = document.documentElement.lang || '';
+        if (htmlLang.indexOf('zh') === 0) {
+            return 'zh';
+        }
+        return 'en';
+    }
+
+    // ===== 获取Cookie =====
+    function getCookie(name) {
+        var value = '; ' + document.cookie;
+        var parts = value.split('; ' + name + '=');
+        if (parts.length === 2) {
+            return parts.pop().split(';').shift();
+        }
+        return null;
+    }
+
+    // ===== 设置Cookie =====
+    function setCookie(name, value, days) {
+        var expires = '';
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+            expires = '; expires=' + date.toUTCString();
+        }
+        document.cookie = name + '=' + value + expires + '; path=/';
+    }
+
+    // ===== 隐藏横幅 =====
+    function hideBanner() {
+        var banner = document.getElementById('cookieBanner');
+        if (banner) {
+            banner.classList.remove('show');
+        }
+    }
+
+    // ===== 接受所有Cookie =====
+    function acceptCookies() {
+        setCookie(COOKIE_NAME, 'accepted', COOKIE_EXPIRY_DAYS);
+        hideBanner();
+    }
+
+    // ===== 拒绝非必要Cookie =====
+    function declineCookies() {
+        setCookie(COOKIE_NAME, 'declined', COOKIE_EXPIRY_DAYS);
+        hideBanner();
+    }
+
+    // ===== 创建横幅HTML（多语言） =====
+    function createBanner() {
+        if (document.getElementById('cookieBanner')) {
+            return;
+        }
+
+        var lang = detectLanguage();
+        var text = TEXTS[lang] || TEXTS.en;
+
+        // 隐私政策链接（根据语言切换）
+        var privacyLink = lang === 'zh' ? 'privacy-policy.html' : 'privacy-policy.html';
+
+        var banner = document.createElement('div');
+        banner.id = 'cookieBanner';
+        banner.className = 'cookie-banner';
+        banner.setAttribute('role', 'dialog');
+        banner.setAttribute('aria-label', lang === 'zh' ? 'Cookie同意' : 'Cookie Consent');
+
+        banner.innerHTML = [
+            '<span class="cookie-text">',
+            text.title,
+            ' <a href="' + privacyLink + '" target="_blank">' + text.link + '</a>',
+            '。',
+            '</span>',
+            '<span class="cookie-buttons">',
+            '<button class="cookie-btn decline" id="cookieDeclineBtn">' + text.btn_decline + '</button>',
+            '<button class="cookie-btn accept" id="cookieAcceptBtn">' + text.btn_accept + '</button>',
+            '</span>'
+        ].join('');
+
+        document.body.appendChild(banner);
+
+        // 绑定按钮事件
+        document.getElementById('cookieAcceptBtn').addEventListener('click', acceptCookies);
+        document.getElementById('cookieDeclineBtn').addEventListener('click', declineCookies);
+
+        // 显示横幅（如果还没有选择过）
+        var consent = getCookie(COOKIE_NAME);
+        if (!consent) {
+            setTimeout(function() {
+                banner.classList.add('show');
+            }, 200);
+        }
+    }
+
+    // ===== 初始化 =====
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', createBanner);
+    } else {
+        createBanner();
+    }
+
+    // ===== 暴露接口 =====
+    window.CookieConsent = {
+        accept: acceptCookies,
+        decline: declineCookies,
+        getStatus: function() {
+            return getCookie(COOKIE_NAME);
+        },
+        reset: function() {
+            setCookie(COOKIE_NAME, '', -1);
+            var banner = document.getElementById('cookieBanner');
+            if (banner) {
+                banner.classList.add('show');
+            }
+        }
+    };
+
+})();
