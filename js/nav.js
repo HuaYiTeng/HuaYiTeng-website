@@ -22,7 +22,7 @@ $(function() {
         // 如果页面上没有导航，直接退出
         if ($handles.length === 0 || $menus.length === 0) return;
 
-        // 给所有包含二级菜单的 li 自动添加 .has-submenu 类（方便小白，不用改 HTML）
+        // 给所有包含二级菜单的 li 自动添加 .has-submenu 类
         $menus.find('ul li .erji').each(function() {
             $(this).closest('li').addClass('has-submenu');
         });
@@ -39,17 +39,21 @@ $(function() {
             $handle.toggleClass('on');
 
             if ($menu.hasClass('active')) {
-    // 关闭菜单
-    $menu.removeClass('active');
-    $body.removeClass('menu-open');
-    // 收起所有展开的子菜单
-    $subItems.removeClass('open');
-    $subItems.find('.erji').removeClass('open');
-} else {
-    // 打开菜单
-    $menu.addClass('active');
-    $body.addClass('menu-open');
-}
+                // 关闭菜单
+                $menu.slideUp(300, function() {
+                    $menu.removeClass('active');
+                    $body.removeClass('menu-open');
+                });
+                // 收起所有展开的子菜单
+                $subItems.removeClass('open');
+                $subItems.find('.erji').slideUp(200);
+            } else {
+                // 打开菜单
+                $menu.slideDown(350, function() {
+                    $menu.addClass('active');
+                    $body.addClass('menu-open');
+                });
+            }
         });
 
         // --- 2. 二级菜单点击展开/收起（带动画） ---
