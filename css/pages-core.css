@@ -1925,68 +1925,218 @@
     }
 
     /* ============================================================
-       手机端导航统一样式 (≤768px)
+       手机端导航统一样式 (≤768px) — 内页和首页完全一致
        ============================================================ */
 
-    /* 1. 隐藏桌面端语言切换和右上角区域 */
-    .header .header-lang-switch,
-    .nyheader .nyheader-right .lang-dropdown,
-    .nyheader .nyheader-right {
-        display: none !important;
-    }
-
-    /* 2. 显示移动端语言切换 */
-    .header .mobile-lang-switch,
-    .nyheader .mobile-lang-switch {
-        display: block !important;
-        text-align: center;
-        padding: 18px 0 10px 0;
-        border-top: 1px solid #f0f0f0;
-        margin-top: 15px;
-    }
-    .nyheader .mobile-lang-switch a,
-    .header .mobile-lang-switch a {
-        display: inline-block;
-        padding: 5px 18px;
-        font-size: 15px;
-        font-weight: 600;
-        color: #666;
-        text-decoration: none;
-        border-radius: 4px;
-    }
-    .nyheader .mobile-lang-switch a.active,
-    .header .mobile-lang-switch a.active {
-        color: #1e7470;
-        background: rgba(30, 116, 112, 0.08);
-    }
-    .nyheader .mobile-lang-switch .lang-divider,
-    .header .mobile-lang-switch .lang-divider {
-        color: #ccc;
-        padding: 0 4px;
-    }
-
-    /* 3. 统一菜单容器（全屏遮罩） */
-    .header .inmuen,
-    .nyheader .inmuen {
+    /* ---- 内页导航 (.nyheader) 手机端改造 ---- */
+    .nyheader {
+        width: 100% !important;
+        height: 60px !important;
+        min-height: 60px !important;
+        padding: 10px 15px !important;
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
+        right: 0 !important;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.08) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        background: #fff !important;
+        z-index: 999999 !important;
+        box-sizing: border-box !important;
+        border-radius: 0 !important;
         width: 100% !important;
-        height: 100vh !important;
-        height: 100dvh !important;
+        margin: 0 !important;
+        flex-wrap: nowrap !important;
+    }
+
+    /* 内页左侧（Logo + 品牌名） */
+    .nyheader .nyheader-left {
+        flex: 0 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    .nyheader .nyheader-left .logo img {
+        height: 35px !important;
+    }
+    .nyheader .nyheader-brand {
+        font-size: 15px !important;
+        display: inline-block !important;
+    }
+
+    /* 内页中间区域（菜单）— 手机端隐藏，用汉堡控制 */
+    .nyheader .nyheader-center {
+        display: none !important;
+    }
+
+    /* 内页右侧（语言切换 + 汉堡） */
+    .nyheader .nyheader-right {
+        flex: 0 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+    }
+
+    /* 隐藏内页桌面语言下拉 */
+    .nyheader .nyheader-right .lang-dropdown {
+        display: none !important;
+    }
+
+    /* 显示汉堡按钮 */
+    .nyheader .nav_handle {
+        display: block !important;
+        margin-top: 0 !important;
+        padding: 0 0 0 10px !important;
+        position: relative !important;
+        width: 30px !important;
+        height: 30px !important;
+        cursor: pointer !important;
+        z-index: 999999 !important;
+    }
+    .nyheader .nav_handle b {
+        width: 25px !important;
+        height: 12px !important;
+        position: relative !important;
+        display: block !important;
+        margin: 0 auto !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+    .nyheader .nav_handle b i {
+        display: block !important;
+        position: absolute !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 2px !important;
+        background-color: #333 !important;
+        transition: all 0.3s ease !important;
+    }
+    .nyheader .nav_handle b .l_1 {
+        top: 0 !important;
+        transform-origin: 29% 50% !important;
+    }
+    .nyheader .nav_handle b .l_2 {
+        top: auto !important;
+        bottom: 0 !important;
+        transform-origin: 29% 50% !important;
+    }
+    .nyheader .nav_handle.on b .l_1 {
+        transform: rotate(45deg) !important;
+        background: #1e7470 !important;
+    }
+    .nyheader .nav_handle.on b .l_2 {
+        transform: rotate(-45deg) !important;
+        background: #1e7470 !important;
+    }
+
+    /* ---- 首页导航 (.header) 手机端改造 ---- */
+    .header {
+        width: 100% !important;
+        height: 60px !important;
+        padding: 10px 15px !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.08) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        background: #fff !important;
+        z-index: 999999 !important;
+        box-sizing: border-box !important;
+        flex-wrap: nowrap !important;
+    }
+    .header .logo {
+        flex: 0 0 auto !important;
+        float: none !important;
+    }
+    .header .logo img {
+        height: 35px !important;
+    }
+    .header .nav_handle {
+        display: block !important;
+        margin-top: 0 !important;
+        padding: 0 0 0 10px !important;
+        width: 30px !important;
+        height: 30px !important;
+        cursor: pointer !important;
+        z-index: 999999 !important;
+    }
+    .header .nav_handle b {
+        width: 25px !important;
+        height: 12px !important;
+        position: relative !important;
+        display: block !important;
+        margin: 0 auto !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+    .header .nav_handle b i {
+        display: block !important;
+        position: absolute !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 2px !important;
+        background-color: #333 !important;
+        transition: all 0.3s ease !important;
+    }
+    .header .nav_handle b .l_1 {
+        top: 0 !important;
+        transform-origin: 29% 50% !important;
+    }
+    .header .nav_handle b .l_2 {
+        top: auto !important;
+        bottom: 0 !important;
+        transform-origin: 29% 50% !important;
+    }
+    .header .nav_handle.on b .l_1 {
+        transform: rotate(45deg) !important;
+        background: #1e7470 !important;
+    }
+    .header .nav_handle.on b .l_2 {
+        transform: rotate(-45deg) !important;
+        background: #1e7470 !important;
+    }
+    .webmain {
+        padding-left: 0 !important;
+        margin-top: 60px !important;
+    }
+
+    /* 隐藏首页桌面语言切换 */
+    .header .header-lang-switch {
+        display: none !important;
+    }
+
+    /* ---- 统一菜单（全屏遮罩） ---- */
+    .header .inmuen,
+    .nyheader .inmuen {
+        position: fixed !important;
+        top: 60px !important;  /* 从顶部导航下方开始 */
+        left: 0 !important;
+        width: 100% !important;
+        height: calc(100vh - 60px) !important;
+        height: calc(100dvh - 60px) !important;
         background: #ffffff !important;
         z-index: 999 !important;
         overflow-y: auto !important;
-        padding: 70px 20px 40px !important;
+        padding: 30px 20px 40px !important;
         box-sizing: border-box !important;
-        display: none;
+        display: none !important;  /* 默认隐藏，JS控制显示 */
         box-shadow: none !important;
         margin: 0 !important;
         border-radius: 0 !important;
         opacity: 1 !important;
+        border-top: 1px solid #f0f0f0 !important;
     }
 
-    /* 4. 统一菜单列表样式 */
+    /* 菜单打开时显示（由JS添加 .active 控制） */
+    .header .inmuen.active,
+    .nyheader .inmuen.active {
+        display: block !important;
+    }
+
+    /* ---- 统一菜单列表 ---- */
     .header .inmuen ul,
     .nyheader .inmuen ul {
         display: flex !important;
@@ -2025,7 +2175,7 @@
         color: #1e7470 !important;
     }
 
-    /* 5. 统一二级菜单样式 */
+    /* ---- 统一二级菜单 ---- */
     .header .inmuen .erji,
     .nyheader .inmuen .erji {
         position: static !important;
@@ -2036,9 +2186,13 @@
         box-shadow: none !important;
         border-radius: 0 !important;
         background: #f8fafc !important;
-        display: none;
+        display: none !important;
         padding: 4px 0 !important;
         overflow: hidden !important;
+    }
+    .header .inmuen .erji.open,
+    .nyheader .inmuen .erji.open {
+        display: block !important;
     }
 
     .header .inmuen .erji .li,
@@ -2056,13 +2210,15 @@
     .nyheader .inmuen .erji .li:last-child {
         border-bottom: none !important;
     }
+
+    /* 子菜单项 hover */
     .header .inmuen .erji .li:hover,
     .nyheader .inmuen .erji .li:hover {
         background: #1e7470 !important;
         color: #fff !important;
     }
 
-    /* 6. 有子菜单的父级箭头 */
+    /* ---- 有子菜单的父级箭头 ---- */
     .header .inmuen ul li.has-submenu > a::after,
     .nyheader .inmuen ul li.has-submenu > a::after {
         content: "\f107";
@@ -2079,43 +2235,37 @@
         color: #1e7470;
     }
 
-    /* 7. 统一显示汉堡按钮 */
-    .header .nav_handle,
-    .nyheader .nav_handle {
+    /* ---- 移动端语言切换 ---- */
+    .header .mobile-lang-switch,
+    .nyheader .mobile-lang-switch {
         display: block !important;
+        text-align: center;
+        padding: 18px 0 10px 0;
+        border-top: 1px solid #f0f0f0;
+        margin-top: 15px;
+    }
+    .header .mobile-lang-switch a,
+    .nyheader .mobile-lang-switch a {
+        display: inline-block;
+        padding: 5px 18px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #666;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+    .header .mobile-lang-switch a.active,
+    .nyheader .mobile-lang-switch a.active {
+        color: #1e7470;
+        background: rgba(30, 116, 112, 0.08);
+    }
+    .header .mobile-lang-switch .lang-divider,
+    .nyheader .mobile-lang-switch .lang-divider {
+        color: #ccc;
+        padding: 0 4px;
     }
 
-    /* 8. 首页侧栏强制变为顶栏样式 */
-    .header {
-        width: 100% !important;
-        height: 60px !important;
-        padding: 10px 20px !important;
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.08) !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        background: #fff !important;
-        z-index: 999999 !important;
-        box-sizing: border-box !important;
-    }
-    .header .logo {
-        float: none !important;
-    }
-    .header .logo img {
-        height: 40px !important;
-    }
-    .header .nav_handle {
-        margin-top: 0 !important;
-    }
-    .webmain {
-        padding-left: 0 !important;
-        margin-top: 60px !important;
-    }
-
-    /* 原有其它样式 */
+    /* 原有其它样式（关于、认证、联系、法律等）保持不变 */
     .intro-grid {
         flex-direction: column;
     }

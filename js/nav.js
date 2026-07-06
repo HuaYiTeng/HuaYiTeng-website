@@ -39,21 +39,17 @@ $(function() {
             $handle.toggleClass('on');
 
             if ($menu.hasClass('active')) {
-                // 关闭菜单
-                $menu.slideUp(300, function() {
-                    $menu.removeClass('active');
-                    $body.removeClass('menu-open');
-                });
-                // 收起所有展开的子菜单
-                $subItems.removeClass('open');
-                $subItems.find('.erji').slideUp(200);
-            } else {
-                // 打开菜单
-                $menu.slideDown(350, function() {
-                    $menu.addClass('active');
-                    $body.addClass('menu-open');
-                });
-            }
+    // 关闭菜单
+    $menu.removeClass('active');
+    $body.removeClass('menu-open');
+    // 收起所有展开的子菜单
+    $subItems.removeClass('open');
+    $subItems.find('.erji').removeClass('open');
+} else {
+    // 打开菜单
+    $menu.addClass('active');
+    $body.addClass('menu-open');
+}
         });
 
         // --- 2. 二级菜单点击展开/收起（带动画） ---
