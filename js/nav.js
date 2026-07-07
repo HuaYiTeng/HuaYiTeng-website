@@ -31,30 +31,26 @@ $(function() {
         var $subItems = $menus.find('li.has-submenu');
 
         // --- 1. 汉堡按钮点击：展开/收起全屏菜单 ---
-        $handles.off('click.unified').on('click.unified', function(e) {
-            e.stopPropagation();
-            var $handle = $(this);
-            var $menu = $handle.closest('.header, .nyheader').find('.inmuen');
+$handles.off('click.unified').on('click.unified', function(e) {
+    e.stopPropagation();
+    var $handle = $(this);
+    var $menu = $handle.closest('.header, .nyheader').find('.inmuen');
 
-            $handle.toggleClass('on');
+    $handle.toggleClass('on');
 
-            if ($menu.hasClass('active')) {
-                // 关闭菜单
-                $menu.slideUp(300, function() {
-                    $menu.removeClass('active');
-                    $body.removeClass('menu-open');
-                });
-                // 收起所有展开的子菜单
-                $subItems.removeClass('open');
-                $subItems.find('.erji').slideUp(200);
-            } else {
-                // 打开菜单
-                $menu.slideDown(350, function() {
-                    $menu.addClass('active');
-                    $body.addClass('menu-open');
-                });
-            }
-        });
+    if ($menu.hasClass('active')) {
+        // 关闭菜单
+        $menu.removeClass('active');
+        $body.removeClass('menu-open');
+        // 收起所有展开的子菜单
+        $subItems.removeClass('open');
+        $subItems.find('.erji').slideUp(200);
+    } else {
+        // 打开菜单
+        $menu.addClass('active');
+        $body.addClass('menu-open');
+    }
+});
 
         // --- 2. 二级菜单点击展开/收起（带动画） ---
         $subItems.off('click.unified').on('click.unified', function(e) {
@@ -103,10 +99,8 @@ $(function() {
                 var $openMenus = $menus.filter('.active:visible');
                 if ($openMenus.length) {
                     $handles.removeClass('on');
-                    $menus.slideUp(300, function() {
-                        $menus.removeClass('active');
-                        $body.removeClass('menu-open');
-                    });
+                    $menus.removeClass('active');
+                    $body.removeClass('menu-open');
                     $subItems.removeClass('open');
                     $subItems.find('.erji').slideUp(200);
                 }
