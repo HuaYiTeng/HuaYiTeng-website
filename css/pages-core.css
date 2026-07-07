@@ -3,7 +3,7 @@
  *  Hua Yi Teng - 核心页面样式（始终加载）
  *  整合自: index-style.css, about-style.css, certifications-style.css,
  *          contact-style.css, legal.css, 以及各页面的通用布局
- *  最后更新: 2026-07-04
+ *  最后更新: 2026-07-08
  * ============================================================
  */
 
@@ -1965,7 +1965,16 @@
         display: inline-block !important;
     }
 
-
+    /* 内页中间区域 - 菜单容器（不隐藏，让子菜单可以正常显示） */
+    .nyheader .nyheader-center {
+        flex: 1 !important;
+        display: block !important;
+        position: static !important;
+        background: transparent !important;
+        width: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
 
     /* 内页右侧（语言切换 + 汉堡） */
     .nyheader .nyheader-right {
@@ -2109,17 +2118,17 @@
     .header .inmuen,
     .nyheader .inmuen {
         position: fixed !important;
-        top: 60px !important;  /* 从顶部导航下方开始 */
+        top: 60px !important;
         left: 0 !important;
         width: 100% !important;
         height: calc(100vh - 60px) !important;
         height: calc(100dvh - 60px) !important;
         background: #ffffff !important;
-        z-index: 999 !important;
+        z-index: 9999 !important;
         overflow-y: auto !important;
         padding: 30px 20px 40px !important;
         box-sizing: border-box !important;
-        display: none !important;  /* 默认隐藏，JS控制显示 */
+        display: none !important;
         box-shadow: none !important;
         margin: 0 !important;
         border-radius: 0 !important;
@@ -2131,6 +2140,7 @@
     .header .inmuen.active,
     .nyheader .inmuen.active {
         display: block !important;
+        z-index: 99999 !important;  /* 确保在最上层 */
     }
 
     /* ---- 统一菜单列表 ---- */
@@ -2549,7 +2559,6 @@
     .header .inmuen .mobile-lang-switch {
         display: none !important;
     }
-    /* 新增：PC端隐藏内页的移动语言切换 */
     .nyheader .mobile-lang-switch {
         display: none !important;
     }

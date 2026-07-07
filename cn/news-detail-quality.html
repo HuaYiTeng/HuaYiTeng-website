@@ -83,6 +83,12 @@
                     <li><a href="news.html" class="on">新闻资讯</a></li>
                     <li><a href="contact.html">联系我们</a></li>
                 </ul>
+                <!-- 移动端语言切换（手机端显示） -->
+                <div class="mobile-lang-switch">
+                    <a href="../news-detail-quality.html">English</a>
+                    <span class="lang-divider">|</span>
+                    <a href="news-detail-quality.html" class="active">中文</a>
+                </div>
             </div>
         </div>
         <div class="nyheader-right">
@@ -296,10 +302,6 @@
     $(function(){
         new WOW().init();
 
-        $('.nav_handle').on('click', function() {
-            $(this).toggleClass('on');
-            $('.nyheader .inmuen').toggleClass('active');
-        });
     });
 </script>
 </body>

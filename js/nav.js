@@ -53,24 +53,28 @@ $handles.off('click.unified').on('click.unified', function(e) {
 });
 
         // --- 2. 二级菜单点击展开/收起（带动画） ---
-        $subItems.off('click.unified').on('click.unified', function(e) {
-            var $target = $(e.target);
-            // 只处理点击父级 <a> 标签
-            if ($target.is('a') && $target.closest('.has-submenu').length) {
-                e.preventDefault();
-                var $parent = $target.closest('.has-submenu');
-                var $sub = $parent.find('.erji');
-                var isOpen = $parent.hasClass('open');
+$subItems.off('click.unified').on('click.unified', function(e) {
+    var $target = $(e.target);
+    // 只处理点击父级 <a> 标签
+    if ($target.is('a') && $target.closest('.has-submenu').length) {
+        var $parent = $target.closest('.has-submenu');
+        var $sub = $parent.find('.erji');
+        var isOpen = $parent.hasClass('open');
 
-                if (isOpen) {
-                    $parent.removeClass('open');
-                    $sub.slideUp(250);
-                } else {
-                    $parent.addClass('open');
-                    $sub.slideDown(300);
-                }
-            }
-        });
+        // 只有当点击的是父级菜单（即点击的是 .has-submenu 的直接 <a> 标签）时才阻止跳转
+        if ($target.closest('.has-submenu').children('a').is($target)) {
+            e.preventDefault();  // 阻止父级菜单跳转（如 "Products"）
+        }
+
+        if (isOpen) {
+            $parent.removeClass('open');
+            $sub.slideUp(250);
+        } else {
+            $parent.addClass('open');
+            $sub.slideDown(300);
+        }
+    }
+});
 
         // --- 3. 点击子菜单项后自动关闭整个菜单（提升体验） ---
         $menus.find('.erji .li').off('click.unified').on('click.unified', function() {

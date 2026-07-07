@@ -87,6 +87,12 @@
                     <li><a href="news.html" class="on">News</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
+                <!-- 移动端语言切换（手机端显示） -->
+<div class="mobile-lang-switch">
+    <a href="news.html" class="active">English</a>
+    <span class="lang-divider">|</span>
+    <a href="cn/news.html">中文</a>
+</div>
             </div>
         </div>
         <div class="nyheader-right">
@@ -287,8 +293,6 @@
 
         // ========== ★★★ 移动端导航增强 - 二级菜单滑动动画 ★★★ ==========
         // 
-        var $navHandle = $('.nyheader .nav_handle');
-        var $mobileMenu = $('.nyheader .inmuen');
         var $submenuItems = $('.nyheader .inmuen ul li.has-submenu');
         var $body = $('body');
         var isMenuOpen = false;
