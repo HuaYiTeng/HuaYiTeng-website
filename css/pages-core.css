@@ -2059,6 +2059,10 @@
     }
     .header .logo img {
         height: 35px !important;
+        width: auto !important;
+        max-height: 35px !important;
+        max-width: none !important;
+        object-fit: contain !important;
     }
     .header .nav_handle {
         display: block !important;
