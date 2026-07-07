@@ -10,23 +10,27 @@
     <meta name="keywords" content="AC DC电源适配器, IP44户外电源, 防水电源, 圣诞电源, 定制电源, 插墙式适配器, 桌面式电源, LED驱动电源, CE ETL FCC认证, 中国制造商, 华亿腾">
 
     <!-- ============================================================
-         整合后的 CSS 样式表
+         样式表（均保持独立文件）
      ============================================================ -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/vendor.css">
     <link rel="stylesheet" href="../css/pages-core.css">
 
-    <!-- ===== 核心 JS (必须同步加载，不能 defer) ===== -->
+    <!-- ============================================================
+         核心 JS（同步加载）
+     ============================================================ -->
     <script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
     <script defer type="text/javascript" src="../js/idangerous.swiper.min.js"></script>
 
-    <!-- ===== 非核心 JS (添加 defer，不阻塞页面渲染) ===== -->
+    <!-- ============================================================
+         非核心 JS（defer 异步加载）
+     ============================================================ -->
     <script defer type="text/javascript" src="../js/wow.min.js"></script>
-     
 
-
-    <!-- ===== Open Graph / Social Media ===== -->
+    <!-- ============================================================
+         Open Graph / SEO
+     ============================================================ -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="华亿腾 | 专业电源适配器制造商">
     <meta property="og:description" content="ISO9001认证制造商，成立于2008年，月产能90万台。专注于IP20室内电源适配器（1W-180W）及IP44户外防溅水电源（1W-60W）。拥有CE、ETL、FCC、GS、UKCA、RCM等16+全球认证。支持OEM/ODM定制。">
@@ -36,9 +40,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="华亿腾 | 专业电源适配器制造商">
     <meta name="twitter:description" content="ISO9001认证制造商，成立于2008年，月产能90万台。专注于IP20室内电源适配器（1W-180W）及IP44户外防溅水电源（1W-60W）。拥有CE、ETL、FCC、GS、UKCA、RCM等16+全球认证。支持OEM/ODM定制。">
-    <!-- ===== Canonical URL ===== -->
     <link rel="canonical" href="https://www.huayiteng.com/cn/">
-    <!-- ===== Structured Data (JSON-LD) ===== -->
+
+    <!-- ============================================================
+         Structured Data (JSON-LD)
+     ============================================================ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -58,7 +64,9 @@
 
 <div class="webmain">
 
-    <!-- ================= 头部导航 ================= -->
+    <!-- ============================================================
+         头部导航
+     ============================================================ -->
     <div class="header">
         <a href="index.html"><div class="logo"><img src="../images/logo.webp" alt="华亿腾 Logo" loading="lazy"></div></a>
         <div class="nav_handle" role="button" aria-label="Toggle navigation menu" aria-expanded="false"><em class="middle_holder"></em><b class="middle"><i class="l_1"></i><i class="l_2"></i></b></div>
@@ -88,7 +96,7 @@
                 <div class="kongg"></div>
             </ul>
 
-            <!-- ===== 移动端语言切换 ===== -->
+            <!-- 移动端语言切换 -->
             <div class="mobile-lang-switch">
                 <a href="../index.html">English</a>
                 <span class="lang-divider">|</span>
@@ -96,7 +104,7 @@
             </div>
         </div>
 
-        <!-- ===== 桌面端语言切换 ===== -->
+        <!-- 桌面端语言切换 -->
         <div class="header-lang-switch">
             <a href="../index.html">English</a>
             <span class="lang-divider">|</span>
@@ -104,7 +112,9 @@
         </div>
     </div>
 
-    <!-- ================= Banner 轮播 ================= -->
+    <!-- ============================================================
+         Banner 轮播
+     ============================================================ -->
     <div class="banner">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><a href="../cn/about.html"><img src="../images/cn/banner1.webp" alt="华亿腾 Banner 1" loading="lazy"></a></div>
@@ -114,7 +124,9 @@
         <div class="pagination"></div>
     </div>
 
-    <!-- ================= 产品系列展示 ================= -->
+    <!-- ============================================================
+         产品系列展示
+     ============================================================ -->
     <div class="content" style="max-width: 1400px; margin: 60px auto; padding: 0 20px;">
         <div class="section-header-custom">
             <h2>产品系列</h2>
@@ -156,7 +168,9 @@
         </div>
     </div>
 
-    <!-- ================= About 区块 ================= -->
+    <!-- ============================================================
+         About 区块（优化版）
+     ============================================================ -->
     <div class="hyt-about-section">
 
         <div class="hyt-about-row">
@@ -166,12 +180,13 @@
             <div class="hyt-story">
                 <div class="hyt-story-tagline">关于华亿腾</div>
                 <div class="hyt-story-headline">
-                    我们打造看不见的完美。
+                    于无声处，定义可靠
                 </div>
-                <p class="hyt-story-text">自2008年以来，我们一直在制造一种没人注意的东西——直到它失效。那就是电源适配器。所以我们把它做得绝对可靠。</p>
-                <p class="hyt-story-text">我们投资了自动化生产线——不是为了炫耀，而是为了让每一个适配器都完美地重复上一个。这种安静的、始终如一的品质，保护着您的品牌声誉。</p>
+                <p class="hyt-story-text">自 <strong>2008</strong> 年起，我们深耕电源适配器赛道，专注打造每一款值得长期信赖的供电配套。适配器虽不起眼，却持续承载整机稳定运行，是设备不可忽视的核心配套。</p>
+                <p class="hyt-story-text">我们持续升级自动化产线、搭建精益制造全流程体系，不盲目扩张产能规模，只为统一严控每台适配器的稳定性能。</p>
+                <p class="hyt-story-text">以可靠供电保障您设备长效运行，用稳定品质助力品牌积累客户信任。</p>
                 <div class="hyt-cert-line">
-                    <span class="hyt-cert-badge">20+</span> 项全球认证——ETL、GS、KC、PSE、CCC、CB、CE、UKCA、RCM 等。
+                    <span class="hyt-cert-badge">20+</span> 项全球认证——ETL、GS、KC、PSE、CCC、CB、CE、UKCA、RCM 等，覆盖全球主流市场。
                 </div>
             </div>
         </div>
@@ -181,22 +196,22 @@
                 <div class="hyt-value-icon">
                     <i class="fa fa-cogs"></i>
                 </div>
-                <h4 class="hyt-value-title">真正的定制</h4>
-                <p class="hyt-value-desc">电压、电流、外壳、线材、连接器、插头类型、标签、包装——完全按您的品牌需求定制。</p>
+                <h4 class="hyt-value-title">全要素模块化定制</h4>
+                <p class="hyt-value-desc">电压、电流、外壳、线材、插头、标签、包装……您提出需求，我们交付完美适配的成品。<strong>您的规格，就是我们的标准。</strong></p>
             </div>
             <div class="hyt-value-item">
                 <div class="hyt-value-icon">
                     <i class="fa fa-trophy"></i>
                 </div>
-                <h4 class="hyt-value-title">品质保证</h4>
-                <p class="hyt-value-desc">出货前100%老化测试。完全符合国际安全及EMC标准。</p>
+                <h4 class="hyt-value-title">品质与合规前置</h4>
+                <p class="hyt-value-desc">出货前100%老化测试，完全符合国际安全及EMC标准。从源头规避召回风险，让您后顾无忧。</p>
             </div>
             <div class="hyt-value-item">
                 <div class="hyt-value-icon">
                     <i class="fa fa-truck"></i>
                 </div>
-                <h4 class="hyt-value-title">快速可靠的交付</h4>
-                <p class="hyt-value-desc">为欧洲、美国、日本、韩国、中国、澳大利亚等市场提供DDP/DDU/DAP服务。</p>
+                <h4 class="hyt-value-title">交付，与承诺同速</h4>
+                <p class="hyt-value-desc">依托精准产能规划与国际物流经验，为全球客户提供DDP/DDU/DAP一站式到门服务。<strong>交期，像我们的适配器一样可靠。</strong></p>
             </div>
         </div>
 
@@ -215,15 +230,36 @@
 
     </div>
 
-    <!-- ================= Certification 区块 ================= -->
+    <!-- ============================================================
+         Certification 区块（优化版）
+     ============================================================ -->
     <div class="hyt-cert-section">
         <div class="hyt-cert-inner">
 
             <div class="hyt-cert-header">
                 <span class="hyt-cert-subtitle">认证与合规</span>
-                <h2 class="hyt-cert-title">全球认证，安全可靠</h2>
+                <h2 class="hyt-cert-title"><strong>20+</strong> 全球认证，您的国际市场<strong>"通行证"</strong></h2>
                 <div class="hyt-cert-underline"></div>
-                <p class="hyt-cert-desc">无忧清关。我们的电源产品拥有 <strong>20+ 项全球安全认证</strong>，助您顺利进入目标市场。</p>
+                <p class="hyt-cert-desc">我们将合规前置，为您扫清市场准入障碍。华亿腾电源适配器持有 ETL、GS、KC、PSE、CCC 等 <strong>20+</strong> 项国际权威认证，覆盖欧美日韩澳等主流市场。这意味着：</p>
+            </div>
+
+            <!-- 三个零价值点 -->
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin:30px 0 40px 0;">
+                <div style="background:rgba(255,255,255,0.08);padding:20px 30px;border-radius:12px;text-align:center;min-width:180px;">
+                    <div style="font-size:32px;font-weight:700;color:#F5C518;">✓</div>
+                    <div style="font-weight:600;font-size:18px;margin-top:6px;">清关零阻力</div>
+                    <div style="font-size:14px;opacity:0.8;">文件齐全，快速通关</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.08);padding:20px 30px;border-radius:12px;text-align:center;min-width:180px;">
+                    <div style="font-size:32px;font-weight:700;color:#F5C518;">✓</div>
+                    <div style="font-weight:600;font-size:18px;margin-top:6px;">安全零顾虑</div>
+                    <div style="font-size:14px;opacity:0.8;">符合最严苛标准，规避召回风险</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.08);padding:20px 30px;border-radius:12px;text-align:center;min-width:180px;">
+                    <div style="font-size:32px;font-weight:700;color:#F5C518;">✓</div>
+                    <div style="font-weight:600;font-size:18px;margin-top:6px;">成本零浪费</div>
+                    <div style="font-size:14px;opacity:0.8;">无需为重复认证支付额外费用</div>
+                </div>
             </div>
 
             <div class="hyt-cert-grid">
@@ -270,7 +306,9 @@
         </div>
     </div>
 
-    <!-- ================= Contact 区块 ================= -->
+    <!-- ============================================================
+         Contact 区块
+     ============================================================ -->
     <div class="hyt-contact-section">
         <div class="hyt-contact-inner">
 
@@ -320,8 +358,8 @@
             <div class="hyt-inquiry-wrapper">
                 <div class="hyt-inquiry-card">
                     <div class="hyt-inquiry-header">
-                        <h3 class="hyt-inquiry-title">发送询盘</h3>
-                        <p class="hyt-inquiry-subtitle">我们将在24小时内回复您的请求。</p>
+                        <h3 class="hyt-inquiry-title">立即获取您的定制方案</h3>
+                        <p class="hyt-inquiry-subtitle">告诉我们您的项目需求，华亿腾工程师将在 <strong>24小时</strong> 内为您提供专属电源建议。</p>
                     </div>
 
                     <form action="https://formspree.io/f/mykapkbz" method="POST" class="hyt-inquiry-form">
@@ -348,19 +386,19 @@
                         </div>
 
                         <!-- GDPR 同意复选框 -->
-<div class="hyt-form-group" style="margin-top:16px;">
-    <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#4A5568;cursor:pointer;">
-        <input type="checkbox" name="consent" required style="margin-top:3px;width:16px;height:16px;flex-shrink:0;">
-        <span>
-            我已阅读并同意
-            <a href="../cn/privacy-policy.html" target="_blank" style="color:#1e7470;font-weight:600;">隐私政策</a>，
-            同意我的个人信息被用于处理询价。
-        </span>
-    </label>
-</div>
-<div class="hyt-form-action">
-    <button type="submit" class="hyt-submit-btn">提交询盘</button>
-</div>
+                        <div class="hyt-form-group" style="margin-top:16px;">
+                            <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#4A5568;cursor:pointer;">
+                                <input type="checkbox" name="consent" required style="margin-top:3px;width:16px;height:16px;flex-shrink:0;">
+                                <span>
+                                    我已阅读并同意
+                                    <a href="../cn/privacy-policy.html" target="_blank" style="color:#1e7470;font-weight:600;">隐私政策</a>，
+                                    同意我的个人信息被用于处理询价。
+                                </span>
+                            </label>
+                        </div>
+                        <div class="hyt-form-action">
+                            <button type="submit" class="hyt-submit-btn">提交询盘</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -368,7 +406,9 @@
         </div>
     </div>
 
-    <!-- ================= Footer ================= -->
+    <!-- ============================================================
+         Footer
+     ============================================================ -->
     <div class="banq">© 2008-2026 深圳市华亿腾科技有限公司 | 支持 OEM/ODM 定制
     <span style="margin: 0 10px;">|</span>
     <a href="privacy-policy.html" style="color:#999;">隐私政策</a>
@@ -377,28 +417,30 @@
 
     <div class="page-down"><i class="fa fa-angle-up"></i></div>
 
-    <!-- ===== 底部 JS ===== -->
+    <!-- ============================================================
+         底部 JS（保持独立文件）
+     ============================================================ -->
     <script defer type="text/javascript" src="../js/web.js"></script>
     <script defer type="text/javascript" src="../js/nav.js"></script>
 
     <script>
+        // WOW 初始化
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof WOW !== 'undefined') {
                 new WOW().init();
             }
         });
-
         if (document.readyState === 'complete' || document.readyState === 'interactive') {
             if (typeof WOW !== 'undefined') {
                 new WOW().init();
             }
         }
-    </script>
-    <script>
-document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + 'info' + '@' + 'hyteng.com" style="color:#FFFFFF;">info@hyteng.com</a>';
-</script>
 
-</div><!-- web main end -->
+        // 邮箱显示
+        document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + 'info' + '@' + 'hyteng.com" style="color:#FFFFFF;">info@hyteng.com</a>';
+    </script>
+
+</div><!-- webmain end -->
 
 </body>
 </html>
