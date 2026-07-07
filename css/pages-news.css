@@ -24,6 +24,61 @@
     top: 100px;
     align-self: flex-start;
 }
+/* ============================================================
+   Sidebar Contact 样式修复
+   ============================================================ */
+
+/* 侧边栏联系卡片 */
+.news-sidebar .sidebar-contact {
+    background: #F8FAFC;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #E8EDF2;
+    margin-top: 20px;
+}
+
+.news-sidebar .sidebar-contact h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0B2545;
+    margin-bottom: 8px;
+}
+
+.news-sidebar .sidebar-contact p {
+    font-size: 13px;
+    color: #4A5568;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.news-sidebar .sidebar-contact .btn-small {
+    display: inline-block;
+    background: #1e7470;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.news-sidebar .sidebar-contact .btn-small:hover {
+    background: #155a57;
+}
+
+.news-sidebar .sidebar-contact .btn-small i {
+    margin-left: 6px;
+}
+
+/* 手机端修复：确保侧边栏联系卡片显示 */
+@media (max-width: 768px) {
+    .news-sidebar .sidebar-contact {
+        display: block !important;  /* 覆盖之前的 display: none */
+        margin-top: 15px;
+        width: 100%;
+    }
+}
 .news-content {
     flex: 1;
     min-width: 280px;
