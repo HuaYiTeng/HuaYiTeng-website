@@ -2183,7 +2183,7 @@
         box-shadow: none !important;
         border-radius: 0 !important;
         background: #f8fafc !important;
-        display: none !important;
+        display: none;
         padding: 4px 0 !important;
         overflow: hidden !important;
     }
