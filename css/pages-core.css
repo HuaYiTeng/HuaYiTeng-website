@@ -1965,10 +1965,7 @@
         display: inline-block !important;
     }
 
-    /* 内页中间区域（菜单）— 手机端隐藏，用汉堡控制 */
-    .nyheader .nyheader-center {
-        display: none !important;
-    }
+
 
     /* 内页右侧（语言切换 + 汉堡） */
     .nyheader .nyheader-right {
