@@ -3,157 +3,157 @@
 
   <!-- English Pages -->
   <url>
-    <loc>https://www.huayiteng.com/index.html</loc>
+    <loc>https://www.hyteng.com/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/about.html</loc>
+    <loc>https://www.hyteng.com/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/products.html</loc>
+    <loc>https://www.hyteng.com/products.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/products-desktop.html</loc>
+    <loc>https://www.hyteng.com/products-desktop.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/products-inter.html</loc>
+    <loc>https://www.hyteng.com/products-inter.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/products-ip44.html</loc>
+    <loc>https://www.hyteng.com/products-ip44.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/products-plug.html</loc>
+    <loc>https://www.hyteng.com/products-plug.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/products-usb.html</loc>
+    <loc>https://www.hyteng.com/products-usb.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/certifications.html</loc>
+    <loc>https://www.hyteng.com/certifications.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/news.html</loc>
+    <loc>https://www.hyteng.com/news.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/news-detail-18years.html</loc>
+    <loc>https://www.hyteng.com/news-detail-18years.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/news-detail-certifications.html</loc>
+    <loc>https://www.hyteng.com/news-detail-certifications.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/news-detail-ip44.html</loc>
+    <loc>https://www.hyteng.com/news-detail-ip44.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/news-detail-quality.html</loc>
+    <loc>https://www.hyteng.com/news-detail-quality.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/contact.html</loc>
+    <loc>https://www.hyteng.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://www.huayiteng.com/privacy-policy.html</loc>
+    <loc>https://www.hyteng.com/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/terms.html</loc>
+    <loc>https://www.hyteng.com/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <!-- Product Detail Pages -->
-  <url><loc>https://www.huayiteng.com/product-detail-D-00DC-001A-N-22.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-D-00DC-N-23.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-D-00DC-P-24.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-D-00DC-P-26.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-D-00DC-P-27.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-D-00DC-P-28.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-001A-001C-1A1C-N-30.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-001A-001C-1A1C-N-31.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-001A-N-29.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00DC-001A-N-K-13.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00DC-001A-N-P-11.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00DC-N-14.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00DC-N-15.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00DC-N-16.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00DC-N-17.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00DC-N-21.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00RT-N-01.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00RT-N-02.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00RT-N-03.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00RT-N-04.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00RT-N-05.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.huayiteng.com/product-detail-W-00RT-N-08.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-D-00DC-001A-N-22.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-D-00DC-N-23.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-D-00DC-P-24.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-D-00DC-P-26.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-D-00DC-P-27.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-D-00DC-P-28.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-001A-001C-1A1C-N-30.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-001A-001C-1A1C-N-31.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-001A-N-29.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00DC-001A-N-K-13.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00DC-001A-N-P-11.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00DC-N-14.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00DC-N-15.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00DC-N-16.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00DC-N-17.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00DC-N-21.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00RT-N-01.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00RT-N-02.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00RT-N-03.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00RT-N-04.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00RT-N-05.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.hyteng.com/product-detail-W-00RT-N-08.html</loc><priority>0.7</priority></url>
 
   <!-- Chinese Pages -->
   <url>
-    <loc>https://www.huayiteng.com/cn/index.html</loc>
+    <loc>https://www.hyteng.com/cn/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/cn/about.html</loc>
+    <loc>https://www.hyteng.com/cn/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/cn/products.html</loc>
+    <loc>https://www.hyteng.com/cn/products.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/cn/certifications.html</loc>
+    <loc>https://www.hyteng.com/cn/certifications.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/cn/news.html</loc>
+    <loc>https://www.hyteng.com/cn/news.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/cn/contact.html</loc>
+    <loc>https://www.hyteng.com/cn/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Chinese Legal Pages -->
   <url>
-    <loc>https://www.huayiteng.com/cn/privacy-policy.html</loc>
+    <loc>https://www.hyteng.com/cn/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.huayiteng.com/cn/terms.html</loc>
+    <loc>https://www.hyteng.com/cn/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
