@@ -1,20 +1,16 @@
 /**
  * ============================================================
- *  Hua Yi Teng - 全局样式表 Global Styles
- *  整合自: global.css, style.css 基础部分
- *  最后更新: 2026-07-03
+ *  Hua Yi Teng - 全局样式表（修复版）
+ *  最后更新: 2026-07-10
  * ============================================================
  */
 
-/* ============================================================
-   1. CSS 变量与基础重置
-   ============================================================ */
-
+/* ========== 1. CSS变量与重置 ========== */
 :root {
     --primary: #1e7470;
     --primary-dark: #155a57;
-    --primary-light: rgba(30, 116, 112, 0.1);
-    --primary-light-06: rgba(30, 116, 112, 0.06);
+    --primary-light: rgba(30,116,112,0.1);
+    --primary-light-06: rgba(30,116,112,0.06);
     --dark: #0B2545;
     --dark-secondary: #1a2a4a;
     --gray-900: #1F2937;
@@ -32,598 +28,124 @@
     --whatsapp: #25D366;
 }
 
-/* ============================================================
-   2. 全局容器与工具类
-   ============================================================ */
+.content,.about-container{max-width:1200px;margin:0 auto;padding:0 20px;box-sizing:border-box}
+.about-container{padding:40px 20px}
 
-.content {
-    max-width: 1200px;
-    height: auto;
-    margin: 0 auto;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-.about-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    box-sizing: border-box;
-}
-
-img { max-width: 100%; }
-.fl { float: left; }
-.fr { float: right; }
-
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-.clean { display: block; width: 100%; clear: both; }
-.table { display: table; width: 100%; height: 100%; }
-.table .cell { display: table-cell; text-align: center; vertical-align: middle; }
+img{max-width:100%}
+.fl{float:left}.fr{float:right}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clean{display:block;width:100%;clear:both}
+.table{display:table;width:100%;height:100%}
+.table .cell{display:table-cell;text-align:center;vertical-align:middle}
 
 /* 间距工具 */
-.blank3, .blank5, .blank6, .blank9, .blank10, .blank12,
-.blank15, .blank20, .blank25, .blank50, .blank80 {
-    margin: 0 auto;
-    clear: both;
-    font-size: 1px;
-    overflow: hidden;
-}
-.blank3 { height: 3px; }
-.blank5 { height: 5px; }
-.blank6 { height: 6px; }
-.blank9 { height: 9px; }
-.blank10 { height: 10px; }
-.blank12 { height: 12px; }
-.blank15 { height: 15px; }
-.blank20 { height: 20px; }
-.blank25 { height: 25px; }
-.blank50 { height: 50px; }
-.blank80 { height: 80px; }
+.blank3,.blank5,.blank6,.blank9,.blank10,.blank12,.blank15,.blank20,.blank25,.blank50,.blank80{margin:0 auto;clear:both;font-size:1px;overflow:hidden}
+.blank3{height:3px}.blank5{height:5px}.blank6{height:6px}.blank9{height:9px}
+.blank10{height:10px}.blank12{height:12px}.blank15{height:15px}.blank20{height:20px}
+.blank25{height:25px}.blank50{height:50px}.blank80{height:80px}
 
-.text-white { color: #fff !important; }
-.text-primary { color: var(--primary) !important; }
-.bg-primary { background: var(--primary) !important; }
-.bg-white { background: #fff !important; }
+.text-white{color:#fff!important}
+.text-primary{color:var(--primary)!important}
+.bg-primary{background:var(--primary)!important}
+.bg-white{background:#fff!important}
 
-/* ============================================================
-   3. 返回顶部按钮
-   ============================================================ */
+/* ========== 2. 返回顶部 ========== */
+.page-down{width:30px;height:30px;background:#999;position:fixed;bottom:30px;right:30px;text-align:center;line-height:30px;font-size:18px;color:#fff;cursor:pointer;display:none;z-index:99999}
+.page-down:hover{background:var(--primary)}
 
-.page-down {
-    width: 30px;
-    height: 30px;
-    background: #999;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 18px;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    z-index: 99999;
-}
-.page-down:hover { background: var(--primary); }
+/* ========== 3. 通用组件 ========== */
+.cert-badge{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:25px}
+.cert-badge span{background:#F0F4F0;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600;color:var(--primary)}
 
-/* ============================================================
-   4. 通用组件：徽章 / 标签 / 按钮
-   ============================================================ */
+.feature-badge{display:inline-block;background:var(--gold);color:var(--dark);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-right:10px;margin-bottom:10px}
+.badge-secondary{background:#f0f0f0;color:#999;font-size:12px;padding:3px 10px;border-radius:20px;margin-left:10px;vertical-align:middle}
 
-/* 认证徽章 */
-.cert-badge {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 25px;
-}
-.cert-badge span {
-    background: #F0F4F0;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--primary);
-}
-
-/* 特色徽章 */
-.feature-badge {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--dark);
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-/* 次要徽章 */
-.badge-secondary {
-    background: #f0f0f0;
-    color: #999;
-    font-size: 12px;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
-/* 认证标签 */
-.cert-tag {
-    font-size: 11px;
-    font-weight: 500;
-    padding: 3px 12px;
-    border-radius: 20px;
-    background: #E8F4F3;
-    color: var(--primary);
-}
-.cert-tag.market {
-    background: var(--dark);
-    color: #FFFFFF;
-}
+.cert-tag{font-size:11px;font-weight:500;padding:3px 12px;border-radius:20px;background:#E8F4F3;color:var(--primary)}
+.cert-tag.market{background:var(--dark);color:#fff}
 
 /* 按钮 */
-.btn-primary {
-    display: inline-block;
-    background: var(--primary);
-    color: #fff;
-    padding: 14px 36px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    transition: 0.3s;
-}
-.btn-primary:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-}
-.btn-primary i { margin-left: 8px; }
+.btn-primary,.contact-btn,.contact-btn-small{display:inline-block;background:var(--primary);color:#fff;padding:14px 36px;border-radius:30px;text-decoration:none;font-weight:600;font-size:15px;transition:.3s}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px)}
+.btn-primary i,.submit-btn i{margin-left:8px}
 
-.btn-secondary {
-    display: inline-block;
-    background: transparent;
-    border: 1.5px solid var(--primary);
-    color: var(--primary);
-    padding: 12px 32px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 15px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-.btn-secondary:hover {
-    background: var(--primary);
-    color: #FFFFFF;
-}
-.btn-secondary i { margin-right: 8px; }
+.btn-secondary{display:inline-block;background:transparent;border:1.5px solid var(--primary);color:var(--primary);padding:12px 32px;border-radius:30px;font-weight:600;font-size:15px;text-decoration:none;transition:.3s}
+.btn-secondary:hover{background:var(--primary);color:#fff}
+.btn-secondary i{margin-right:8px}
 
-.contact-btn {
-    display: inline-block;
-    background: var(--primary);
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 30px;
-    margin-top: 20px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-.contact-btn:hover {
-    background: var(--primary-dark);
-    color: #fff;
-}
+.contact-btn,.contact-btn-small{padding:12px 30px;font-weight:700}
+.contact-btn-small{padding:12px 32px;font-weight:600;font-size:14px}
+.contact-btn:hover,.contact-btn-small:hover{background:var(--primary-dark);color:#fff}
 
-.contact-btn-small {
-    display: inline-block;
-    background: var(--primary);
-    color: #fff;
-    padding: 12px 32px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: 0.3s;
-}
-.contact-btn-small:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-}
+/* ========== 4. 产品卡片 ========== */
+.product-card{background:#fff;border:1px solid var(--gray-200);border-radius:16px;overflow:hidden;transition:all .3s;text-decoration:none;display:block}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(0,0,0,.08);border-color:var(--primary)}
+.product-card .product-image{background:#fafafa;padding:30px;text-align:center;border-bottom:1px solid var(--gray-200)}
+.product-card .product-image img{max-width:70%;height:auto;transition:transform .3s}
+.product-card:hover .product-image img{transform:scale(1.03)}
+.product-card .product-info{padding:20px}
+.product-card .product-title{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px}
+.product-card .product-specs{font-size:12px;color:var(--primary);font-weight:600;margin-bottom:10px}
+.product-card .product-desc{font-size:12px;color:var(--gray-600);line-height:1.5;margin-bottom:12px}
+.product-card .product-cert{display:flex;flex-wrap:wrap;gap:6px}
+.product-card .product-cert span{font-size:10px;background:#F0F4F0;padding:3px 8px;border-radius:12px;color:var(--primary);font-weight:500}
 
-/* ============================================================
-   5. 通用组件：产品卡片
-   ============================================================ */
+/* ========== 5. 紧凑联系表单 ========== */
+.compact-contact{background:var(--gray-100);padding:50px 0;margin-top:40px}
+.compact-contact-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;align-items:center}
+.compact-info{flex:1;min-width:240px}
+.compact-info h3{font-size:20px;font-weight:700;color:var(--dark);margin-bottom:15px}
+.compact-info p{font-size:13px;color:var(--gray-700);margin-bottom:8px}
+.compact-info i{width:25px;color:var(--primary);margin-right:8px}
+.compact-form{flex:1;min-width:280px;display:flex;flex-wrap:wrap;gap:12px}
+.compact-form input,.compact-form textarea{flex:1;min-width:180px;padding:10px 14px;font-size:13px;border:1px solid var(--gray-300);border-radius:8px;background:#fff}
+.compact-form textarea{width:100%;min-width:100%;resize:vertical}
+.compact-form button{background:var(--primary);color:#fff;border:none;padding:10px 24px;border-radius:8px;font-weight:600;cursor:pointer;transition:.3s}
+.compact-form button:hover{background:var(--primary-dark)}
 
-.product-card {
-    background: #FFFFFF;
-    border: 1px solid var(--gray-200);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: block;
-}
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    border-color: var(--primary);
-}
-.product-card .product-image {
-    background: #FAFAFA;
-    padding: 30px;
-    text-align: center;
-    border-bottom: 1px solid var(--gray-200);
-}
-.product-card .product-image img {
-    max-width: 70%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-.product-card:hover .product-image img { transform: scale(1.03); }
-.product-card .product-info { padding: 20px; }
-.product-card .product-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--dark);
-    margin-bottom: 6px;
-}
-.product-card .product-specs {
-    font-size: 12px;
-    color: var(--primary);
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.product-card .product-desc {
-    font-size: 12px;
-    color: var(--gray-600);
-    line-height: 1.5;
-    margin-bottom: 12px;
-}
-.product-card .product-cert {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-.product-card .product-cert span {
-    font-size: 10px;
-    background: #F0F4F0;
-    padding: 3px 8px;
-    border-radius: 12px;
-    color: var(--primary);
-    font-weight: 500;
-}
+/* ========== 6. Section Header ========== */
+.section-header,.section-header-custom{text-align:center;margin-bottom:50px}
+.section-subtitle{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--primary);background:var(--primary-light);display:inline-block;padding:5px 15px;border-radius:20px;margin-bottom:15px}
+.section-title{font-size:32px;font-weight:700;color:var(--dark);margin-bottom:15px}
+.section-underline{width:60px;height:3px;background:var(--gold);margin:0 auto 20px;border-radius:2px}
+.section-header-custom h2{font-size:32px;color:#1e2a3a}
+.section-header-custom .underline{width:60px;height:3px;background:var(--primary);margin:15px auto}
+.section-header-custom p{color:#666;max-width:700px;margin:0 auto}
 
-/* ============================================================
-   6. 通用组件：紧凑联系表单
-   ============================================================ */
+/* ========== 7. 统计卡片 ========== */
+.stat-item{text-align:center;padding:15px 20px}
+.stat-number{font-size:32px;font-weight:700;color:var(--primary)}
+.stat-label{font-size:14px;color:#666;margin-top:5px}
 
-.compact-contact {
-    background: var(--gray-100);
-    padding: 50px 0;
-    margin-top: 40px;
-}
-.compact-contact-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: space-between;
-    align-items: center;
-}
-.compact-info {
-    flex: 1;
-    min-width: 240px;
-}
-.compact-info h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--dark);
-    margin-bottom: 15px;
-}
-.compact-info p {
-    font-size: 13px;
-    color: var(--gray-700);
-    margin-bottom: 8px;
-}
-.compact-info i {
-    width: 25px;
-    color: var(--primary);
-    margin-right: 8px;
-}
-.compact-form {
-    flex: 1;
-    min-width: 280px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-.compact-form input,
-.compact-form textarea {
-    flex: 1;
-    min-width: 180px;
-    padding: 10px 14px;
-    font-size: 13px;
-    border: 1px solid var(--gray-300);
-    border-radius: 8px;
-    background: #FFFFFF;
-}
-.compact-form textarea {
-    width: 100%;
-    min-width: 100%;
-    resize: vertical;
-}
-.compact-form button {
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    padding: 10px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.compact-form button:hover {
-    background: var(--primary-dark);
-}
+/* ========== 8. 认证图标网格 ========== */
+.cert-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px;margin:30px 0}
+.cert-grid img{max-height:40px;opacity:.7;transition:.3s}
+.cert-grid img:hover{opacity:1}
 
-/* ============================================================
-   7. 通用 Section Header
-   ============================================================ */
+/* ========== 9. 内页导航栏 ========== */
+.nyheader{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;min-height:80px;width:80%;position:fixed;top:20px;left:10%;background:#fff;z-index:999999;transition:all .5s;padding:0 20px;box-shadow:0 2px 15px rgba(0,0,0,.08);border-radius:8px}
+.nyheader.on{width:100%;left:0;top:0;border-radius:0}
+.nyheader-left{flex-shrink:0}
+.nyheader-logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nyheader-brand{font-size:18px;font-weight:700;color:var(--dark)}
+.nyheader-center{flex:1;display:flex;justify-content:flex-end;margin-right:20px}
+.nyheader-right{flex-shrink:0;display:flex;align-items:center;gap:10px}
+.nyheader .inmuen{float:none;display:block}
+.nyheader .inmuen ul{margin:0;padding:0;display:flex}
+.nyheader .inmuen ul li{float:left;list-style:none;position:relative}
+.nyheader .inmuen ul li>a{display:block;line-height:80px;padding:0 18px;font-size:15px;font-weight:600;color:#333;transition:color .3s}
+.nyheader .inmuen ul li>a:hover,.nyheader .inmuen ul li>a.on{color:var(--primary)}
+.nyheader .inmuen ul li .erji{display:none;width:180px;background:#fff;position:absolute;left:50%;margin-left:-90px;top:80px;box-shadow:0 10px 25px rgba(0,0,0,.1);border-radius:8px;z-index:100}
+.nyheader .inmuen ul li .erji .li{display:block;height:40px;padding:0 15px;line-height:40px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;font-size:13px;color:#666;transition:all .3s}
+.nyheader .inmuen ul li .erji .li:hover{background:var(--primary);color:#fff}
+.nyheader .inmuen ul li:hover .erji{display:block}
+.nyheader .nav_handle{display:none;position:relative;width:27px;padding:0 15px;cursor:pointer;float:right;margin-top:0}
+.nyheader .nav_handle b{width:27px;height:10px;position:relative;display:block}
+.nyheader .nav_handle b i{display:block;position:absolute;left:0;right:0;height:2px;background-color:#333;top:0;transform-origin:29% 50%;transition:all .3s}
+.nyheader .nav_handle b .l_2{top:auto;bottom:0}
+.nyheader .nav_handle.on b i{transform:rotate(45deg);background:var(--primary)}
+.nyheader .nav_handle.on b .l_2{transform:rotate(-45deg)}
 
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-.section-subtitle {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--primary);
-    background: var(--primary-light);
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 20px;
-    margin-bottom: 15px;
-}
-.section-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--dark);
-    margin-bottom: 15px;
-}
-.section-underline {
-    width: 60px;
-    height: 3px;
-    background: var(--gold);
-    margin: 0 auto 20px auto;
-    border-radius: 2px;
-}
-
-/* 首页自定义 Section Header */
-.section-header-custom {
-    text-align: center;
-    margin-bottom: 50px;
-}
-.section-header-custom h2 {
-    font-size: 32px;
-    color: #1e2a3a;
-}
-.section-header-custom .underline {
-    width: 60px;
-    height: 3px;
-    background: #1e7470;
-    margin: 15px auto;
-}
-.section-header-custom p {
-    color: #666;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* ============================================================
-   8. 通用统计卡片
-   ============================================================ */
-
-.stat-item {
-    text-align: center;
-    padding: 15px 20px;
-}
-.stat-number {
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--primary);
-}
-.stat-label {
-    font-size: 14px;
-    color: #666;
-    margin-top: 5px;
-}
-
-/* ============================================================
-   9. 认证图标网格
-   ============================================================ */
-
-.cert-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 30px 0;
-}
-.cert-grid img {
-    max-height: 40px;
-    opacity: 0.7;
-    transition: 0.3s;
-}
-.cert-grid img:hover { opacity: 1; }
-
-/* ============================================================
-   10. 内页导航栏 (桌面 + 移动端)
-   ============================================================ */
-
-.nyheader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    height: auto;
-    min-height: 80px;
-    width: 80%;
-    position: fixed;
-    top: 20px;
-    left: 10%;
-    background: #fff;
-    z-index: 999999;
-    transition: all .5s;
-    padding: 0 20px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-    border-radius: 8px;
-}
-.nyheader.on {
-    width: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 0;
-}
-.nyheader-left { flex-shrink: 0; }
-.nyheader-logo-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-}
-.nyheader-brand {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--dark);
-}
-.nyheader-center {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-}
-.nyheader-right {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.nyheader .inmuen {
-    float: none;
-    display: block;
-}
-.nyheader .inmuen ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-.nyheader .inmuen ul li {
-    float: left;
-    list-style: none;
-    position: relative;
-}
-.nyheader .inmuen ul li > a {
-    display: block;
-    line-height: 80px;
-    padding: 0 18px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #333;
-    transition: color 0.3s ease;
-}
-.nyheader .inmuen ul li > a:hover,
-.nyheader .inmuen ul li > a.on {
-    color: var(--primary);
-}
-
-/* 二级菜单 */
-.nyheader .inmuen ul li .erji {
-    display: none;
-    width: 180px;
-    background: #fff;
-    position: absolute;
-    left: 50%;
-    margin-left: -90px;
-    top: 80px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    z-index: 100;
-}
-.nyheader .inmuen ul li .erji .li {
-    display: block;
-    height: 40px;
-    padding: 0 15px;
-    line-height: 40px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-align: center;
-    font-size: 13px;
-    color: #666;
-    transition: all 0.3s ease;
-}
-.nyheader .inmuen ul li .erji .li:hover {
-    background: var(--primary);
-    color: #fff;
-}
-.nyheader .inmuen ul li:hover .erji {
-    display: block;
-}
-
-/* 汉堡按钮 */
-.nyheader .nav_handle {
-    display: none;
-    position: relative;
-    width: 27px;
-    padding: 0 15px;
-    cursor: pointer;
-    float: right;
-    margin-top: 0;
-}
-.nyheader .nav_handle b {
-    width: 27px;
-    height: 10px;
-    position: relative;
-    display: block;
-}
-.nyheader .nav_handle b i {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #333;
-    top: 0;
-    transform-origin: 29% 50%;
-    transition: all .3s ease;
-}
-.nyheader .nav_handle b .l_2 {
-    top: auto;
-    bottom: 0;
-}
-.nyheader .nav_handle.on b i {
-    transform: rotate(45deg);
-    background: var(--primary);
-}
-.nyheader .nav_handle.on b .l_2 {
-    transform: rotate(-45deg);
-}
-
-/* 语言切换下拉 */
+/* ========== 10. 语言切换下拉 ========== */
 .lang-dropdown {
     position: relative;
     display: inline-flex;
@@ -636,59 +158,65 @@ img { max-width: 100%; }
     align-items: center;
     gap: 6px;
     padding: 6px 14px 6px 12px;
-    background: #FFFFFF;
-    border: 1.5px solid #E8EDF2;
+    background: #fff;
+    border: 1.5px solid var(--gray-200, #E8EDF2);
     border-radius: 8px;
     font-size: 13px;
     font-weight: 600;
-    color: #0B2545;
+    color: var(--dark, #0B2545);
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all .25s ease;
     font-family: inherit;
     line-height: 1.4;
 }
 .lang-btn:hover {
-    border-color: #1e7470;
+    border-color: var(--primary, #1e7470);
     background: rgba(30, 116, 112, 0.04);
 }
 .lang-btn .lang-arrow {
     font-size: 10px;
-    color: #9CA3AF;
-    transition: transform 0.25s ease;
+    color: var(--gray-400, #9CA3AF);
+    transition: transform .25s ease;
     margin-left: 2px;
 }
 .lang-dropdown.open .lang-btn .lang-arrow {
     transform: rotate(180deg);
 }
 .lang-btn .lang-label {
-    transition: opacity 0.2s ease;
+    transition: opacity .2s ease;
 }
 .lang-btn.switching .lang-label {
-    opacity: 0.5;
+    opacity: .5;
 }
+
+/* 下拉菜单 — 默认隐藏 */
 .lang-menu {
     position: absolute;
     top: calc(100% + 8px);
     right: 0;
     min-width: 150px;
-    background: #FFFFFF;
-    border: 1px solid #E8EDF2;
+    background: #fff;
+    border: 1px solid var(--gray-200, #E8EDF2);
     border-radius: 8px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     padding: 6px 0;
     margin: 0;
     list-style: none;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-6px) scale(0.98);
-    transition: all 0.2s ease;
+    transition: all .2s ease;
     transform-origin: top right;
+    pointer-events: none;
 }
+/* 只有添加 .open 类时才显示 */
 .lang-dropdown.open .lang-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0) scale(1);
+    pointer-events: auto;
 }
+
 .lang-menu a {
     display: flex;
     align-items: center;
@@ -696,497 +224,110 @@ img { max-width: 100%; }
     padding: 8px 16px;
     font-size: 13px;
     font-weight: 500;
-    color: #4A5568;
+    color: var(--gray-700, #4A5568);
     text-decoration: none;
-    transition: all 0.15s ease;
+    transition: all .15s ease;
     border-left: 3px solid transparent;
 }
 .lang-menu a:hover {
     background: rgba(30, 116, 112, 0.06);
-    color: #1e7470;
+    color: var(--primary, #1e7470);
 }
 .lang-menu a.active {
     background: rgba(30, 116, 112, 0.08);
-    color: #1e7470;
+    color: var(--primary, #1e7470);
     font-weight: 600;
-    border-left-color: #1e7470;
+    border-left-color: var(--primary, #1e7470);
 }
 .lang-menu a .lang-check {
-    color: #1e7470;
+    color: var(--primary, #1e7470);
     font-size: 12px;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity .2s ease;
 }
 .lang-menu a.active .lang-check {
     opacity: 1;
 }
 
-/* ============================================================
-   11. 内页底部版权
-   ============================================================ */
+/* ========== 11. 底部版权 ========== */
+.banq{background:#f7f7f7;padding:10px;color:#999;line-height:25px;text-align:center}
 
-.banq {
-    background: #f7f7f7;
-    padding: 10px;
-    color: #999999;
-    line-height: 25px;
-    text-align: center;
-}
+/* ========== 12. 最小屏幕提示 ========== */
+.smallest-screen{position:fixed;z-index:999999;width:100%;height:100%;background:url(../images/displaynone.png) no-repeat center #666;display:none}
+@media only screen and (max-width:319px){.smallest-screen{display:block}}
 
-/* ============================================================
-   12. 移动端导航响应式
-   ============================================================ */
+/* ========== 13. 首页导航栏 ========== */
+.header{width:280px;height:100%;padding:20px;box-sizing:border-box;position:fixed;left:0;top:0;z-index:999999;background:#fff;box-shadow:0 0 20px rgba(0,0,0,.2)}
+.header .logo{float:left}
+.header .logo img{max-height:80px;width:auto}
+.header .nav_handle{display:none;position:relative;width:27px;padding:0 15px;cursor:pointer;float:right;margin-top:29px}
+.header .nav_handle b{width:27px;height:10px;position:relative;display:block}
+.header .nav_handle b i{display:block;position:absolute;left:0;right:0;height:2px;background-color:#333;top:0;transform-origin:29% 50%;transition:all .3s}
+.header .nav_handle b .l_2{top:auto;bottom:0}
+.header .nav_handle.on b i{transform:rotate(45deg);background:#1e7470}
+.header .nav_handle.on b .l_2{transform:rotate(-45deg)}
+.header .inmuen{margin-top:35px}
+.header .inmuen ul li{display:block;line-height:34px;font-size:19px;font-weight:700}
+.header .inmuen ul li.on{color:#1e7470}
+.header .inmuen .erji .li{display:block;line-height:24px;font-size:14px;color:#666;padding-left:20px}
+.header .inmuen .erji .li.on{color:#1e7470}
+.header .inmuen .kongg{height:20px;clear:both}
+.webmain{overflow:hidden;padding-left:280px}
 
-@media (max-width: 1100px) {
-    .nyheader .inmuen ul li > a {
-        padding: 0 12px;
-        font-size: 13px;
-    }
-}
+/* 首页导航底部语言切换 */
+.header .header-lang-switch{position:absolute;bottom:20px;left:0;right:0;padding:14px 20px 10px;text-align:center;border-top:1px solid #e8e8e8;margin:0}
+.header .header-lang-switch a{display:inline-block;padding:4px 14px;font-size:13px;font-weight:600;color:#888;text-decoration:none;border-radius:4px;transition:all .2s;letter-spacing:.3px}
+.header .header-lang-switch a:hover{color:#1e7470;background:rgba(30,116,112,.06)}
+.header .header-lang-switch a.active{color:#1e7470;background:rgba(30,116,112,.1)}
+.header .header-lang-switch .lang-divider{color:#ddd;padding:0 4px;font-weight:300}
+.header .inmuen .mobile-lang-switch{display:none;text-align:center;padding:18px 0 10px;border-top:1px solid #f0f0f0;margin-top:15px}
+.header .inmuen .mobile-lang-switch a{display:inline-block;padding:5px 18px;font-size:15px;font-weight:600;color:#666;text-decoration:none;border-radius:4px;transition:all .2s}
+.header .inmuen .mobile-lang-switch a.active{color:#1e7470;background:rgba(30,116,112,.08)}
+.header .inmuen .mobile-lang-switch .lang-divider{color:#ccc;padding:0 4px}
 
-@media (max-width: 900px) {
-    .nyheader {
-        width: 96%;
-        left: 2%;
-        padding: 10px 15px;
-        min-height: 60px;
-        top: 15px;
-    }
-    .nyheader.on {
-        top: 0;
-        width: 100%;
-        left: 0;
-        border-radius: 0;
-        padding: 10px 15px;
-    }
-    .nyheader-center { display: none; }
-    .nyheader .nav_handle { display: block; margin-top: 0; }
+/* ========== 14. Cookie同意横幅 ========== */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999999;background:var(--dark);color:#fff;padding:16px 24px;box-shadow:0 -4px 20px rgba(0,0,0,.15);display:none;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 24px;font-size:13px;line-height:1.5}
+.cookie-banner.show{display:flex}
+.cookie-banner .cookie-text{flex:1;min-width:240px;text-align:center}
+.cookie-banner .cookie-text a{color:var(--gold);text-decoration:underline}
+.cookie-banner .cookie-text a:hover{color:#FFD54F}
+.cookie-banner .cookie-buttons{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.cookie-banner .cookie-btn{padding:8px 28px;border:none;border-radius:30px;font-size:13px;font-weight:600;cursor:pointer;transition:all .25s;font-family:inherit}
+.cookie-banner .cookie-btn.accept{background:var(--primary);color:#fff}
+.cookie-banner .cookie-btn.accept:hover{background:var(--primary-dark);transform:translateY(-2px)}
+.cookie-banner .cookie-btn.decline{background:transparent;color:var(--gray-400);border:1px solid var(--gray-700)}
+.cookie-banner .cookie-btn.decline:hover{background:rgba(255,255,255,.05);border-color:var(--gray-400);color:#fff}
 
-    .nyheader .inmuen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        height: 100dvh;
-        background: #fff;
-        display: none;
-        z-index: 999;
-        overflow-y: auto;
-        padding: 80px 20px 40px 20px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        box-sizing: border-box;
-    }
-    .nyheader .inmuen.active { display: block; }
-    body.menu-open {
-        overflow: hidden;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-    }
-    .nyheader .inmuen ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    .nyheader .inmuen ul li {
-        float: none;
-        text-align: center;
-        border-bottom: 1px solid #f0f0f0;
-        width: 100%;
-        position: relative;
-    }
-    .nyheader .inmuen ul li:last-child { border-bottom: none; }
-    .nyheader .inmuen ul li > a {
-        line-height: 52px;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 0 10px;
-        display: block;
-        width: 100%;
-        transition: background 0.2s ease;
-    }
-    .nyheader .inmuen ul li > a:hover {
-        background: rgba(30, 116, 112, 0.05);
-    }
-    .nyheader .inmuen ul li .erji {
-        position: static;
-        width: 100%;
-        margin-left: 0;
-        left: 0;
-        top: 0;
-        box-shadow: none;
-        border-radius: 0;
-        background: #f8fafc;
-        display: none;
-        padding: 4px 0;
-        overflow: hidden;
-    }
-    .nyheader .inmuen ul li .erji .li {
-        height: 40px;
-        line-height: 40px;
-        font-size: 14px;
-        color: var(--gray-700);
-        padding: 0 15px;
-        text-align: center;
-        border-bottom: 1px solid #eef2f6;
-        transition: background 0.2s ease;
-    }
-    .nyheader .inmuen ul li .erji .li:last-child { border-bottom: none; }
-    .nyheader .inmuen ul li .erji .li:hover {
-        background: var(--primary);
-        color: #fff;
-    }
-    .nyheader .inmuen ul li.has-submenu > a:after {
-        content: "\f107";
-        font-family: FontAwesome;
-        font-size: 12px;
-        margin-left: 8px;
-        color: #999;
-        transition: transform 0.3s ease;
-        display: inline-block;
-    }
-    .nyheader .inmuen ul li.has-submenu.open > a:after {
-        transform: rotate(180deg);
-        color: var(--primary);
-    }
-
-    .lang-dropdown { margin-right: 8px; }
-    .lang-btn {
-        padding: 4px 10px 4px 8px;
-        font-size: 12px;
-        border-radius: 6px;
-    }
-    .lang-menu {
-        right: auto;
-        left: 0;
-        min-width: 140px;
-        transform-origin: top left;
-    }
-    .lang-menu a {
-        padding: 6px 14px;
-        font-size: 12px;
-    }
+/* ========== 15. 响应式（首页导航） ========== */
+@media (max-width:1200px){
+    .header{width:100%;height:70px;padding:10px 20px;position:fixed;top:0;left:0;box-shadow:0 0 20px rgba(0,0,0,.2)}
+    .webmain{padding-left:0;margin-top:70px}
+    .header .logo img{height:50px}
+    .header .nav_handle{margin-top:8px;display:block}
+    /* 首页菜单默认隐藏 */
+    .header .inmuen{position:fixed;background:#fff;left:0;top:70px;width:100%;height:0;overflow:hidden;opacity:0;transition:all .5s ease;margin-top:0;padding:0;text-align:center;z-index:999;visibility:hidden}
+    .header .inmuen ul{display:inline-block;padding:30px 0 0 0;margin:0}
+    .header .inmuen .erji .li{padding:0}
+    /* 首页菜单打开时 */
+    .header .inmuen.kai{height:calc(100vh - 70px);height:calc(100dvh - 70px);opacity:1;overflow-y:auto;visibility:visible;padding-bottom:40px}
+    .header .header-lang-switch{display:none!important}
+    .header .inmuen .mobile-lang-switch{display:block!important}
 }
 
-@media (max-width: 640px) {
-    .nyheader {
-        top: 10px;
-        min-height: 55px;
-        padding: 8px 12px;
-    }
-    .nyheader-brand { font-size: 14px; }
-    .nyheader .logo img { height: 35px !important; }
-    .nyheader .inmuen { padding: 70px 16px 30px 16px; }
-    .nyheader .inmuen ul li > a {
-        line-height: 46px;
-        font-size: 15px;
-    }
-    .nyheader .inmuen ul li .erji .li {
-        height: 36px;
-        line-height: 36px;
-        font-size: 13px;
-    }
-    .lang-btn {
-        padding: 3px 8px 3px 6px;
-        font-size: 11px;
-        border-radius: 4px;
-        border-width: 1px;
-    }
-    .lang-menu { min-width: 120px; }
+@media (max-width:640px){
+    .header{height:60px}
+    .webmain{margin-top:60px}
+    .header .logo img{height:40px}
+    .header .nav_handle{margin-top:5px}
+    .header .inmuen{top:60px}
+    .header .inmuen.kai{top:60px;height:calc(100vh - 60px);height:calc(100dvh - 60px)}
+    .header .inmuen .mobile-lang-switch a{font-size:14px;padding:4px 14px}
 }
 
-/* ============================================================
-   13. 最小屏幕提示
-   ============================================================ */
-
-.smallest-screen {
-    position: fixed;
-    z-index: 999999;
-    width: 100%;
-    height: 100%;
-    background: url(../images/displaynone.png) no-repeat center #666;
-    display: none;
-}
-@media only screen and (max-width: 319px) {
-    .smallest-screen { display: block; }
-}
-/* ============================================================
-   14. 首页导航栏 (header)
-   ============================================================ */
-
-.header {
-    width: 280px;
-    height: 100%;
-    padding: 20px 20px;
-    box-sizing: border-box;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 999999;
-    background: #fff;
-    box-shadow: 0 0 20px rgba(0,0,0,.2);
-}
-.header .logo {
-    float: left;
-}
-.header .logo img {
-    max-height: 80px;
-    width: auto;
-}
-.header .nav_handle {
-    display: none;
-    position: relative;
-    width: 27px;
-    padding: 0 15px;
-    cursor: pointer;
-    float: right;
-    margin-top: 29px;
-}
-.header .nav_handle b {
-    width: 27px;
-    height: 10px;
-    position: relative;
-    display: block;
-}
-.header .nav_handle b i {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #333;
-    top: 0;
-    transform-origin: 29% 50%;
-    transition: all .3s ease;
-}
-.header .nav_handle b .l_2 {
-    top: auto;
-    bottom: 0;
-}
-.header .nav_handle.on b i {
-    transform: rotate(45deg);
-    background: #1e7470;
-}
-.header .nav_handle.on b .l_2 {
-    transform: rotate(-45deg);
-}
-
-.header .inmuen {
-    margin-top: 35px;
-}
-.header .inmuen ul li {
-    display: block;
-    line-height: 34px;
-    font-size: 19px;
-    font-weight: bold;
-}
-.header .inmuen ul li.on {
-    color: #1e7470;
-}
-.header .inmuen .erji .li {
-    display: block;
-    line-height: 24px;
-    font-size: 14px;
-    color: #666;
-    padding-left: 20px;
-}
-.header .inmuen .erji .li.on {
-    color: #1e7470;
-}
-.header .inmuen .kongg {
-    height: 20px;
-    clear: both;
-}
-
-.webmain {
-    overflow: hidden;
-    padding-left: 280px;
-}
-
-/* 首页导航响应式 */
-@media (max-width: 1200px) {
-    .header {
-        width: 100%;
-        height: 70px;
-        padding: 10px 20px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        box-shadow: 0 0 20px rgba(0,0,0,.2);
-    }
-    .webmain {
-        padding-left: 0;
-        margin-top: 70px;
-    }
-    .header .logo img {
-        height: 50px;
-    }
-    .header .nav_handle {
-        margin-top: 8px;
-        display: block;
-    }
-    .header .inmuen {
-        overflow: hidden;
-        opacity: 0;
-        transition: all .5s;
-        position: fixed;
-        background: #fff;
-        width: 0;
-        height: 0;
-        padding-top: 30px;
-        margin-top: 0px;
-        left: 50%;
-        top: 50%;
-        text-align: center;
-    }
-    .header .inmuen ul {
-        display: inline-block;
-    }
-    .header .inmuen .erji .li {
-        padding: 0;
-    }
-    .header .inmuen.kai {
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 70px;
-        opacity: 1;
-        overflow-y: auto;
-        padding-bottom: 40px;
-    }
-    /* 窄屏时语言切换移到汉堡菜单内部 */
-    .header .header-lang-switch {
+/* ========== 16. PC端隐藏移动端语言切换 ========== */
+@media screen and (min-width: 769px) {
+    .nyheader .mobile-lang-switch,
+    .header .mobile-lang-switch {
         display: none !important;
-    }
-    .header .inmuen .mobile-lang-switch {
-        display: block !important;
-    }
-}
-
-@media (max-width: 640px) {
-    .header {
-        height: 60px;
-    }
-    .webmain {
-        margin-top: 60px;
-    }
-    .header .logo img {
-        height: 40px;
-    }
-    .header .nav_handle {
-        margin-top: 5px;
-    }
-    .header .inmuen.kai {
-        top: 60px;
-    }
-    .header .inmuen .mobile-lang-switch a {
-        font-size: 14px;
-        padding: 4px 14px;
-    }
-}
-/* ============================================================
-   Cookie 同意横幅
-   ============================================================ */
-
-.cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 999999;
-    background: #0B2545;
-    color: #FFFFFF;
-    padding: 16px 24px;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
-    display: none;
-    /* 默认隐藏，JS控制显示 */
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 16px 24px;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.cookie-banner.show {
-    display: flex;
-}
-
-.cookie-banner .cookie-text {
-    flex: 1;
-    min-width: 240px;
-    text-align: center;
-}
-
-.cookie-banner .cookie-text a {
-    color: #FFB703;
-    text-decoration: underline;
-}
-
-.cookie-banner .cookie-text a:hover {
-    color: #FFD54F;
-}
-
-.cookie-banner .cookie-buttons {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.cookie-banner .cookie-btn {
-    padding: 8px 28px;
-    border: none;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    font-family: inherit;
-}
-
-.cookie-banner .cookie-btn.accept {
-    background: #1e7470;
-    color: #FFFFFF;
-}
-
-.cookie-banner .cookie-btn.accept:hover {
-    background: #155a57;
-    transform: translateY(-2px);
-}
-
-.cookie-banner .cookie-btn.decline {
-    background: transparent;
-    color: #9CA3AF;
-    border: 1px solid #4A5568;
-}
-
-.cookie-banner .cookie-btn.decline:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: #9CA3AF;
-    color: #FFFFFF;
-}
-
-/* 手机端适配 */
-@media (max-width: 640px) {
-    .cookie-banner {
-        padding: 14px 16px;
-        flex-direction: column;
-        gap: 12px;
-    }
-    .cookie-banner .cookie-text {
-        font-size: 12px;
-        text-align: center;
-    }
-    .cookie-banner .cookie-btn {
-        padding: 10px 24px;
-        font-size: 13px;
-        width: 100%;
-        max-width: 200px;
     }
 }

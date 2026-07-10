@@ -13,136 +13,143 @@ $(function() {
     //  1. 移动端菜单统一交互（同时控制首页 .header 和内页 .nyheader）
     // ============================================================
     function initUnifiedMobileMenu() {
-        // 选取所有导航容器
-        var $headers = $('.header, .nyheader');
-        var $handles = $headers.find('.nav_handle');
-        var $menus = $headers.find('.inmuen');
-        var $body = $('body');
+    var $headers = $('.header, .nyheader');
+    var $handles = $headers.find('.nav_handle');
+    var $menus = $headers.find('.inmuen');
+    var $body = $('body');
 
-        // 如果页面上没有导航，直接退出
-        if ($handles.length === 0 || $menus.length === 0) return;
+    if ($handles.length === 0 || $menus.length === 0) return;
 
-        // 给所有包含二级菜单的 li 自动添加 .has-submenu 类
-        $menus.find('ul li .erji').each(function() {
-            $(this).closest('li').addClass('has-submenu');
-        });
+    // 给所有包含二级菜单的 li 自动添加 .has-submenu 类
+    $menus.find('ul li .erji').each(function() {
+        $(this).closest('li').addClass('has-submenu');
+    });
 
-        // 重新获取带子菜单的项
-        var $subItems = $menus.find('li.has-submenu');
+    var $subItems = $menus.find('li.has-submenu');
 
-        // --- 1. 汉堡按钮点击：展开/收起全屏菜单 ---
-$handles.off('click.unified').on('click.unified', function(e) {
-    e.stopPropagation();
-    var $handle = $(this);
-    var $menu = $handle.closest('.header, .nyheader').find('.inmuen');
+    // --- 汉堡按钮点击 ---
+    $handles.off('click.unified').on('click.unified', function(e) {
+        e.stopPropagation();
+        var $handle = $(this);
+        var $header = $handle.closest('.header, .nyheader');
+        var $menu = $header.find('.inmuen');
 
-    $handle.toggleClass('on');
+        $handle.toggleClass('on');
 
-    if ($menu.hasClass('active')) {
-        // 关闭菜单
-        $menu.removeClass('active');
-        $body.removeClass('menu-open');
-        // 收起所有展开的子菜单
-        $subItems.removeClass('open');
-        $subItems.find('.erji').slideUp(200);
-    } else {
-        // 打开菜单
-        $menu.addClass('active');
-        $body.addClass('menu-open');
-    }
-});
-
-        // --- 2. 二级菜单点击展开/收起（带动画） ---
-$subItems.off('click.unified').on('click.unified', function(e) {
-    var $target = $(e.target);
-    // 只处理点击父级 <a> 标签
-    if ($target.is('a') && $target.closest('.has-submenu').length) {
-        var $parent = $target.closest('.has-submenu');
-        var $sub = $parent.find('.erji');
-        var isOpen = $parent.hasClass('open');
-
-        // 只有当点击的是父级菜单（即点击的是 .has-submenu 的直接 <a> 标签）时才阻止跳转
-        if ($target.closest('.has-submenu').children('a').is($target)) {
-            e.preventDefault();  // 阻止父级菜单跳转（如 "Products"）
-        }
-
-        if (isOpen) {
-            $parent.removeClass('open');
-            $sub.slideUp(250);
-        } else {
-            $parent.addClass('open');
-            $sub.slideDown(300);
-        }
-    }
-});
-
-        // --- 3. 点击子菜单项后自动关闭整个菜单（提升体验） ---
-        $menus.find('.erji .li').off('click.unified').on('click.unified', function() {
-            var $menu = $(this).closest('.inmuen');
-            if ($menu.is(':visible')) {
-                var $handle = $menu.closest('.header, .nyheader').find('.nav_handle');
-                // 收起所有子菜单
-                $subItems.removeClass('open');
-                $subItems.find('.erji').slideUp(150);
-                // 延迟关闭主菜单
-                setTimeout(function() {
-                    $handle.removeClass('on');
-                    $menu.slideUp(300, function() {
-                        $menu.removeClass('active');
-                        $body.removeClass('menu-open');
-                    });
-                }, 200);
-            }
-        });
-
-        // --- 4. 点击页面空白区域关闭菜单 ---
-        $(document).off('click.unified').on('click.unified', function(e) {
-            var $target = $(e.target);
-            // 如果点击的不是导航内部，且菜单是打开的
-            if ($target.closest('.header, .nyheader').length === 0) {
-                var $openMenus = $menus.filter('.active:visible');
-                if ($openMenus.length) {
-                    $handles.removeClass('on');
-                    $menus.removeClass('active');
-                    $body.removeClass('menu-open');
-                    $subItems.removeClass('open');
-                    $subItems.find('.erji').slideUp(200);
-                }
-            }
-        });
-
-        // --- 5. ESC 键关闭菜单 ---
-        $(document).off('keydown.unified').on('keydown.unified', function(e) {
-            if (e.key === 'Escape') {
-                var $openMenus = $menus.filter('.active:visible');
-                if ($openMenus.length) {
-                    $handles.removeClass('on');
-                    $menus.slideUp(300, function() {
-                        $menus.removeClass('active');
-                        $body.removeClass('menu-open');
-                    });
-                    $subItems.removeClass('open');
-                    $subItems.find('.erji').slideUp(200);
-                }
-            }
-        });
-
-        // --- 6. 窗口尺寸变化时重置菜单状态（从手机切回平板/电脑） ---
-        var windowWidth = $(window).width();
-        $(window).off('resize.unified').on('resize.unified', function() {
-            var newWidth = $(window).width();
-            // 当宽度大于 768px 时（即离开手机模式），强制重置所有菜单状态
-            if (newWidth > 768 && windowWidth <= 768) {
-                $handles.removeClass('on');
-                $menus.removeClass('active').removeAttr('style');
+        // 判断是首页还是内页
+        if ($header.hasClass('header')) {
+            // 首页使用 kai 类
+            if ($menu.hasClass('kai')) {
+                $menu.removeClass('kai');
                 $body.removeClass('menu-open');
                 $subItems.removeClass('open');
-                $subItems.find('.erji').removeAttr('style');
+                $subItems.find('.erji').slideUp(200);
+            } else {
+                $menu.addClass('kai');
+                $body.addClass('menu-open');
             }
-            windowWidth = newWidth;
-        });
-    }
+        } else {
+            // 内页使用 active 类
+            if ($menu.hasClass('active')) {
+                $menu.removeClass('active');
+                $body.removeClass('menu-open');
+                $subItems.removeClass('open');
+                $subItems.find('.erji').slideUp(200);
+            } else {
+                $menu.addClass('active');
+                $body.addClass('menu-open');
+            }
+        }
+    });
 
+    // --- 二级菜单点击展开/收起 ---
+    $subItems.off('click.unified').on('click.unified', function(e) {
+        var $target = $(e.target);
+        if ($target.is('a') && $target.closest('.has-submenu').length) {
+            var $parent = $target.closest('.has-submenu');
+            var $sub = $parent.find('.erji');
+            var isOpen = $parent.hasClass('open');
+
+            if ($target.closest('.has-submenu').children('a').is($target)) {
+                e.preventDefault();
+            }
+
+            if (isOpen) {
+                $parent.removeClass('open');
+                $sub.slideUp(250);
+            } else {
+                $parent.addClass('open');
+                $sub.slideDown(300);
+            }
+        }
+    });
+
+    // --- 点击子菜单项后自动关闭菜单 ---
+    $menus.find('.erji .li').off('click.unified').on('click.unified', function() {
+        var $menu = $(this).closest('.inmuen');
+        var $header = $menu.closest('.header, .nyheader');
+        var $handle = $header.find('.nav_handle');
+
+        $subItems.removeClass('open');
+        $subItems.find('.erji').slideUp(150);
+
+        setTimeout(function() {
+            $handle.removeClass('on');
+            if ($header.hasClass('header')) {
+                $menu.removeClass('kai');
+            } else {
+                $menu.removeClass('active');
+            }
+            $body.removeClass('menu-open');
+        }, 200);
+    });
+
+    // --- 点击页面空白区域关闭菜单 ---
+    $(document).off('click.unified').on('click.unified', function(e) {
+        var $target = $(e.target);
+        if ($target.closest('.header, .nyheader').length === 0) {
+            var $openHeaders = $('.header .inmuen.kai, .nyheader .inmuen.active');
+            if ($openHeaders.length) {
+                $handles.removeClass('on');
+                $('.header .inmuen').removeClass('kai');
+                $('.nyheader .inmuen').removeClass('active');
+                $body.removeClass('menu-open');
+                $subItems.removeClass('open');
+                $subItems.find('.erji').slideUp(200);
+            }
+        }
+    });
+
+    // --- ESC 键关闭菜单 ---
+    $(document).off('keydown.unified').on('keydown.unified', function(e) {
+        if (e.key === 'Escape') {
+            var $openHeaders = $('.header .inmuen.kai, .nyheader .inmuen.active');
+            if ($openHeaders.length) {
+                $handles.removeClass('on');
+                $('.header .inmuen').removeClass('kai');
+                $('.nyheader .inmuen').removeClass('active');
+                $body.removeClass('menu-open');
+                $subItems.removeClass('open');
+                $subItems.find('.erji').slideUp(200);
+            }
+        }
+    });
+
+    // --- 窗口尺寸变化时重置菜单状态 ---
+    var windowWidth = $(window).width();
+    $(window).off('resize.unified').on('resize.unified', function() {
+        var newWidth = $(window).width();
+        if (newWidth > 768 && windowWidth <= 768) {
+            $handles.removeClass('on');
+            $('.header .inmuen').removeClass('kai').removeAttr('style');
+            $('.nyheader .inmuen').removeClass('active').removeAttr('style');
+            $body.removeClass('menu-open');
+            $subItems.removeClass('open');
+            $subItems.find('.erji').removeAttr('style');
+        }
+        windowWidth = newWidth;
+    });
+}
     // 执行统一菜单初始化
     initUnifiedMobileMenu();
 
@@ -251,6 +258,10 @@ $subItems.off('click.unified').on('click.unified', function(e) {
                 return;
             }
             updateLanguageMenu();
+
+            // 确保初始状态是关闭的
+            dropdown.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
 
             btn.onclick = null;
             btn.addEventListener('click', function(e) {
