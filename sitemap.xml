@@ -158,4 +158,20 @@
     <priority>0.4</priority>
   </url>
 
+  <!-- 260716新增新闻英文版 -->
+<url>
+    <loc>https://www.hyteng.com/news-detail-market-trends-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<!-- 260716新增新闻中文版 -->
+<url>
+    <loc>https://www.hyteng.com/cn/news-detail-market-trends-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
 </urlset>
+
+
