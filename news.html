@@ -312,11 +312,20 @@
     $(function(){
         new WOW().init();
 
-        // ========== ★★★ 移动端导航增强 - 二级菜单滑动动画 ★★★ ==========
-        // 
+        // ============================================================
+        // 移动端导航 - 二级菜单滑动动画
+        // ============================================================
+        var $navHandle = $('.nyheader .nav_handle');
+        var $mobileMenu = $('.nyheader .inmuen');
         var $submenuItems = $('.nyheader .inmuen ul li.has-submenu');
         var $body = $('body');
         var isMenuOpen = false;
+
+        // 给包含二级菜单的 li 添加 has-submenu 类
+        $('.nyheader .inmuen ul li .erji').each(function() {
+            $(this).closest('li').addClass('has-submenu');
+        });
+        $submenuItems = $('.nyheader .inmuen ul li.has-submenu');
 
         // --- 1. 汉堡按钮：打开/关闭全屏菜单 ---
         $navHandle.on('click', function(e) {
@@ -324,52 +333,44 @@
             $(this).toggleClass('on');
 
             if ($mobileMenu.hasClass('active')) {
-                // 关闭菜单
                 $mobileMenu.slideUp(300, function() {
                     $mobileMenu.removeClass('active');
                     $body.removeClass('menu-open');
                 });
                 isMenuOpen = false;
-                // 同时收起所有展开的子菜单
                 $submenuItems.removeClass('open');
                 $submenuItems.find('.erji').slideUp(200);
             } else {
-                // 打开菜单
                 $mobileMenu.addClass('active').slideDown(350);
                 $body.addClass('menu-open');
                 isMenuOpen = true;
             }
         });
 
-        // --- 2. ★★★ 二级菜单点击展开/收起（带 slideDown/slideUp 动画）★★★ ---
+        // --- 2. 二级菜单点击展开/收起 ---
         $submenuItems.on('click', function(e) {
-            // 只处理点击父级 <a> 标签，不处理点击子菜单项
             var $target = $(e.target);
             if ($target.is('a') && $target.closest('.has-submenu').length) {
                 e.preventDefault();
-
                 var $parent = $target.closest('.has-submenu');
                 var $subMenu = $parent.find('.erji');
                 var isCurrentlyOpen = $parent.hasClass('open');
 
                 if (isCurrentlyOpen) {
-                    // 收起
                     $parent.removeClass('open');
                     $subMenu.slideUp(250);
                 } else {
-                    // 展开
                     $parent.addClass('open');
                     $subMenu.slideDown(300);
                 }
             }
         });
 
-        // --- 3. 点击菜单项（子菜单项）后自动关闭菜单 ---
+        // --- 3. 点击子菜单项后自动关闭菜单 ---
         $('.nyheader .inmuen ul li .erji .li').on('click', function() {
             if ($mobileMenu.is(':visible')) {
                 $submenuItems.removeClass('open');
                 $submenuItems.find('.erji').slideUp(150);
-
                 setTimeout(function() {
                     $navHandle.removeClass('on');
                     $mobileMenu.slideUp(300, function() {
@@ -414,7 +415,7 @@
         });
 
         // ============================================================
-        // ========== 新闻分类筛选功能（URL驱动） ==========
+        // 新闻分类筛选功能（URL驱动）
         // ============================================================
 
         var categoryLinks = $('#categoryList a');
