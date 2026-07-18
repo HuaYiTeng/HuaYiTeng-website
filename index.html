@@ -48,6 +48,7 @@
       "certification": ["ISO9001", "CE", "ETL", "FCC", "GS", "UKCA", "RCM"]
     }
     </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 </head>
 <body>
 
@@ -318,6 +319,10 @@
                                     and consent to the processing of my personal data for inquiry purposes.
                                 </span>
                             </label>
+                        </div>
+                        <!-- Turnstile 验证 -->
+                        <div class="form-group" style="margin-bottom: 16px;">
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAD4a_IElkNPPI15P"></div>
                         </div>
                         <div class="hyt-form-action">
                             <button type="submit" class="hyt-submit-btn">Submit Inquiry</button>

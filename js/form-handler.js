@@ -1,8 +1,8 @@
 /**
  * ============================================================
- *  Hua Yi Teng - 统一表单处理脚本
- *  功能：表单验证 + Ajax 提交 + 自定义感谢页
- *  最后更新: 2026-07-16
+ *  Hua Yi Teng - 统一表单处理脚本（含 Turnstile 支持）
+ *  功能：表单验证 + Turnstile 验证 + Ajax 提交 + 自定义感谢页
+ *  最后更新: 2026-07-18
  * ============================================================
  */
 
@@ -44,7 +44,6 @@
     // 获取当前页面基础路径（用于相对路径跳转）
     function getBasePath() {
         var path = window.location.pathname;
-        // 如果当前在 cn/ 目录下，返回 '../'
         if (path.indexOf('/cn/') !== -1 || path === '/cn' || path === '/cn/') {
             return '../';
         }
@@ -56,13 +55,11 @@
         var lang = detectLanguage();
         var base = getBasePath();
         var page = lang === 'zh' ? CONFIG.thankYouPage.zh : CONFIG.thankYouPage.en;
-        // 如果 base 为空，直接返回 page；否则拼接
         return base ? base + page : page;
     }
 
     // 显示表单消息
     function showMessage($form, type, text) {
-        // 移除旧消息
         $form.find('.form-message').remove();
 
         var colors = {
@@ -108,7 +105,6 @@
 
         $form.prepend(messageHtml);
 
-        // 自动隐藏（仅成功消息自动隐藏）
         if (type === 'success') {
             setTimeout(function() {
                 $form.find('.form-message').fadeOut(300, function() {
@@ -125,12 +121,10 @@
         var isValid = true;
         var errorMsg = '';
 
-        // 必填验证
         if ($field.prop('required') && !value) {
             return { valid: false, message: '此字段为必填项' };
         }
 
-        // 邮箱验证
         if (type === 'email' && value) {
             var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailRegex.test(value)) {
@@ -138,12 +132,10 @@
             }
         }
 
-        // 姓名验证（至少2个字符）
         if ($field.attr('name') === 'name' && value && value.length < 2) {
             return { valid: false, message: '姓名至少需要2个字符' };
         }
 
-        // 消息验证（至少10个字符）
         if ($field.attr('name') === 'message' && value && value.length < 10) {
             return { valid: false, message: '请详细描述您的需求（至少10个字符）' };
         }
@@ -152,18 +144,86 @@
     }
 
     // ============================================================
-    // 3. 核心提交函数
+    // 3. 获取 Turnstile 令牌
+    // ============================================================
+
+    function getTurnstileToken($form) {
+        var $turnstileContainer = $form.find('.cf-turnstile');
+        if (!$turnstileContainer.length) {
+            return { token: null, container: null };
+        }
+
+        // 尝试从隐藏输入字段获取令牌（Turnstile 自动填充）
+        var $tokenInput = $turnstileContainer.find('[name="cf-turnstile-response"]');
+        if ($tokenInput.length && $tokenInput.val()) {
+            return { token: $tokenInput.val(), container: $turnstileContainer };
+        }
+
+        // 尝试从 data-response 属性获取（备用）
+        var responseAttr = $turnstileContainer.attr('data-response');
+        if (responseAttr) {
+            return { token: responseAttr, container: $turnstileContainer };
+        }
+
+        return { token: null, container: $turnstileContainer };
+    }
+
+    // 重置 Turnstile
+    function resetTurnstile($container) {
+        if ($container && $container.length && typeof turnstile !== 'undefined') {
+            try {
+                // 尝试重置 Turnstile
+                var widgetId = $container.attr('data-widget-id');
+                if (widgetId) {
+                    turnstile.reset(widgetId);
+                } else {
+                    // 如果找不到 widgetId，尝试重新渲染
+                    var siteKey = $container.attr('data-sitekey');
+                    if (siteKey) {
+                        $container.empty();
+                        turnstile.render($container[0], {
+                            sitekey: siteKey,
+                            callback: function(token) {
+                                $container.attr('data-response', token);
+                            }
+                        });
+                    }
+                }
+            } catch(e) {
+                // 静默处理重置失败
+            }
+        }
+    }
+
+    // ============================================================
+    // 4. 核心提交函数（支持 Turnstile）
     // ============================================================
 
     function submitForm($form) {
         var $submitBtn = $form.find('button[type="submit"]');
         var originalText = $submitBtn.text();
         var action = $form.attr('action');
-        var formData = new FormData($form[0]);
 
-        // 禁用按钮，防止重复提交
+        // --- 1. 获取 Turnstile 令牌 ---
+        var turnstileResult = getTurnstileToken($form);
+        var turnstileToken = turnstileResult.token;
+        var $turnstileContainer = turnstileResult.container;
+
+        if ($turnstileContainer && $turnstileContainer.length && !turnstileToken) {
+            showMessage($form, 'warning', '⚠️ 请完成 Turnstile 验证后再提交。');
+            return;
+        }
+
+        // --- 2. 禁用按钮 ---
         $submitBtn.prop('disabled', true).text('发送中...');
 
+        // --- 3. 构建表单数据 ---
+        var formData = new FormData($form[0]);
+        if (turnstileToken) {
+            formData.append('cf-turnstile-response', turnstileToken);
+        }
+
+        // --- 4. 发送请求 ---
         fetch(action, {
             method: 'POST',
             body: formData,
@@ -173,20 +233,28 @@
         })
         .then(function(response) {
             if (response.ok) {
-                // 提交成功
                 showMessage($form, 'success', '✅ 您的询盘已发送成功！我们将在24小时内回复您。');
                 $form[0].reset();
-                // 清除字段的高亮状态
-                $form.find('.is-invalid').removeClass('is-invalid');
 
-                // 延迟后跳转到感谢页
+                // 重置 Turnstile
+                if ($turnstileContainer && $turnstileContainer.length) {
+                    resetTurnstile($turnstileContainer);
+                }
+
                 setTimeout(function() {
                     window.location.href = getThankYouUrl();
                 }, CONFIG.redirectDelay);
             } else {
-                // 提交失败，尝试解析错误信息
                 return response.json().then(function(data) {
                     var errorMsg = data.error || '提交失败，请稍后重试。';
+                    // 检查是否是 Turnstile 相关错误
+                    if (errorMsg.toLowerCase().includes('turnstile') || errorMsg.toLowerCase().includes('captcha')) {
+                        errorMsg = 'Turnstile 验证失败，请刷新页面后重试。';
+                        // 重置 Turnstile 让用户重新验证
+                        if ($turnstileContainer && $turnstileContainer.length) {
+                            resetTurnstile($turnstileContainer);
+                        }
+                    }
                     showMessage($form, 'error', '❌ ' + errorMsg);
                 }).catch(function() {
                     showMessage($form, 'error', '❌ 提交失败，请稍后重试。');
@@ -194,17 +262,15 @@
             }
         })
         .catch(function() {
-            // 网络错误
             showMessage($form, 'error', '❌ 网络连接异常，请检查网络后重试。');
         })
         .finally(function() {
-            // 恢复按钮状态
             $submitBtn.prop('disabled', false).text(originalText);
         });
     }
 
     // ============================================================
-    // 4. 初始化所有表单
+    // 5. 初始化所有表单
     // ============================================================
 
     function initForms() {
@@ -213,17 +279,15 @@
         $forms.each(function() {
             var $form = $(this);
 
-            // --- 4a. 实时字段验证（输入时） ---
+            // --- 5a. 实时字段验证 ---
             $form.find('input, textarea, select').on('blur', function() {
                 var $field = $(this);
-                // 跳过隐藏字段和 _gotcha
                 if ($field.attr('type') === 'hidden' || $field.attr('name') === '_gotcha') {
                     return;
                 }
                 var result = validateField($field);
                 if (!result.valid && $field.val().trim()) {
                     $field.addClass('is-invalid');
-                    // 显示错误提示
                     var $error = $field.siblings('.field-error');
                     if (!$error.length) {
                         $error = $('<span class="field-error" style="color:#C62828;font-size:12px;display:block;margin-top:4px;"></span>');
@@ -236,7 +300,7 @@
                 }
             });
 
-            // --- 4b. 输入时清除错误状态 ---
+            // --- 5b. 输入时清除错误状态 ---
             $form.find('input, textarea, select').on('input change', function() {
                 var $field = $(this);
                 if ($field.hasClass('is-invalid')) {
@@ -248,7 +312,7 @@
                 }
             });
 
-            // --- 4c. 提交前全量验证 ---
+            // --- 5c. 提交前全量验证 ---
             $form.on('submit', function(e) {
                 e.preventDefault();
 
@@ -299,14 +363,12 @@
                 }
 
                 if (!isValid) {
-                    // 滚动到第一个错误字段
                     if (firstInvalid) {
                         $('html, body').animate({
                             scrollTop: firstInvalid.offset().top - 120
                         }, 300);
                         firstInvalid.focus();
                     }
-                    // 显示通用错误提示
                     showMessage($form, 'warning', '⚠️ 请完善表单中标记的必填项后再提交。');
                     return;
                 }
@@ -318,12 +380,11 @@
     }
 
     // ============================================================
-    // 5. 启动（在 DOM 加载完成后执行）
+    // 6. 启动（在 DOM 加载完成后执行）
     // ============================================================
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
-            // 确保 jQuery 已加载
             if (typeof jQuery !== 'undefined') {
                 initForms();
             } else {
