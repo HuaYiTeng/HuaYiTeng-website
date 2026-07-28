@@ -1,8 +1,8 @@
 /**
  * ============================================================
- *  Hua Yi Teng - 统一表单处理脚本（含 Turnstile 支持）
- *  功能：表单验证 + Turnstile 验证 + Ajax 提交 + 自定义感谢页
- *  最后更新: 2026-07-18
+ *  Hua Yi Teng - 统一表单处理脚本（Google reCAPTCHA v2 版本）
+ *  功能：表单验证 + reCAPTCHA 验证 + Ajax 提交 + 自定义感谢页
+ *  最后更新: 2026-07-28
  * ============================================================
  */
 
@@ -144,59 +144,35 @@
     }
 
     // ============================================================
-    // 3. 获取 Turnstile 令牌
+    // 3. 获取 reCAPTCHA 令牌
     // ============================================================
 
-    function getTurnstileToken($form) {
-        var $turnstileContainer = $form.find('.cf-turnstile');
-        if (!$turnstileContainer.length) {
-            return { token: null, container: null };
+    function getRecaptchaToken() {
+        // 检查 grecaptcha 是否已加载
+        if (typeof grecaptcha === 'undefined') {
+            return null;
         }
-
-        // 尝试从隐藏输入字段获取令牌（Turnstile 自动填充）
-        var $tokenInput = $turnstileContainer.find('[name="cf-turnstile-response"]');
-        if ($tokenInput.length && $tokenInput.val()) {
-            return { token: $tokenInput.val(), container: $turnstileContainer };
+        try {
+            var token = grecaptcha.getResponse();
+            return token || null;
+        } catch (e) {
+            return null;
         }
-
-        // 尝试从 data-response 属性获取（备用）
-        var responseAttr = $turnstileContainer.attr('data-response');
-        if (responseAttr) {
-            return { token: responseAttr, container: $turnstileContainer };
-        }
-
-        return { token: null, container: $turnstileContainer };
     }
 
-    // 重置 Turnstile
-    function resetTurnstile($container) {
-        if ($container && $container.length && typeof turnstile !== 'undefined') {
+    // 重置 reCAPTCHA
+    function resetRecaptcha() {
+        if (typeof grecaptcha !== 'undefined') {
             try {
-                // 尝试重置 Turnstile
-                var widgetId = $container.attr('data-widget-id');
-                if (widgetId) {
-                    turnstile.reset(widgetId);
-                } else {
-                    // 如果找不到 widgetId，尝试重新渲染
-                    var siteKey = $container.attr('data-sitekey');
-                    if (siteKey) {
-                        $container.empty();
-                        turnstile.render($container[0], {
-                            sitekey: siteKey,
-                            callback: function(token) {
-                                $container.attr('data-response', token);
-                            }
-                        });
-                    }
-                }
-            } catch(e) {
+                grecaptcha.reset();
+            } catch (e) {
                 // 静默处理重置失败
             }
         }
     }
 
     // ============================================================
-    // 4. 核心提交函数（支持 Turnstile）
+    // 4. 核心提交函数（支持 reCAPTCHA）
     // ============================================================
 
     function submitForm($form) {
@@ -204,13 +180,18 @@
         var originalText = $submitBtn.text();
         var action = $form.attr('action');
 
-        // --- 1. 获取 Turnstile 令牌 ---
-        var turnstileResult = getTurnstileToken($form);
-        var turnstileToken = turnstileResult.token;
-        var $turnstileContainer = turnstileResult.container;
+        // --- 1. 获取 reCAPTCHA 令牌 ---
+        var recaptchaToken = getRecaptchaToken();
 
-        if ($turnstileContainer && $turnstileContainer.length && !turnstileToken) {
-            showMessage($form, 'warning', '⚠️ 请完成 Turnstile 验证后再提交。');
+        if (!recaptchaToken) {
+            showMessage($form, 'warning', '⚠️ 请完成 "我不是机器人" 验证后再提交。');
+            // 滚动到验证码位置
+            var $recaptcha = $form.find('.g-recaptcha');
+            if ($recaptcha.length) {
+                $('html, body').animate({
+                    scrollTop: $recaptcha.offset().top - 160
+                }, 300);
+            }
             return;
         }
 
@@ -219,9 +200,8 @@
 
         // --- 3. 构建表单数据 ---
         var formData = new FormData($form[0]);
-        if (turnstileToken) {
-            formData.append('cf-turnstile-response', turnstileToken);
-        }
+        // 添加 reCAPTCHA 令牌到表单数据
+        formData.append('g-recaptcha-response', recaptchaToken);
 
         // --- 4. 发送请求 ---
         fetch(action, {
@@ -235,11 +215,8 @@
             if (response.ok) {
                 showMessage($form, 'success', '✅ 您的询盘已发送成功！我们将在24小时内回复您。');
                 $form[0].reset();
-
-                // 重置 Turnstile
-                if ($turnstileContainer && $turnstileContainer.length) {
-                    resetTurnstile($turnstileContainer);
-                }
+                // 重置 reCAPTCHA
+                resetRecaptcha();
 
                 setTimeout(function() {
                     window.location.href = getThankYouUrl();
@@ -247,22 +224,21 @@
             } else {
                 return response.json().then(function(data) {
                     var errorMsg = data.error || '提交失败，请稍后重试。';
-                    // 检查是否是 Turnstile 相关错误
-                    if (errorMsg.toLowerCase().includes('turnstile') || errorMsg.toLowerCase().includes('captcha')) {
-                        errorMsg = 'Turnstile 验证失败，请刷新页面后重试。';
-                        // 重置 Turnstile 让用户重新验证
-                        if ($turnstileContainer && $turnstileContainer.length) {
-                            resetTurnstile($turnstileContainer);
-                        }
+                    // 检查是否是 reCAPTCHA 相关错误
+                    if (errorMsg.toLowerCase().includes('captcha') || errorMsg.toLowerCase().includes('recaptcha')) {
+                        errorMsg = '验证码验证失败，请刷新页面后重试。';
                     }
                     showMessage($form, 'error', '❌ ' + errorMsg);
+                    resetRecaptcha();
                 }).catch(function() {
                     showMessage($form, 'error', '❌ 提交失败，请稍后重试。');
+                    resetRecaptcha();
                 });
             }
         })
         .catch(function() {
             showMessage($form, 'error', '❌ 网络连接异常，请检查网络后重试。');
+            resetRecaptcha();
         })
         .finally(function() {
             $submitBtn.prop('disabled', false).text(originalText);
@@ -370,6 +346,12 @@
                         firstInvalid.focus();
                     }
                     showMessage($form, 'warning', '⚠️ 请完善表单中标记的必填项后再提交。');
+                    return;
+                }
+
+                // 检查 reCAPTCHA 是否已加载
+                if (typeof grecaptcha === 'undefined') {
+                    showMessage($form, 'error', '❌ 验证码组件加载失败，请刷新页面后重试。');
                     return;
                 }
 

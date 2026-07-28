@@ -48,7 +48,8 @@
       "certification": ["ISO9001", "CE", "ETL", "FCC", "GS", "UKCA", "RCM"]
     }
     </script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -320,9 +321,9 @@
                                 </span>
                             </label>
                         </div>
-                        <!-- Turnstile 验证 -->
+                        <!-- Google reCAPTCHA 验证 -->
                         <div class="form-group" style="margin-bottom: 16px;">
-                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAD4a_IElkNPPI15P"></div>
+                            <div class="g-recaptcha" data-sitekey="6LexNGktAAAAAGYTn9JafmZ3817uvJy40PEpdV-A"></div>
                         </div>
                         <div class="hyt-form-action">
                             <button type="submit" class="hyt-submit-btn">Submit Inquiry</button>
