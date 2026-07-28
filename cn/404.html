@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 | 华亿腾</title>
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/global.css" rel="stylesheet">
+    <style>
+        .error-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 40px 20px;
+            background: #F8FAFC;
+        }
+        .error-page .code {
+            font-size: 120px;
+            font-weight: 800;
+            color: #1e7470;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .error-page h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0B2545;
+            margin-bottom: 16px;
+        }
+        .error-page p {
+            font-size: 16px;
+            color: #4A5568;
+            max-width: 500px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .error-page .btn-primary {
+            display: inline-block;
+            background: #1e7470;
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .error-page .btn-primary:hover {
+            background: #155a57;
+            transform: translateY(-2px);
+        }
+        .error-page .logo {
+            margin-bottom: 30px;
+        }
+        .error-page .logo img {
+            height: 60px;
+        }
+        @media (max-width: 640px) {
+            .error-page .code { font-size: 72px; }
+            .error-page h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="logo">
+            <img src="../images/logo.webp" alt="华亿腾">
+        </div>
+        <div class="code">404</div>
+        <h1>页面未找到</h1>
+        <p>抱歉，您访问的页面不存在或已被移动。请返回我们的首页。</p>
+        <a href="index.html" class="btn-primary">← 返回首页</a>
+    </div>
+</body>
+</html>
