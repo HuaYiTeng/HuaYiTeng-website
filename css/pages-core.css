@@ -510,3 +510,21 @@
     .product-grid-5 .product-name{font-size:15px!important}
 }
 @media (max-width:480px){.hyt-cert-grid{grid-template-columns:repeat(3,1fr)}.hyt-cert-subtitle{font-size:10px}}
+
+/* Banner 图片自适应 */
+.banner .swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 如果希望 Banner 高度固定，用 object-fit: cover */
+.banner .swiper-slide {
+    position: relative;
+}
+.banner .swiper-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
