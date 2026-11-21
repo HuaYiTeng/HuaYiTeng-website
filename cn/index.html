@@ -57,8 +57,8 @@
       "certification": ["ISO9001", "CE", "ETL", "FCC", "GS", "UKCA", "RCM"]
     }
     </script>
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
+    <!-- Cloudflare Turnstile 验证 -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 </head>
 <body>
 
@@ -398,9 +398,9 @@
                                 </span>
                             </label>
                         </div>
-                        <!-- Google reCAPTCHA 验证 -->
+                        <!-- Cloudflare Turnstile 验证 -->
                         <div class="form-group" style="margin-bottom: 16px;">
-                            <div class="g-recaptcha" data-sitekey="6LexNGktAAAAAGYTn9JafmZ3817uvJy40PEpdV-A"></div>
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAGLSFX-5dIfFDxgP" data-action="contact"></div>
                         </div>
                         <div class="hyt-form-action">
                             <button type="submit" class="hyt-submit-btn">提交询盘</button>
