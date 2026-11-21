@@ -1,11 +1,11 @@
-# 为所有图片、CSS、JS、字体设置1年缓存
-/images/*    
+# 图片和字体长期缓存；CSS、JS 使用短缓存并强制重新验证
+/images/*   
   Cache-Control: public, max-age=31536000, immutable
-/css/*       
-  Cache-Control: public, max-age=31536000, immutable
-/js/*        
-  Cache-Control: public, max-age=31536000, immutable
-/fonts/*     
+/css/*      
+  Cache-Control: public, max-age=86400, must-revalidate
+/js/*       
+  Cache-Control: public, max-age=86400, must-revalidate
+/fonts/*    
   Cache-Control: public, max-age=31536000, immutable
 
   /*
