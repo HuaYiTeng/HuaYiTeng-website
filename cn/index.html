@@ -47,18 +47,105 @@
     <link rel="canonical" href="https://hyteng.com/cn/">
 
     <!-- ============================================================
-         Structured Data (JSON-LD)
-     ============================================================ -->
+          Structured Data (JSON-LD)
+      ============================================================ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "华亿腾",
-      "url": "https://hyteng.com",
-      "description": "ISO9001认证制造商，成立于2008年，月产能90万台。专注于IP20室内电源适配器（1W-180W）及IP44户外防溅水电源（1W-60W）。拥有CE、ETL、FCC、GS、UKCA、RCM等16+全球认证。支持OEM/ODM定制。",
-      "foundingDate": "2008",
-      "areaServed": ["US", "EU", "JP", "KR", "AU"],
-      "certification": ["ISO9001", "CE", "ETL", "FCC", "GS", "UKCA", "RCM"]
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://hyteng.com/#organization",
+          "name": "华亿腾",
+          "legalName": "深圳市华亿腾科技开发有限公司",
+          "url": "https://hyteng.com",
+          "logo": "https://hyteng.com/images/logo.webp",
+          "foundingDate": "2008",
+          "sameAs": [
+            "https://hyteng.en.alibaba.com/"
+          ],
+          "description": "ISO9001认证制造商，成立于2008年，月产能90万台。专注于IP20室内电源适配器（1W-180W）及IP44户外防溅水电源（1W-60W）。拥有CE、ETL、FCC、GS、UKCA、RCM等16+全球认证。支持OEM/ODM定制。",
+          "areaServed": ["US", "EU", "JP", "KR", "AU"],
+          "certification": ["ISO9001", "CE", "ETL", "FCC", "GS", "UKCA", "RCM"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+86-755-84099039",
+            "contactType": "sales",
+            "areaServed": ["US", "EU", "JP", "KR", "AU"],
+            "availableLanguage": ["zh", "en"]
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://hyteng.com/cn/#webpage",
+          "url": "https://hyteng.com/cn/",
+          "name": "华亿腾 | 专业电源适配器制造商",
+          "description": "ISO9001认证制造商，成立于2008年，月产能90万台。专注于室内电源适配器与IP44户外防水电源（1W-180W）。支持OEM/ODM深度定制。",
+          "datePublished": "2024-01-01",
+          "dateModified": "2026-11-21",
+          "inLanguage": "zh-CN",
+          "publisher": {
+            "@id": "https://hyteng.com/#organization"
+          },
+          "author": {
+            "@id": "https://hyteng.com/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://hyteng.com/cn/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "最低起订量是多少？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MOQ从100件起，具体取决于型号和配置。部分特殊定制设计需要更高的数量。请提供所需型号、插头、输出及定制信息，以便确认适用MOQ。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "样品及批量生产交期是多少？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "标准产品的样品交期为3–5个自然日，批量生产为15–20个自然日。定制产品的样品交期为5–10个自然日，批量生产为20–30个自然日。交期从付款且规格确认后起算，国际运输时间另计。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "你们有哪些适配器类型及功率范围？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "HYT提供插墙式、桌面式、可互换插头、USB充电器及IP44防水电源适配器选项，现有产品系列输出功率最高可达180W。可选电压和电流组合取决于产品系列及额定功率。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "可以定制电气参数、插头、线材及品牌包装吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "支持。HYT提供输出规格、AC插头选项、DC连接器、线材、Logo、标签及零售包装的OEM与ODM定制。每个项目的可行性及对认证的影响需分别确认。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "可提供哪些认证资料？出货前如何控制质量？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "HYT拥有ISO 9001:2015质量管理体系认证，并为适用型号提供ETL、FCC、CE、UKCA、RCM、PSE、KC及CCC合规资料。所有产品出货前均执行100%老化测试、按约定规格验证及批次追溯。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "质保期多久？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "大部分HYT电源适配器具有2年质保。具体期限与条款取决于型号，应在下单前确认。"
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
     <!-- Cloudflare Turnstile 验证 -->
@@ -203,21 +290,21 @@
                 <div class="hyt-value-icon">
                     <i class="fa fa-cogs"></i>
                 </div>
-                <h4 class="hyt-value-title">全要素模块化定制</h4>
+                <h3 class="hyt-value-title">全要素模块化定制</h3>
                 <p class="hyt-value-desc">电压、电流、外壳、线材、插头、标签、包装……您提出需求，我们交付完美适配的成品。<strong>您的规格，就是我们的标准。</strong></p>
             </div>
             <div class="hyt-value-item">
                 <div class="hyt-value-icon">
                     <i class="fa fa-trophy"></i>
                 </div>
-                <h4 class="hyt-value-title">品质与合规前置</h4>
+                <h3 class="hyt-value-title">品质与合规前置</h3>
                 <p class="hyt-value-desc">出货前100%老化测试，完全符合国际安全及EMC标准。从源头规避召回风险，让您后顾无忧。</p>
             </div>
             <div class="hyt-value-item">
                 <div class="hyt-value-icon">
                     <i class="fa fa-truck"></i>
                 </div>
-                <h4 class="hyt-value-title">交付，与承诺同速</h4>
+                <h3 class="hyt-value-title">交付，与承诺同速</h3>
                 <p class="hyt-value-desc">依托精准产能规划与国际物流经验，为全球客户提供DDP/DDU/DAP一站式到门服务。<strong>交期，像我们的适配器一样可靠。</strong></p>
             </div>
         </div>
@@ -310,6 +397,52 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- ============================================================
+         FAQ 常见问题解答区块
+     ============================================================ -->
+    <div class="hyt-faq-section" style="padding:70px 0;background:#F8FAFC;border-top:1px solid #E2E8F0;border-bottom:1px solid #E2E8F0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div class="section-header-custom" style="text-align:center;margin-bottom:45px;">
+                <span style="font-size:13px;font-weight:700;color:#1e7470;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:8px;">FREQUENTLY ASKED QUESTIONS</span>
+                <h2 style="font-size:32px;font-weight:700;color:#0B2545;margin:0 0 12px 0;">采购商常见问题解答</h2>
+                <div class="underline" style="width:60px;height:3px;background:#1e7470;margin:0 auto 16px auto;border-radius:2px;"></div>
+                <p style="font-size:15px;color:#64748b;max-width:680px;margin:0 auto;line-height:1.6;">针对MOQ起订量、生产交期、参数定制、认证资料及质保条款的核心解答。</p>
+            </div>
+
+            <div class="hyt-faq-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;">
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>最低起订量是多少？</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">MOQ从100件起，具体取决于型号和配置。部分特殊定制设计需要更高的数量。请提供所需型号、插头、输出及定制信息，以便确认适用MOQ。</p>
+                </div>
+
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>样品及批量生产交期是多少？</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">标准产品的样品交期为3–5个自然日，批量生产为15–20个自然日。定制产品的样品交期为5–10个自然日，批量生产为20–30个自然日。交期从付款且规格确认后起算，国际运输时间另计。</p>
+                </div>
+
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>你们有哪些适配器类型及功率范围？</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">HYT提供插墙式、桌面式、可互换插头、USB充电器及IP44防水电源适配器选项，现有产品系列输出功率最高可达180W。可选电压和电流组合取决于产品系列及额定功率。</p>
+                </div>
+
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>可以定制电气参数、插头、线材及品牌包装吗？</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">支持。HYT提供输出规格、AC插头选项、DC连接器、线材、Logo、标签及零售包装的OEM与ODM定制。每个项目的可行性及对认证的影响需分别确认。</p>
+                </div>
+
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>可提供哪些认证资料？出货前如何控制质量？</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">HYT拥有ISO 9001:2015质量管理体系认证，并为适用型号提供ETL、FCC、CE、UKCA、RCM、PSE、KC及CCC合规资料。所有产品出货前均执行100%老化测试、按约定规格验证及批次追溯。</p>
+                </div>
+
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>质保期多久？</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">大部分HYT电源适配器具有2年质保。具体期限与条款取决于型号，应在下单前确认。</p>
+                </div>
+            </div>
         </div>
     </div>
 

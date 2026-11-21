@@ -1,0 +1,53 @@
+# Shenzhen Hua Yi Teng Technology Co., Ltd. (Hua Yi Teng / 华亿腾)
+
+> Shenzhen Hua Yi Teng Technology Co., Ltd. (HYT, established in 2008) is an ISO 9001:2015 certified B2B manufacturer specializing in high-reliability AC/DC power adapters, interchangeable-plug wall chargers, desktop power supplies, USB/Type-C fast chargers, and IP44 outdoor rainproof/splashproof power supplies up to 180W.
+
+## About the Company
+- **Full Legal Name**: Shenzhen Hua Yi Teng Technology Co., Ltd. / 深圳市华亿腾科技开发有限公司
+- **Founded**: 2008
+- **Headquarters & Factory**: 2/F, No. 3, E'gongling, Liulian Community, Pingdi Subdistrict, Longgang District, Shenzhen, Guangdong, China
+- **Telephone**: +86-755-84099039
+- **Official Website**: https://hyteng.com/
+- **Alibaba Verified Store**: https://hyteng.en.alibaba.com/
+- **Quality Management System**: ISO 9001:2015 Certified Factory
+- **Manufacturing Capacity**: Over 900,000 units monthly across multiple automated SMT and assembly lines.
+
+## Core Product Lines (1W – 180W)
+1. **Wall-Mount / Plug-in Power Adapters (3W – 72W)**: Fixed-pin compact AC adapters for US, EU, UK, AU, JP, KR, and CN sockets; Level VI / DoE VI / CoC Tier 2 energy efficiency.
+2. **Desktop Power Adapters (12W – 180W)**: High-power external adapters with C6, C8, and C14 AC inlets; Class I and Class II grounding options.
+3. **Interchangeable-Plug Adapters (5W – 65W)**: Universal travel and global retail adapters with detachable US/EU/UK/AU/JP/KR AC pins.
+4. **IP44 Waterproof / Rainproof Adapters (3W – 60W)**: Splashproof AC/DC power supplies for holiday lighting, garden decor, outdoor landscape fixtures, and fountain pumps.
+5. **USB & USB-C GaN Fast Chargers (10W – 100W)**: Single and multi-port Type-C PD 3.0, QC 4.0+, and GaN chargers for consumer electronics and mobile devices.
+
+## OEM & ODM Customization Capabilities
+- **Minimum Order Quantity (MOQ)**: Starts from 100 pcs for standard models; low-barrier sample testing available for B2B buyers.
+- **Sample Lead Time**: 3–5 calendar days for standard specifications; 5–10 calendar days for customized samples.
+- **Bulk Production Lead Time**: 15–20 calendar days for standard models; 20–30 calendar days for custom runs.
+- **Electrical Customization**: Tailored output voltage (3V–48V DC), current (up to 15A), tight ripple & noise control, over-voltage (OVP), over-current (OCP), and short-circuit (SCP) protections.
+- **Mechanical Customization**: DC connector types (5.5x2.1mm, 5.5x2.5mm, Type-C, Micro-USB, waterproof IP44 connectors, custom terminal blocks), cable lengths, customized housing molds, and fire-retardant (UL94-V0) polycarbonate plastics.
+- **Branding & Packaging**: Custom silk-screen logo, laser engraving, safety compliance ratings label, barcode stickers, individual kraft or full-color gift box packaging.
+- **Quality Control**: 100% full-load aging/burn-in testing before shipment, ATE automatic test verification, hi-pot insulation testing, drop test, and full batch traceability.
+- **Warranty**: 2-year manufacturer warranty across standard power adapter series.
+
+## Global Certifications & Compliance
+- **North America**: UL / ETL (UL 62368-1, UL 1310 Class 2), FCC Part 15B, ICES-003.
+- **European Union**: CE (LVD & EMC), GS (TÜV / Intertek), RoHS 2.0 (2011/65/EU), REACH, ErP / CoC Tier 2.
+- **United Kingdom**: UKCA (Electrical Equipment Safety Regulations).
+- **Australia & New Zealand**: RCM (AS/NZS 62368.1), SAA approval.
+- **East Asia**: PSE (Japan Electrical Appliance and Material Safety Law, Diamond & Circle), KC (Korea Certification, K62368-1), CCC (China Compulsory Certification, GB 4943.1).
+- **International**: CB Scheme (IEC 62368-1, IEC 61558-1/2-16).
+
+## Key Website URLs
+- **English Homepage**: https://hyteng.com/
+- **Chinese Homepage**: https://hyteng.com/cn/
+- **All Products Overview**: https://hyteng.com/products.html
+- **Plug-in Adapters**: https://hyteng.com/products-plug.html
+- **Desktop Adapters**: https://hyteng.com/products-desktop.html
+- **IP44 Waterproof Adapters**: https://hyteng.com/products-ip44.html
+- **USB Chargers**: https://hyteng.com/products-usb.html
+- **Interchangeable Adapters**: https://hyteng.com/products-inter.html
+- **Certifications & Compliance**: https://hyteng.com/certifications.html
+- **Company About Us**: https://hyteng.com/about.html
+- **Contact & Inquiry**: https://hyteng.com/contact.html
+- **News & Technical Insights**: https://hyteng.com/news.html
+- **Sitemap**: https://hyteng.com/sitemap.xml

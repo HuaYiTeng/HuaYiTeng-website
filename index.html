@@ -40,13 +40,100 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Hua Yi Teng",
-      "url": "https://hyteng.com",
-      "description": "ISO9001 certified manufacturer established in 2008, producing 900,000 units monthly. We specialize in premium IP20 indoor power adapters (1W-180W) & splashproof IP44 outdoor seasonal lighting power supplies. 16+ global certifications (CE, ETL, FCC, GS, UKCA, RCM). OEM/ODM customization available.",
-      "foundingDate": "2008",
-      "areaServed": ["US", "EU", "JP", "KR", "AU"],
-      "certification": ["ISO9001", "CE", "ETL", "FCC", "GS", "UKCA", "RCM"]
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://hyteng.com/#organization",
+          "name": "Hua Yi Teng",
+          "legalName": "Shenzhen Hua Yi Teng Technology Co., Ltd.",
+          "url": "https://hyteng.com",
+          "logo": "https://hyteng.com/images/logo.webp",
+          "foundingDate": "2008",
+          "sameAs": [
+            "https://hyteng.en.alibaba.com/"
+          ],
+          "description": "ISO9001 certified manufacturer established in 2008, producing 900,000 units monthly. We specialize in premium IP20 indoor power adapters (1W-180W) & splashproof IP44 outdoor seasonal lighting power supplies. 16+ global certifications (CE, ETL, FCC, GS, UKCA, RCM). OEM/ODM customization available.",
+          "areaServed": ["US", "EU", "JP", "KR", "AU"],
+          "certification": ["ISO9001", "CE", "ETL", "FCC", "GS", "UKCA", "RCM"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+86-755-84099039",
+            "contactType": "sales",
+            "areaServed": ["US", "EU", "JP", "KR", "AU"],
+            "availableLanguage": ["en", "zh"]
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://hyteng.com/#webpage",
+          "url": "https://hyteng.com/",
+          "name": "Hua Yi Teng | Professional Power Adapter Manufacturer",
+          "description": "ISO9001 certified manufacturer established in 2008, producing 900,000 units monthly. Premium indoor & IP44 outdoor power adapters (1W-180W). OEM/ODM customization available.",
+          "datePublished": "2024-01-01",
+          "dateModified": "2026-11-21",
+          "inLanguage": "en-US",
+          "publisher": {
+            "@id": "https://hyteng.com/#organization"
+          },
+          "author": {
+            "@id": "https://hyteng.com/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://hyteng.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is your minimum order quantity (MOQ)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MOQ starts from 100 pcs and varies by model and configuration. Some special custom designs require a higher quantity. Send the required model, plug, output and customization details for the applicable MOQ."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are your sample and bulk production lead times?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For standard products, samples take 3–5 calendar days and bulk production takes 15–20 calendar days. For customized products, samples take 5–10 calendar days and bulk production takes 20–30 calendar days. Timing starts after payment and specification confirmation; international transit is additional."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which power adapter types and power ratings do you offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "HYT offers wall-mount, desktop, interchangeable-plug, USB charger, and IP44 waterproof power adapter options with outputs up to 180W. Available voltage and current combinations depend on the series and rated power."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you customize the electrical specifications, plug, cable, and branding?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. HYT supports OEM and ODM customization of output specifications, AC plug options, DC connectors, cables, logos, labels, and retail packaging. Feasibility and any impact on safety certification are confirmed for each project."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which certificates do you provide and how do you check quality before shipment?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "HYT holds ISO 9001:2015 factory certification and provides ETL, FCC, CE, UKCA, RCM, PSE, KC, and CCC compliance documentation for applicable models. Every adapter undergoes 100% burn-in testing, specification verification, and batch traceability before shipment."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the warranty period?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most HYT power adapters have a 2-year warranty. The applicable period and terms depend on the specific model and are confirmed prior to order placement."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
     <!-- Cloudflare Turnstile 验证 -->
@@ -179,17 +266,17 @@
         <div class="hyt-values-row">
             <div class="hyt-value-item">
                 <div class="hyt-value-icon"><i class="fa fa-cogs"></i></div>
-                <h4 class="hyt-value-title">True Customization</h4>
+                <h3 class="hyt-value-title">True Customization</h3>
                 <p class="hyt-value-desc">Voltage, current, casing, cables, connectors, plug types, labels, packaging — fully tailored to your brand.</p>
             </div>
             <div class="hyt-value-item">
                 <div class="hyt-value-icon"><i class="fa fa-trophy"></i></div>
-                <h4 class="hyt-value-title">Quality Assurance</h4>
+                <h3 class="hyt-value-title">Quality Assurance</h3>
                 <p class="hyt-value-desc">100% aging test before shipment. Full compliance with international safety &amp; EMC standards.</p>
             </div>
             <div class="hyt-value-item">
                 <div class="hyt-value-icon"><i class="fa fa-truck"></i></div>
-                <h4 class="hyt-value-title">Fast &amp; Reliable Delivery</h4>
+                <h3 class="hyt-value-title">Fast &amp; Reliable Delivery</h3>
                 <p class="hyt-value-desc">DDP/DDU/DAP service available for Europe, USA, Japan, Korea, Australia, and other markets.</p>
             </div>
         </div>
@@ -246,6 +333,50 @@
                 <div class="hyt-cert-footer-item">
                     <i class="fa fa-globe"></i>
                     <div><strong>Global Market Ready</strong><span>USA | EU | JP | KR | AU</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= FAQ 区块 ================= -->
+    <div class="hyt-faq-section" style="padding:70px 0;background:#F8FAFC;border-top:1px solid #E2E8F0;border-bottom:1px solid #E2E8F0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div class="section-header-custom" style="text-align:center;margin-bottom:45px;">
+                <span style="font-size:13px;font-weight:700;color:#1e7470;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:8px;">FREQUENTLY ASKED QUESTIONS</span>
+                <h2 style="font-size:32px;font-weight:700;color:#0B2545;margin:0 0 12px 0;">Buyer FAQs</h2>
+                <div class="underline" style="width:60px;height:3px;background:#1e7470;margin:0 auto 16px auto;border-radius:2px;"></div>
+                <p style="font-size:15px;color:#64748b;max-width:680px;margin:0 auto;line-height:1.6;">Direct answers to common procurement questions on MOQ, lead times, custom specifications, compliance, and warranty terms.</p>
+            </div>
+
+            <div class="hyt-faq-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;">
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>What is your minimum order quantity (MOQ)?</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">MOQ starts from 100 pcs and varies by model and configuration. Some special custom designs require a higher quantity. Send the required model, plug, output and customization details for the applicable MOQ.</p>
+                </div>
+
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>What are your sample and bulk production lead times?</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">For standard products, samples take 3–5 calendar days and bulk production takes 15–20 calendar days. For customized products, samples take 5–10 calendar days and bulk production takes 20–30 calendar days. Timing starts after payment and specification confirmation; international transit is additional.</p>
+                </div>
+
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>Which power adapter types and power ratings do you offer?</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">HYT offers wall-mount, desktop, interchangeable-plug, USB charger, and IP44 waterproof power adapter options with outputs up to 180W. Available voltage and current combinations depend on the series and rated power.</p>
+                </div>
+
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>Can you customize the electrical specifications, plug, cable, and branding?</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">Yes. HYT supports OEM and ODM customization of output specifications, AC plug options, DC connectors, cables, logos, labels, and retail packaging. Feasibility and any impact on safety certification are confirmed for each project.</p>
+                </div>
+
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>Which certificates do you provide and how do you check quality before shipment?</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">HYT holds ISO 9001:2015 factory certification and provides ETL, FCC, CE, UKCA, RCM, PSE, KC, and CCC compliance documentation for applicable models. Every adapter undergoes 100% burn-in testing, specification verification, and batch traceability before shipment.</p>
+                </div>
+
+                <div class="hyt-faq-card" style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:26px 28px;box-shadow:0 4px 15px rgba(11,37,69,0.04);">
+                    <h3 style="font-size:17px;font-weight:700;color:#0B2545;margin:0 0 12px 0;line-height:1.45;display:flex;align-items:flex-start;gap:10px;"><i class="fa fa-question-circle" style="color:#1e7470;font-size:18px;margin-top:2px;flex-shrink:0;"></i><span>What is the warranty period?</span></h3>
+                    <p style="font-size:14px;color:#475569;line-height:1.65;margin:0;">Most HYT power adapters have a 2-year warranty. The applicable period and terms depend on the specific model and are confirmed prior to order placement.</p>
                 </div>
             </div>
         </div>
