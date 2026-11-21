@@ -125,17 +125,17 @@ img,svg,video,iframe{max-width:100%}
 .cert-grid img:hover{opacity:1}
 
 /* ========== 9. 内页导航栏 ========== */
-.nyheader{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;min-height:80px;width:80%;position:fixed;top:20px;left:10%;background:#fff;z-index:999999;transition:all .5s;padding:0 20px;box-shadow:0 2px 15px rgba(0,0,0,.08);border-radius:8px}
+.nyheader{display:flex;justify-content:space-between;align-items:center;flex-wrap:nowrap;height:80px;min-height:80px;width:80%;position:fixed;top:20px;left:10%;background:#fff;z-index:999999;transition:all .5s;padding:0 20px;box-shadow:0 2px 15px rgba(0,0,0,.08);border-radius:8px;box-sizing:border-box}
 .nyheader.on{width:100%;left:0;top:0;border-radius:0}
 .nyheader-left{flex-shrink:0}
-.nyheader-logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nyheader-brand{font-size:18px;font-weight:700;color:var(--dark)}
-.nyheader-center{flex:1;display:flex;justify-content:flex-end;margin-right:20px}
-.nyheader-right{flex-shrink:0;display:flex;align-items:center;gap:10px}
+.nyheader-logo-link{display:flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
+.nyheader-brand{font-size:18px;font-weight:700;color:var(--dark);white-space:nowrap}
+.nyheader-center{flex:1 1 auto;min-width:0;display:flex;justify-content:flex-end;margin-right:20px}
+.nyheader-right{flex-shrink:0;display:flex;align-items:center;gap:10px;white-space:nowrap}
 .nyheader .inmuen{float:none;display:block}
-.nyheader .inmuen ul{margin:0;padding:0;display:flex}
-.nyheader .inmuen ul li{float:left;list-style:none;position:relative}
-.nyheader .inmuen ul li>a{display:block;line-height:80px;padding:0 18px;font-size:15px;font-weight:600;color:#333;transition:color .3s}
+.nyheader .inmuen ul{margin:0;padding:0;display:flex;flex-wrap:nowrap}
+.nyheader .inmuen ul li{float:left;list-style:none;position:relative;flex-shrink:0;white-space:nowrap}
+.nyheader .inmuen ul li>a{display:block;line-height:80px;padding:0 18px;font-size:15px;font-weight:600;color:#333;transition:color .3s;white-space:nowrap}
 .nyheader .inmuen ul li>a:hover,.nyheader .inmuen ul li>a.on{color:var(--primary)}
 .nyheader .inmuen ul li .erji{display:none;width:180px;background:#fff;position:absolute;left:50%;margin-left:-90px;top:80px;box-shadow:0 10px 25px rgba(0,0,0,.1);border-radius:8px;z-index:100}
 .nyheader .inmuen ul li .erji .li{display:block;height:40px;padding:0 15px;line-height:40px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;font-size:13px;color:#666;transition:all .3s}
@@ -155,6 +155,8 @@ img,svg,video,iframe{max-width:100%}
     align-items: center;
     margin-right: 16px;
     z-index: 1001;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 .lang-btn {
     display: flex;
@@ -171,6 +173,7 @@ img,svg,video,iframe{max-width:100%}
     transition: all .25s ease;
     font-family: inherit;
     line-height: 1.4;
+    white-space: nowrap;
 }
 .lang-btn:hover {
     border-color: var(--primary, #1e7470);
@@ -327,9 +330,71 @@ img,svg,video,iframe{max-width:100%}
     .header .inmuen .mobile-lang-switch a{font-size:14px;padding:4px 14px}
 }
 
-/* ========== 16. PC端隐藏移动端语言切换 ========== */
+/* ========== 16. 内页导航栏桌面中等宽度（1024px-1366px）适配 ========== */
+@media (max-width: 1366px) {
+    .nyheader {
+        width: 92%;
+        left: 4%;
+        padding: 0 16px;
+    }
+    .nyheader-center {
+        margin-right: 12px;
+    }
+    .nyheader .inmuen ul li>a {
+        padding: 0 12px;
+        font-size: 14px;
+    }
+    .nyheader-brand {
+        font-size: 16px;
+    }
+    .lang-dropdown {
+        margin-right: 10px;
+    }
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nyheader {
+        width: 96%;
+        left: 2%;
+        padding: 0 10px;
+    }
+    .nyheader-center {
+        margin-right: 6px;
+    }
+    .nyheader .inmuen ul li>a {
+        padding: 0 8px;
+        font-size: 13px;
+    }
+    .nyheader-left .logo img {
+        height: 38px;
+    }
+    .nyheader-logo-link {
+        gap: 8px;
+    }
+    .nyheader-brand {
+        font-size: 15px;
+    }
+    .lang-dropdown {
+        margin-right: 4px;
+    }
+    .lang-btn {
+        padding: 5px 8px;
+        gap: 4px;
+        font-size: 12px;
+    }
+}
+
+/* ========== 17. PC端隐藏移动端语言切换 ========== */
+@media screen and (min-width: 992px) {
+    .nyheader .mobile-lang-switch {
+        display: none !important;
+    }
+}
 @media screen and (min-width: 769px) {
-    .nyheader .mobile-lang-switch,
     .header .mobile-lang-switch {
         display: none !important;
     }

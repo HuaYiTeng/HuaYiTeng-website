@@ -427,10 +427,42 @@
     .compact-form,.compact-form input,.compact-form textarea{min-width:0;max-width:100%;box-sizing:border-box}
     .compact-contact-inner,.compact-info{min-width:0;max-width:100%}
     .cf-turnstile,.cf-turnstile iframe{max-width:100%}
+}
 
-    /* ============================================================
-       内页导航手机端 (nyheader) — 完整保留
-       ============================================================ */
+/* ============================================================
+   桌面端导航 (nyheader) 及 Hero 安全间距保障 (>= 992px)
+   ============================================================ */
+@media (min-width: 992px) {
+    .nyheader {
+        flex-wrap: nowrap !important;
+        height: 80px !important;
+        min-height: 80px !important;
+        box-sizing: border-box !important;
+    }
+    .nyheader .inmuen ul {
+        flex-wrap: nowrap !important;
+    }
+    .nyheader .inmuen ul li {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+    }
+    .nyheader .inmuen ul li>a {
+        white-space: nowrap !important;
+    }
+    .nyheader-left, .nyheader-right, .lang-dropdown, .lang-btn {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+    }
+    .products-hero, .category-hero, .detail-hero, .news-hero,
+    .about-hero, .cert-hero, .contact-hero, .legal-hero {
+        padding-top: 160px !important;
+    }
+}
+
+/* ============================================================
+   内页导航移动端/平板端 (nyheader) — 提前至 991px 触发汉堡菜单
+   ============================================================ */
+@media (max-width: 991px) {
     .nyheader{width:100%!important;height:60px!important;min-height:60px!important;padding:10px 15px!important;position:fixed!important;top:0!important;left:0!important;right:0!important;box-shadow:0 2px 15px rgba(0,0,0,.08)!important;display:flex!important;align-items:center!important;justify-content:space-between!important;background:#fff!important;z-index:999999!important;box-sizing:border-box!important;border-radius:0!important;flex-wrap:nowrap!important}
     .nyheader .nyheader-left{flex:0 0 auto!important;display:flex!important;align-items:center!important}
     .nyheader .nyheader-left .logo img{height:35px!important}
@@ -475,6 +507,10 @@
     .nyheader .mobile-lang-switch a{display:inline-block;padding:5px 18px;font-size:15px;font-weight:600;color:#666;text-decoration:none;border-radius:4px}
     .nyheader .mobile-lang-switch a.active{color:#1e7470;background:rgba(30,116,112,.08)}
     .nyheader .mobile-lang-switch .lang-divider{color:#ccc;padding:0 4px}
+
+    /* 991px及以下汉堡菜单状态下 Hero Banner 留出60px导航高度的空隙 */
+    .products-hero,.category-hero,.detail-hero,.news-hero,
+    .about-hero,.cert-hero,.contact-hero,.legal-hero{padding:120px 0 40px!important}
 }
 @media (max-width:640px){
     .products-hero,.category-hero,.detail-hero,.news-hero,
