@@ -90,9 +90,9 @@
                 </ul>
                 <!-- 移动端语言切换（手机端显示） -->
 <div class="mobile-lang-switch">
-    <a href="news.html" class="active">English</a>
+    <a href="news.html" data-lang="en" class="active">English</a>
     <span class="lang-divider">|</span>
-    <a href="cn/news.html">中文</a>
+    <a href="cn/news.html" data-lang="zh">中文</a>
 </div>
             </div>
         </div>
@@ -335,107 +335,6 @@
     $(function(){
         new WOW().init();
 
-        // ============================================================
-        // 移动端导航 - 二级菜单滑动动画
-        // ============================================================
-        var $navHandle = $('.nyheader .nav_handle');
-        var $mobileMenu = $('.nyheader .inmuen');
-        var $submenuItems = $('.nyheader .inmuen ul li.has-submenu');
-        var $body = $('body');
-        var isMenuOpen = false;
-
-        // 给包含二级菜单的 li 添加 has-submenu 类
-        $('.nyheader .inmuen ul li .erji').each(function() {
-            $(this).closest('li').addClass('has-submenu');
-        });
-        $submenuItems = $('.nyheader .inmuen ul li.has-submenu');
-
-        // --- 1. 汉堡按钮：打开/关闭全屏菜单 ---
-        $navHandle.on('click', function(e) {
-            e.stopPropagation();
-            $(this).toggleClass('on');
-
-            if ($mobileMenu.hasClass('active')) {
-                $mobileMenu.slideUp(300, function() {
-                    $mobileMenu.removeClass('active');
-                    $body.removeClass('menu-open');
-                });
-                isMenuOpen = false;
-                $submenuItems.removeClass('open');
-                $submenuItems.find('.erji').slideUp(200);
-            } else {
-                $mobileMenu.addClass('active').slideDown(350);
-                $body.addClass('menu-open');
-                isMenuOpen = true;
-            }
-        });
-
-        // --- 2. 二级菜单点击展开/收起 ---
-        $submenuItems.on('click', function(e) {
-            var $target = $(e.target);
-            if ($target.is('a') && $target.closest('.has-submenu').length) {
-                e.preventDefault();
-                var $parent = $target.closest('.has-submenu');
-                var $subMenu = $parent.find('.erji');
-                var isCurrentlyOpen = $parent.hasClass('open');
-
-                if (isCurrentlyOpen) {
-                    $parent.removeClass('open');
-                    $subMenu.slideUp(250);
-                } else {
-                    $parent.addClass('open');
-                    $subMenu.slideDown(300);
-                }
-            }
-        });
-
-        // --- 3. 点击子菜单项后自动关闭菜单 ---
-        $('.nyheader .inmuen ul li .erji .li').on('click', function() {
-            if ($mobileMenu.is(':visible')) {
-                $submenuItems.removeClass('open');
-                $submenuItems.find('.erji').slideUp(150);
-                setTimeout(function() {
-                    $navHandle.removeClass('on');
-                    $mobileMenu.slideUp(300, function() {
-                        $mobileMenu.removeClass('active');
-                        $body.removeClass('menu-open');
-                    });
-                    isMenuOpen = false;
-                }, 200);
-            }
-        });
-
-        // --- 4. 点击页面空白区域关闭菜单 ---
-        $(document).on('click', function(e) {
-            if (isMenuOpen && $mobileMenu.is(':visible')) {
-                var $target = $(e.target);
-                if (!$target.closest('.nyheader .inmuen').length && !$target.closest('.nyheader .nav_handle').length) {
-                    $navHandle.removeClass('on');
-                    $mobileMenu.slideUp(300, function() {
-                        $mobileMenu.removeClass('active');
-                        $body.removeClass('menu-open');
-                    });
-                    $submenuItems.removeClass('open');
-                    $submenuItems.find('.erji').slideUp(200);
-                    isMenuOpen = false;
-                }
-            }
-        });
-
-        // --- 5. 窗口 resize 时重置菜单状态 ---
-        var windowWidth = $(window).width();
-        $(window).on('resize', function() {
-            var newWidth = $(window).width();
-            if (newWidth > 900 && windowWidth <= 900) {
-                $navHandle.removeClass('on');
-                $mobileMenu.removeClass('active').removeAttr('style');
-                $body.removeClass('menu-open');
-                $submenuItems.removeClass('open');
-                $submenuItems.find('.erji').removeAttr('style');
-                isMenuOpen = false;
-            }
-            windowWidth = newWidth;
-        });
 
         // ============================================================
         // 新闻分类筛选功能（URL驱动）

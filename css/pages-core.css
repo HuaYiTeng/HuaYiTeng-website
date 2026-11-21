@@ -344,7 +344,7 @@
     .hyt-story-headline{font-size:24px}
     .hyt-cert-title{font-size:28px}
     .hyt-contact-inner{flex-direction:column;gap:0}
-    .hyt-contact-info,.hyt-inquiry-wrapper{padding:35px 25px}
+    .hyt-contact-info,.hyt-inquiry-wrapper{padding:35px 25px;min-width:0}
     .filter-section{top:70px}
     .contact-main-wrapper{gap:35px;padding:40px 32px}
     .contact-info-left{padding-right:30px}
@@ -359,8 +359,9 @@
 
     .detail-layout,.products-layout,.category-layout,.news-layout{flex-direction:column;padding:30px 0}
     .detail-sidebar,.products-sidebar,.category-sidebar,.news-sidebar{position:static;flex:auto}
-    .category-list{display:flex;flex-wrap:wrap}
-    .category-list li{flex:1;min-width:120px;border-bottom:none;border-right:1px solid #f0f0f0}
+    .category-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+    .category-list li{min-width:0;border-bottom:none;border-right:1px solid #f0f0f0}
+    .category-list li:last-child:nth-child(odd){grid-column:1/-1;border-right:none}
     .category-list li:last-child{border-right:none}
     .category-list li a{text-align:center;padding:12px 10px;font-size:12px}
     .category-list li a.active{border-left:none;border-bottom:2px solid #1e7470}
@@ -406,11 +407,12 @@
     .contact-hero h1{font-size:32px}
     .contact-hero p{font-size:15px}
     .contact-main-wrapper{flex-direction:column;gap:30px;padding:24px 18px;border-radius:16px}
+    .contact-main-wrapper, .contact-info-left, .contact-form-right{min-width:0;max-width:100%}
     .contact-info-left{border-right:none;padding-right:0;padding-bottom:20px;border-bottom:1px solid #E8EDF2}
     .contact-info-left .company-name{font-size:18px}
     .contact-form-right h2{font-size:24px}
     .form-row{flex-direction:column;gap:14px}
-    .map-wrapper iframe{height:220px}
+    .map-wrapper iframe{height:220px;width:100%;max-width:100%}
     .map-address-bar{flex-direction:column;text-align:center;gap:6px;padding:12px 16px;font-size:13px}
     .map-address-bar .action-link{white-space:normal}
     .info-item{padding:8px 10px}
@@ -422,6 +424,9 @@
     .legal-content p,.legal-content ul li{font-size:14px}
     .compact-contact-inner{flex-direction:column;text-align:center}
     .compact-form{flex-direction:column}
+    .compact-form,.compact-form input,.compact-form textarea{min-width:0;max-width:100%;box-sizing:border-box}
+    .compact-contact-inner,.compact-info{min-width:0;max-width:100%}
+    .cf-turnstile,.cf-turnstile iframe{max-width:100%}
 
     /* ============================================================
        内页导航手机端 (nyheader) — 完整保留

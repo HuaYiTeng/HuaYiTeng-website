@@ -31,7 +31,10 @@
 .content,.about-container{max-width:1200px;margin:0 auto;padding:0 20px;box-sizing:border-box}
 .about-container{padding:40px 20px}
 
-img{max-width:100%}
+/* 全局防横向溢出：不产生横向滚动容器，兼容 sticky 定位 */
+html{max-width:100%;overflow-x:clip}
+body{max-width:100%;overflow-x:clip}
+img,svg,video,iframe{max-width:100%}
 .fl{float:left}.fr{float:right}
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .clean{display:block;width:100%;clear:both}

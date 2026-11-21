@@ -224,7 +224,7 @@ $(function() {
         }
 
         function updateLanguageMenu() {
-            var links = document.querySelectorAll('.lang-menu a[data-lang]');
+            var links = document.querySelectorAll('.lang-menu a[data-lang], .mobile-lang-switch a[data-lang]');
             var currentLang = detectCurrentLang();
             links.forEach(function(link) {
                 var langCode = link.getAttribute('data-lang');
