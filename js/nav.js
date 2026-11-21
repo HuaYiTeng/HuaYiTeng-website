@@ -143,7 +143,7 @@ $(function() {
     var windowWidth = $(window).width();
     $(window).off('resize.unified').on('resize.unified', function() {
         var newWidth = $(window).width();
-        if (newWidth > 768 && windowWidth <= 768) {
+        if (newWidth > 1024 && windowWidth <= 1024) {
             $handles.removeClass('on').attr('aria-expanded', 'false');
             $('.header .inmuen').removeClass('kai').removeAttr('style');
             $('.nyheader .inmuen').removeClass('active').removeAttr('style');
