@@ -20,6 +20,8 @@ $(function() {
 
     if ($handles.length === 0 || $menus.length === 0) return;
 
+    $handles.attr('aria-expanded', 'false');
+
     // 给所有包含二级菜单的 li 自动添加 .has-submenu 类
     $menus.find('ul li .erji').each(function() {
         $(this).closest('li').addClass('has-submenu');
@@ -60,6 +62,8 @@ $(function() {
                 $body.addClass('menu-open');
             }
         }
+
+        $handle.attr('aria-expanded', $handle.hasClass('on') ? 'true' : 'false');
     });
 
     // --- 二级菜单点击展开/收起 ---
@@ -94,7 +98,7 @@ $(function() {
         $subItems.find('.erji').slideUp(150);
 
         setTimeout(function() {
-            $handle.removeClass('on');
+            $handle.removeClass('on').attr('aria-expanded', 'false');
             if ($header.hasClass('header')) {
                 $menu.removeClass('kai');
             } else {
@@ -110,7 +114,7 @@ $(function() {
         if ($target.closest('.header, .nyheader').length === 0) {
             var $openHeaders = $('.header .inmuen.kai, .nyheader .inmuen.active');
             if ($openHeaders.length) {
-                $handles.removeClass('on');
+                $handles.removeClass('on').attr('aria-expanded', 'false');
                 $('.header .inmuen').removeClass('kai');
                 $('.nyheader .inmuen').removeClass('active');
                 $body.removeClass('menu-open');
@@ -125,7 +129,7 @@ $(function() {
         if (e.key === 'Escape') {
             var $openHeaders = $('.header .inmuen.kai, .nyheader .inmuen.active');
             if ($openHeaders.length) {
-                $handles.removeClass('on');
+                $handles.removeClass('on').attr('aria-expanded', 'false');
                 $('.header .inmuen').removeClass('kai');
                 $('.nyheader .inmuen').removeClass('active');
                 $body.removeClass('menu-open');
@@ -140,7 +144,7 @@ $(function() {
     $(window).off('resize.unified').on('resize.unified', function() {
         var newWidth = $(window).width();
         if (newWidth > 768 && windowWidth <= 768) {
-            $handles.removeClass('on');
+            $handles.removeClass('on').attr('aria-expanded', 'false');
             $('.header .inmuen').removeClass('kai').removeAttr('style');
             $('.nyheader .inmuen').removeClass('active').removeAttr('style');
             $body.removeClass('menu-open');
