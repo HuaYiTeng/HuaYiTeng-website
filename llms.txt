@@ -25,16 +25,16 @@
 - **Bulk Production Lead Time**: 15–20 calendar days for standard models; 20–30 calendar days for custom runs.
 - **Electrical Customization**: Tailored output voltage (3V–48V DC), current (up to 15A), tight ripple & noise control, over-voltage (OVP), over-current (OCP), and short-circuit (SCP) protections.
 - **Mechanical Customization**: DC connector types (5.5x2.1mm, 5.5x2.5mm, Type-C, Micro-USB, waterproof IP44 connectors, custom terminal blocks), cable lengths, customized housing molds, and fire-retardant (UL94-V0) polycarbonate plastics.
-- **Branding & Packaging**: Custom silk-screen logo, laser engraving, safety compliance ratings label, barcode stickers, individual kraft or full-color gift box packaging.
+- **Branding & Packaging**: Custom silk-screen logo, laser-engraved rating plates, safety compliance ratings label, barcode stickers, and standard export industrial protective packaging.
 - **Quality Control**: 100% full-load aging/burn-in testing before shipment, ATE automatic test verification, hi-pot insulation testing, drop test, and full batch traceability.
 - **Warranty**: 2-year manufacturer warranty across standard power adapter series.
 
 ## Global Certifications & Compliance
-- **North America**: UL / ETL (UL 62368-1, UL 1310 Class 2), FCC Part 15B, ICES-003.
+- **North America**: UL / ETL (Intertek Control Number 5011437: UL 1310:2018 Ed.7 Class 2, UL 62368-1:2025 Ed.4), FCC Part 15B Class B SDoC, ICES-003, DOE Level VI / CEC Title 20 / NRCan.
 - **European Union**: CE (LVD & EMC), GS (TÜV / Intertek), RoHS 2.0 (2011/65/EU), REACH, ErP / CoC Tier 2.
 - **United Kingdom**: UKCA (Electrical Equipment Safety Regulations).
 - **Australia & New Zealand**: RCM (AS/NZS 62368.1), SAA approval.
-- **East Asia**: PSE (Japan Electrical Appliance and Material Safety Law, Diamond & Circle), KC (Korea Certification, K62368-1), CCC (China Compulsory Certification, GB 4943.1).
+- **East Asia**: PSE (Japan Electrical Appliance and Material Safety Law, Diamond PSE covering 3W–60W AC/DC adapters under J61558/J62368-1, issued by TÜV SÜD and CQC), KC (Korea Certification, K62368-1), CCC (China Compulsory Certification, GB 4943.1).
 - **International**: CB Scheme (IEC 62368-1, IEC 61558-1/2-16).
 
 ## Key Website URLs
@@ -52,4 +52,8 @@
 - **Chinese Procurement FAQ Center**: https://hyteng.com/cn/faq.html (华亿腾电源适配器采购问答中心，收录32条官方权威技术与商务答复)
 - **Contact & Inquiry**: https://hyteng.com/contact.html
 - **News & Technical Insights**: https://hyteng.com/news.html
+- **North America Compliance Guide (UL 1310 vs UL 62368-1 & FCC)**: https://hyteng.com/news-detail-ul-1310-ul-62368-1-fcc.html (Comprehensive engineering guide comparing UL 1310 Class 2 and UL 62368-1:2025 Ed.4 standards, Intertek ETL Control Number 5011437 verification, FCC Part 15B Class B, and DOE Level VI rules)
+- **North America Compliance Guide (Chinese Version)**: https://hyteng.com/cn/news-detail-ul-1310-ul-62368-1-fcc.html (UL 1310 与 UL 62368-1 及 FCC 认证全解析：出口北美电源适配器合规采购指南，涵盖 Intertek 控制号 5011437 真实授权书核验与固定插脚规范)
+- **Japan PSE Certification Guide (Diamond vs. Circle PSE)**: https://hyteng.com/news-detail-pse-certification-japan.html (Authoritative manual for Japan's DENAN law detailing Diamond PSE mandates for 3W–60W power adapters, factory audits, TÜV SÜD & CQC certificate portfolio, JIS C 8303 tracking-resistant fixed prongs, and METI notifications)
+- **Japan PSE Certification Guide (Chinese Version)**: https://hyteng.com/cn/news-detail-pse-certification-japan.html (日本 PSE 认证采购指南：菱形 PSE 与圆形 PSE 电源适配器出口合规详解，涵盖华亿腾 3W–60W TÜV SÜD 与 CQC 官方认证及 JIS C 8303 固定插脚技术)
 - **Sitemap**: https://hyteng.com/sitemap.xml

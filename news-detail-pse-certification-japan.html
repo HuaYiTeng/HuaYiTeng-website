@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Shenzhen Hua Yi Teng Technology Co., Ltd." />
+    <link href="favicon.ico" rel="shortcut icon">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSE Certification Guide for Importing AC/DC Power Adapters into Japan (Diamond vs. Circle PSE) | Hua Yi Teng</title>
+    <meta name="description" content="A comprehensive compliance guide on Japan's Electrical Appliance and Material Safety Law (DENAN). Learn the critical differences between Diamond PSE and Circle PSE for external AC/DC power adapters, METI reporting, tracking resistance, and JIS C 8303 plug standards.">
+    <meta name="keywords" content="PSE certification, Diamond PSE, Circle PSE, DENAN law, Japan power adapter, METI notification, tracking resistance plug, JIS C 8303, AC/DC power adapter Japan, Hua Yi Teng">
+
+    <!-- Stylesheets -->
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/pages-core.css">
+    <link rel="stylesheet" href="css/pages-news.css">
+    <link rel="alternate" hreflang="en" href="https://hyteng.com/news-detail-pse-certification-japan.html">
+    <link rel="alternate" hreflang="zh" href="https://hyteng.com/cn/news-detail-pse-certification-japan.html">
+    <link rel="alternate" hreflang="x-default" href="https://hyteng.com/news-detail-pse-certification-japan.html">
+    <link rel="canonical" href="https://hyteng.com/news-detail-pse-certification-japan.html">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PSE Certification Guide for Importing AC/DC Power Adapters into Japan (Diamond vs. Circle PSE) | Hua Yi Teng">
+    <meta property="og:description" content="Detailed engineering and regulatory guide on Japan's DENAN law: Diamond PSE vs. Circle PSE, tracking resistance plugs, METI registration, and factory audit requirements.">
+    <meta property="og:url" content="https://hyteng.com/news-detail-pse-certification-japan.html">
+    <meta property="og:site_name" content="Hua Yi Teng">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PSE Certification Guide for Importing Power Adapters into Japan | Hua Yi Teng">
+    <meta name="twitter:description" content="Authoritative Japan PSE compliance manual for external AC/DC power adapters.">
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script defer type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+    <script defer type="text/javascript" src="js/wow.min.js"></script>
+    <script defer type="text/javascript" src="js/nav.js"></script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "PSE Certification Guide for Importing AC/DC Power Adapters into Japan (Diamond vs. Circle PSE)",
+          "description": "A comprehensive compliance guide on Japan's Electrical Appliance and Material Safety Law (DENAN). Learn the critical differences between Diamond PSE and Circle PSE for external AC/DC power adapters, METI reporting, tracking resistance, and JIS C 8303 plug standards.",
+          "datePublished": "2026-11-22",
+          "dateModified": "2026-11-22",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://hyteng.com/news-detail-pse-certification-japan.html"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Shenzhen Hua Yi Teng Technology Co., Ltd.",
+            "url": "https://hyteng.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Hua Yi Teng",
+            "url": "https://hyteng.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://hyteng.com/images/logo.webp"
+            }
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://hyteng.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "News",
+              "item": "https://hyteng.com/news.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "PSE Certification Guide for Japan",
+              "item": "https://hyteng.com/news-detail-pse-certification-japan.html"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Why can an external AC/DC power adapter NEVER use the Circle PSE mark in Japan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Under Japan's Electrical Appliance and Material Safety Law (DENAN), external AC/DC power adapters and wall chargers are classified as DC Power Supply Units (直流電源装置), which are explicitly categorized as Specified Electrical Appliances and Materials (Category A). Because external power adapters connect directly to high-voltage AC mains and convert to low-voltage DC, failure presents severe electrocution or building fire hazards. Consequently, Japanese law mandates third-party conformity assessment and factory inspection resulting in the mandatory Diamond PSE mark. Circle PSE is strictly reserved for Category B non-specified appliances (such as internal components or simple low-risk household appliances without external conversion circuitry)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does an overseas brand or supplier resolve the METI importer notification (Todokede Jigyousha) requirement?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Under DENAN Article 3, the legal entity that submits the Business Notification (輸入事業届出書) to the Ministry of Economy, Trade and Industry (METI) MUST be a legally registered Japanese resident corporation (importer of record). Overseas factories cannot file METI directly. Sourcing buyers can either: (1) Use their own Japanese subsidiary or licensed Japanese distributor as the METI filer; (2) Retain a licensed Japanese Compliance Agent (ACP - Attorney for Customs Procedures) or third-party importer-of-record service. The legally registered Japanese company name must be prominently inscribed on the product rating label next to the Diamond PSE mark and certification body identifier."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What power ranges and AC plug form factors does Hua Yi Teng cover under its current PSE certificate portfolio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hua Yi Teng (HYT) maintains an extensive catalog of Diamond PSE certified AC/DC power supplies spanning from 3W to 60W. Our certifications cover compliant fixed-blade Japanese wall-mount adapters (Fixed Japanese Type A Prongs with tracking-resistant insulating sleeves conforming to JIS C 8303) and desktop power supplies, backed by official Statements of Conformity Assessment from accredited bodies such as TÜV SÜD (PSB-JP-2026-0719 under J61558) and CQC (PSE26093431 under J62368-1). All units undergo 100% full-load high-temperature burn-in testing, meet J55032 EMC noise standards, and come backed by our standard 2-year factory warranty."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Page Specific Visual Enhancement Styles -->
+    <style>
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0 35px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #2D3748;
+            background: #FFFFFF;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(11, 37, 69, 0.06);
+        }
+        .article-content th {
+            background: #0B2545;
+            color: #FFFFFF;
+            font-weight: 600;
+            padding: 14px 16px;
+            text-align: left;
+            border: 1px solid #1E3A5F;
+        }
+        .article-content td {
+            padding: 12px 16px;
+            border: 1px solid #E2E8F0;
+            vertical-align: top;
+        }
+        .article-content tr:nth-child(even) {
+            background: #F8FAFC;
+        }
+        .article-content tr:hover {
+            background: #EDF2F7;
+        }
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 25px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .article-faq-wrapper {
+            margin: 40px 0 20px;
+        }
+        .article-faq-item {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-left: 4px solid #1e7470;
+            border-radius: 6px;
+            margin-bottom: 18px;
+            padding: 0;
+            transition: all 0.2s ease;
+        }
+        .article-faq-item[open] {
+            background: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(30, 116, 112, 0.08);
+            border-color: #CBD5E0;
+            border-left-color: #1e7470;
+        }
+        .article-faq-summary {
+            padding: 16px 20px;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+        }
+        .article-faq-summary::-webkit-details-marker {
+            display: none;
+        }
+        .article-faq-summary h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #0B2545;
+            line-height: 1.4;
+            padding-right: 15px;
+        }
+        .article-faq-icon {
+            color: #1e7470;
+            font-size: 16px;
+            transition: transform 0.25s ease;
+            flex-shrink: 0;
+        }
+        .article-faq-item[open] .article-faq-icon {
+            transform: rotate(180deg);
+        }
+        .article-faq-body {
+            padding: 0 20px 18px 20px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #4A5568;
+        }
+        .article-faq-body p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body style="background: #FFFFFF;">
+
+<div class="smallest-screen"></div>
+
+<div class="nywebmain">
+
+    <!-- ================= Inner Header Navigation ================= -->
+    <div class="nyheader">
+        <div class="nyheader-left">
+            <a href="index.html" class="nyheader-logo-link">
+                <div class="logo"><img src="images/logo.webp" alt="Hua Yi Teng Logo" style="height: 45px;" loading="lazy"></div>
+                <span class="nyheader-brand">Hua Yi Teng</span>
+            </a>
+        </div>
+        <div class="nyheader-center">
+            <div class="inmuen">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li>
+                        <a href="products.html">Products</a>
+                        <div class="erji">
+                            <a href="products-plug.html" class="li">Plug in Power Adapters</a>
+                            <a href="products-desktop.html" class="li">Desktop Power Adapters</a>
+                            <a href="products-ip44.html" class="li">IP44 Raintight Adapters</a>
+                            <a href="products-usb.html" class="li">USB Chargers</a>
+                            <a href="products-inter.html" class="li">Interchangeable Adapter</a>
+                        </div>
+                    </li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="news.html" class="on">News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="mobile-lang-switch">
+                    <a href="news-detail-pse-certification-japan.html" data-lang="en" class="active">English</a>
+                    <span class="lang-divider">|</span>
+                    <a href="cn/news-detail-pse-certification-japan.html" data-lang="zh">中文</a>
+                </div>
+            </div>
+        </div>
+        <div class="nyheader-right">
+            <div class="lang-dropdown" id="langDropdown">
+                <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Switch Language">
+                    <i class="fa fa-globe" style="font-size:15px;color:#6B7A8F;"></i>
+                    <span class="lang-label" id="langLabel">EN</span>
+                    <span class="lang-arrow"><i class="fa fa-chevron-down"></i></span>
+                </button>
+                <ul class="lang-menu" role="menu">
+                    <li role="none">
+                        <a href="news-detail-pse-certification-japan.html" data-lang="en" class="active" role="menuitem">
+                            <span class="lang-label">English</span>
+                            <span class="lang-check"><i class="fa fa-check"></i></span>
+                        </a>
+                    </li>
+                    <li role="none">
+                        <a href="cn/news-detail-pse-certification-japan.html" data-lang="zh" role="menuitem">
+                            <span class="lang-label">中文</span>
+                            <span class="lang-check"><i class="fa fa-check"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav_handle" role="button" aria-label="Toggle navigation menu" aria-expanded="false"><em class="middle_holder"></em><b class="middle"><i class="l_1"></i><i class="l_2"></i></b></div>
+        </div>
+        <div class="clean"></div>
+    </div>
+
+    <!-- ================= Hero Banner ================= -->
+    <div class="detail-hero">
+        <div class="detail-container">
+            <div class="meta">
+                <span class="date">November 22, 2026</span>
+                <span class="tag">Industry Insights</span>
+            </div>
+            <h1>PSE Certification Guide for Importing AC/DC Power Adapters into Japan (Diamond vs. Circle PSE)</h1>
+            <p class="excerpt">
+                A definitive engineering and compliance breakdown of Japan's Electrical Appliance and Material Safety Law (DENAN). Learn why external AC adapters strictly require Diamond PSE, how to satisfy tracking resistance and METI filing, and how Hua Yi Teng ensures zero-defect Japanese market access.
+            </p>
+        </div>
+    </div>
+
+    <!-- ================= Article Content ================= -->
+    <div class="article-section">
+        <div class="detail-container">
+
+            <!-- Back Link -->
+            <a href="news.html" class="back-link">
+                <i class="fa fa-angle-left"></i> Back to News
+            </a>
+
+            <div class="article-content">
+
+                <!-- Feature Image -->
+                <div class="feature-image">
+                    <img src="images/news/news-certifications.webp" alt="Japan PSE Certification Diamond and Circle PSE" loading="lazy">
+                    <div class="caption">Hua Yi Teng manufactures Diamond PSE certified power adapters equipped with JIS C 8303 compliant tracking-resistant fixed Japanese Type A prongs and desktop configurations.</div>
+                </div>
+
+                <!-- Answer-First Executive Summary -->
+                <div class="highlight-box">
+                    <p>
+                        <strong>Direct Answer for Importers and Sourcing Teams:</strong> Under Japan's <em>Electrical Appliance and Material Safety Law (DENAN)</em>, all external AC/DC power adapters and wall chargers are legally classified as "Specified Electrical Appliances and Materials" (Category A) and <strong>must obtain mandatory Diamond PSE (菱形 PSE) certification</strong> through a METI-registered conformity assessment body (such as JET, JQA, TÜV, or CQC) accompanied by an on-site factory audit. <strong>Circle PSE (円形 PSE) is legally prohibited for standalone external power supplies.</strong> Furthermore, units imported into Japan must feature JIS C 8303 compliant tracking-resistant insulating prong sleeves, pass J55032 electromagnetic noise limits, and carry a legitimate METI business notification (届出事業者) label before customs clearance or listing on Amazon Japan and Rakuten.
+                    </p>
+                </div>
+
+                <p>
+                    Japan represents one of the world's most lucrative yet quality-sensitive consumer and industrial electronics markets. However, foreign OEMs, consumer electronics exporters, and cross-border e-commerce brands frequently face severe customs impoundments, Amazon Japan listing revocations, and heavy financial penalties due to a fundamental misunderstanding of Japan's statutory safety framework.
+                </p>
+
+                <p>
+                    This technical guide demystifies the DENAN regulatory structure, contrasts Diamond PSE against Circle PSE, outlines the mandatory electrical and mechanical requirements unique to Japan, and illustrates how sourcing from <a href="about.html">Shenzhen Hua Yi Teng Technology Co., Ltd. (HYT)</a> provides an immediate, risk-free gateway into the Japanese market.
+                </p>
+
+                <h2>1. Understanding Japan's DENAN Law: Diamond PSE vs. Circle PSE</h2>
+                <p>
+                    The overarching legal framework governing electrical hardware in Japan is the <strong>Electrical Appliance and Material Safety Law (電気用品安全法)</strong>, commonly referred to as <strong>DENAN</strong>, administered by the Ministry of Economy, Trade and Industry (METI). DENAN establishes two distinct regulatory tiers based on hazard risk:
+                </p>
+
+                <h3>Diamond PSE (Category A: Specified Electrical Appliances and Materials - 特別特定電気用品)</h3>
+                <p>
+                    Category A comprises 116 high-risk electrical items that interface directly with the AC electrical distribution grid and present higher probabilities of fire hazard or electrical shock. <strong>DC Power Supply Units (直流電源装置) — including all external AC/DC power adapters, wall chargers, and laptop power bricks — are formally designated under Category A.</strong>
+                </p>
+                <p>
+                    To legally apply the <strong>Diamond PSE mark (〈PS〉E)</strong>, the manufacturer must satisfy a three-tiered compliance regime:
+                </p>
+                <ul>
+                    <li><strong>Type Testing:</strong> Comprehensive safety testing conducted exclusively by a METI-registered third-party Conformity Assessment Body (CAB) adhering to Japanese Technical Standards (Harmonized standard J62368-1 or J61558 series).</li>
+                    <li><strong>Initial &amp; Ongoing Factory Audit:</strong> The CAB must conduct an on-site audit of the manufacturing facility's testing equipment, calibration records, and quality control systems.</li>
+                    <li><strong>Conformity Certificate (適合証明書):</strong> The CAB issues an official Certificate of Conformity with a 3- to 5-year validity period. The manufacturer and the Japanese importer must retain copies of this certificate.</li>
+                </ul>
+
+                <h3>Circle PSE (Category B: Non-Specified Electrical Appliances and Materials - 特定電気用品以外の電気用品)</h3>
+                <p>
+                    Category B encompasses 341 lower-risk electrical products, such as LED light bulbs, electric fans, small kitchen appliances, and internal electrical assemblies.
+                </p>
+                <p>
+                    Unlike Diamond PSE, Category B does not require third-party CAB certification or factory audits. Japanese law permits the importer or manufacturer to declare self-conformity based on internal testing or non-accredited laboratory reports to apply the <strong>Circle PSE mark (◯PS◯E)</strong>.
+                </p>
+                <p>
+                    <em>Critical Warning for Hardware Buyers:</em> Some unscrupulous suppliers attempt to sell external power supplies with a cheap Circle PSE mark to evade the expensive third-party certification fee. This practice is completely illegal in Japan. Japanese customs (Zeikan) and METI market surveillance authorities routinely confiscate external adapters bearing Circle PSE marks, subjecting the importer to criminal fines up to 100 million yen.
+                </p>
+
+                <h2>2. Direct Comparison: Diamond PSE vs. Circle PSE</h2>
+                <p>
+                    To ensure your engineering and procurement teams make fully compliant selections, review the definitive statutory comparison below:
+                </p>
+
+                <div class="table-responsive">
+                    <table class="cert-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 22%;">Regulatory Dimension</th>
+                                <th style="width: 39%;">Diamond PSE (〈PS〉E - Category A)</th>
+                                <th style="width: 39%;">Circle PSE (◯PS◯E - Category B)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Statutory Classification</strong></td>
+                                <td>Specified Electrical Appliances and Materials (116 product categories).</td>
+                                <td>Non-Specified Electrical Appliances and Materials (341 product categories).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Power Supply Applicability</strong></td>
+                                <td><strong>Mandatory for all external AC/DC power adapters, wall chargers, and desktop power supplies.</strong></td>
+                                <td>Strictly prohibited for external power adapters. Permitted only for internal power boards or host equipment.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Testing Requirement</strong></td>
+                                <td>Must be type-tested by a METI-registered accredited CAB (JET, JQA, TÜV, CQC).</td>
+                                <td>Self-declaration of conformity; internal testing or third-party laboratory reports acceptable.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Factory Audit Requirement</strong></td>
+                                <td><strong>Mandatory on-site factory audit</strong> inspecting test equipment (withstand voltage, insulation, continuity) and calibration.</td>
+                                <td>No factory audit required.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Certificate Validity</strong></td>
+                                <td>Official Certificate of Conformity valid for 3 years (or 5 years depending on standard).</td>
+                                <td>No certificate issued; self-maintained technical file.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rating Label Obligations</strong></td>
+                                <td>Diamond PSE logo + Name of Registered CAB + Japanese Registered Importer (届出事業者) + Rated Specs.</td>
+                                <td>Circle PSE logo + Japanese Registered Importer Name + Rated Specs (CAB name not permitted).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Legal Penalty for Violation</strong></td>
+                                <td>Immediate customs seizure, nationwide product recall, fines up to &yen;100,000,000, and corporate imprisonment.</td>
+                                <td>Administrative guidance, sales suspension, and financial penalties for false declaration.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>3. Technical Requirements Unique to the Japanese Market</h2>
+                <p>
+                    Securing PSE approval requires engineering modifications beyond Western UL or CE benchmarks. Power adapters designed for Japan must incorporate several specialized features:
+                </p>
+
+                <h3>Tracking Resistance &amp; Insulating Prong Sleeves (耐トラッキング性)</h3>
+                <p>
+                    Japan's humid climate combined with airborne dust accumulation between wall sockets frequently leads to electrical tracking fires (sparking across the plug base). To prevent this, Japanese standards enforce the <strong>Tracking Resistance Test (Proof Tracking Index - PTI &ge; 100/400)</strong> under standard J60884-1 / JIS C 8303.
+                </p>
+                <p>
+                    All Japanese AC blades must incorporate fire-retardant insulating sleeves covering the base of both prongs. Hua Yi Teng maintains precision private injection molds for <a href="products-plug.html">plug-in adapters</a> with integrated high-grade PBT/Nylon tracking-resistant sleeves, ensuring full compliance with Japanese fire safety mandates.
+                </p>
+
+                <h3>JIS C 8303 Plug Dimensions &amp; Fixed-Blade Engineering</h3>
+                <p>
+                    While Japanese Type A plugs resemble US 2-prong plugs, they do not utilize polarized pin widths (both blades are identical width: 6.3mm &plusmn; 0.2mm, thickness 1.5mm, with &oslash;3.0mm retention holes). Hua Yi Teng strictly implements compliant <strong>fixed Japanese Type A prongs (固定式日规插脚)</strong> alongside robust desktop power configurations. Each plug blade is precision-anchored within flame-retardant UL94-V0 polycarbonate housings, passing rigorous mechanical retention and pull-force evaluations.
+                </p>
+
+                <h3>Electromagnetic Compatibility (J55032 / CISPR 32)</h3>
+                <p>
+                    Power adapters must satisfy <strong>J55032</strong>, the Japanese standard for multimedia equipment radio disturbance characteristics. Harmonic emissions and conducted noise must be tightly suppressed across both 100V 50Hz (Eastern Japan/Tokyo) and 100V 60Hz (Western Japan/Osaka) power grid frequencies.
+                </p>
+
+                <h3>Statutory Rating Label Elements (4 Mandated Components)</h3>
+                <p>
+                    Japanese customs officials strictly inspect power adapter rating plates. A compliant Diamond PSE label must clearly display four mandatory elements in close proximity:
+                </p>
+                <ul>
+                    <li><strong>1. Diamond PSE Symbol:</strong> Legible 〈PS〉E glyph.</li>
+                    <li><strong>2. Registered Testing Body Name:</strong> The abbreviation or mark of the accredited CAB (e.g., "JET", "TÜV", or "CQC").</li>
+                    <li><strong>3. Japanese Business Notifier (届出事業者名):</strong> The registered legal entity name of the Japanese importer (e.g., "株式会社○○").</li>
+                    <li><strong>4. Technical Ratings:</strong> Input voltage (AC 100V–240V 50/60Hz), input current, rated DC output voltage and current, and model designation.</li>
+                </ul>
+
+                <h2>4. 5-Step Sourcing &amp; Compliance Checklist for Japanese Importers</h2>
+                <p>
+                    Follow this actionable verification checklist when sourcing power supplies for distribution in Japan:
+                </p>
+                <ul>
+                    <li><strong>Step 1: Inspect the Original CAB Certificate:</strong> Demand a copy of the official Certificate of Conformity (型式区分適合証明書). Check that the model numbers, power ratings, and factory address match the manufacturer's credentials.</li>
+                    <li><strong>Step 2: Establish the Japanese METI Filer:</strong> Ensure your Japanese corporate entity or partner files the Business Notification of Import (電気用品輸入事業届出書) with the regional METI bureau within 30 days of commercial operations.</li>
+                    <li><strong>Step 3: Verify Tracking-Resistant Plug Construction:</strong> Physically inspect the AC plug to confirm insulating sleeves are firmly injection-molded around the blade bases without burrs or looseness.</li>
+                    <li><strong>Step 4: Audit Factory Routine Testing Equipment:</strong> Under DENAN Article 8, the manufacturing plant must perform 100% routine testing on every production unit for: (1) Dielectric Withstand Voltage (Hi-Pot), (2) Insulation Resistance, and (3) Output Voltage/Continuity, retaining inspection records for 3 years.</li>
+                    <li><strong>Step 5: Review Label Artwork Before Mass Production:</strong> Submit production label artwork to your Japanese compliance advisor or importer of record to ensure font legibility, correct Japanese Kanji representation, and proper symbol proportions.</li>
+                </ul>
+
+                <h2>5. Why Japanese Buyers Trust Hua Yi Teng Power Adapters</h2>
+                <p>
+                    <a href="about.html">Shenzhen Hua Yi Teng Technology Co., Ltd. (HYT)</a> has served discerning Japanese consumer electronics brands, retail distributors, and industrial equipment manufacturers since 2008:
+                </p>
+                <ul>
+                    <li><strong>Verified Multi-Agency Diamond PSE Portfolio (3W–60W):</strong> Hua Yi Teng maintains a comprehensive library of official Japanese Diamond PSE <em>Statements of Conformity Assessment (適合同等証明書)</em> covering the entire <strong>3W to 60W</strong> power spectrum. Our certifications are issued by leading METI-registered Conformity Assessment Bodies (CABs), including <strong>TÜV SÜD</strong> and <strong>CQC (China Quality Certification Centre)</strong>, providing rock-solid legal assurance:
+                        <ul>
+                            <li><strong>Representative Certificate 1 (TÜV SÜD PSB, Certificate No. <code>PSB-JP-2026-0719</code>):</strong> Certified under the latest Japanese standards <code>J61558-1(2025)</code>, <code>J61558-2-16(2025)</code>, and <code>J55014-1(H27)</code>, fully covering DC power supply units and battery charger applications.</li>
+                            <li><strong>Representative Certificate 2 (CQC, Certificate No. <code>PSE26093431</code>):</strong> Certified under <code>J62368-1(2023)</code>, <code>J55032(H29)</code>, and <code>J3000(H25)</code> standards, covering flagship high-demand models including <code>HYT-0502100</code>, <code>HYT-1500800</code>, and <code>HYT-1200800P</code>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>JIS C 8303 Tracking-Resistant Fixed Prongs &amp; Desktop Housing:</strong> Equipped with compliant fixed Japanese Type A blades featuring integral tracking-resistant insulating sleeves, crafted from flame-retardant UL94-V0 polycarbonate resin to eliminate tracking-fire hazards.</li>
+                    <li><strong>Comprehensive METI Support:</strong> Our dedicated export compliance team assists overseas clients and Japanese importers in assembling complete technical dossiers, schematics, PCB layouts, and test reports required for swift METI notification.</li>
+                    <li><strong>Zero-Defect Quality Control:</strong> Every Hua Yi Teng adapter undergoes automated SMT insertion, ATE parametric verification, high-voltage insulation testing, and <strong>100% full-load high-temperature burn-in testing</strong> before packaging. Every shipment carries traceable lot barcodes backed by an ISO 9001:2015 certified quality system and a 2-year warranty.</li>
+                    <li><strong>Low MOQ &amp; Rapid Sampling:</strong> Standard Diamond PSE samples ship in 3–5 business days, with production runs starting at an industry-accessible 100 pieces (MOQ: 100 pcs).</li>
+                </ul>
+
+                <!-- Certificate Visual Showcase (Double Figure Grid) -->
+                <figure class="cert-showcase-box" style="margin: 30px 0; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 20px; text-align: center;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: stretch;">
+                        <div style="flex: 1 1 280px; max-width: 380px; display: flex; flex-direction: column; justify-content: space-between;">
+                            <img src="images/cert/cert-pse-tuv-sud-psb-jp-2026-0719.webp" alt="TÜV SÜD Diamond PSE Certificate PSB-JP-2026-0719" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; background: #FFFFFF; padding: 8px; border: 1px solid #E2E8F0; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); box-sizing: border-box; display: block;" loading="lazy">
+                            <p style="font-size: 13px; color: #4A5568; margin-top: 10px; margin-bottom: 0; font-weight: 600;">TÜV SÜD PSB: PSB-JP-2026-0719<br><span style="font-weight: 400; color: #718096;">J61558-1(2025) / J61558-2-16(2025)</span></p>
+                        </div>
+                        <div style="flex: 1 1 280px; max-width: 380px; display: flex; flex-direction: column; justify-content: space-between;">
+                            <img src="images/cert/cert-pse-cqc-pse26093431.webp" alt="CQC Diamond PSE Certificate PSE26093431" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; background: #FFFFFF; padding: 8px; border: 1px solid #E2E8F0; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); box-sizing: border-box; display: block;" loading="lazy">
+                            <p style="font-size: 13px; color: #4A5568; margin-top: 10px; margin-bottom: 0; font-weight: 600;">CQC: PSE26093431<br><span style="font-weight: 400; color: #718096;">J62368-1(2023) / J55032(H29)</span></p>
+                        </div>
+                    </div>
+                    <figcaption style="font-size: 13px; color: #2D3748; font-weight: 600; margin-top: 15px; border-top: 1px solid #E2E8F0; padding-top: 12px;">
+                        Representative Diamond PSE Certificates issued by TÜV SÜD and CQC (Sample excerpts from HYT's 3W–60W PSE portfolio)
+                    </figcaption>
+                </figure>
+
+                <!-- FAQs Section -->
+                <div class="article-faq-wrapper">
+                    <h2>Frequently Asked Questions</h2>
+
+                    <details class="article-faq-item">
+                        <summary class="article-faq-summary">
+                            <h3 class="faq-question-title">Why can an external AC/DC power adapter NEVER use the Circle PSE mark in Japan?</h3>
+                            <i class="fa fa-chevron-down article-faq-icon"></i>
+                        </summary>
+                        <div class="article-faq-body">
+                            <p>
+                                Under Japan's Electrical Appliance and Material Safety Law (DENAN), external AC/DC power adapters and wall chargers are classified as DC Power Supply Units (直流電源装置), which are explicitly categorized as Specified Electrical Appliances and Materials (Category A). Because external power adapters connect directly to high-voltage AC mains and convert to low-voltage DC, failure presents severe electrocution or building fire hazards. Consequently, Japanese law mandates third-party conformity assessment and factory inspection resulting in the mandatory Diamond PSE mark. Circle PSE is strictly reserved for Category B non-specified appliances (such as internal components or simple low-risk household appliances without external conversion circuitry).
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="article-faq-item">
+                        <summary class="article-faq-summary">
+                            <h3 class="faq-question-title">How does an overseas brand or supplier resolve the METI importer notification (Todokede Jigyousha) requirement?</h3>
+                            <i class="fa fa-chevron-down article-faq-icon"></i>
+                        </summary>
+                        <div class="article-faq-body">
+                            <p>
+                                Under DENAN Article 3, the legal entity that submits the Business Notification (輸入事業届出书) to the Ministry of Economy, Trade and Industry (METI) MUST be a legally registered Japanese resident corporation (importer of record). Overseas factories cannot file METI directly. Sourcing buyers can either: (1) Use their own Japanese subsidiary or licensed Japanese distributor as the METI filer; (2) Retain a licensed Japanese Compliance Agent (ACP - Attorney for Customs Procedures) or third-party importer-of-record service. The legally registered Japanese company name must be prominently inscribed on the product rating label next to the Diamond PSE mark and certification body identifier.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="article-faq-item">
+                        <summary class="article-faq-summary">
+                            <h3 class="faq-question-title">What power ranges and AC plug form factors does Hua Yi Teng cover under its current PSE certificate portfolio?</h3>
+                            <i class="fa fa-chevron-down article-faq-icon"></i>
+                        </summary>
+                        <div class="article-faq-body">
+                            <p>
+                                Hua Yi Teng (HYT) maintains an extensive catalog of Diamond PSE certified AC/DC power supplies spanning from 3W to 60W. Our certifications cover compliant fixed-blade Japanese wall-mount adapters (Fixed Japanese Type A Prongs with tracking-resistant insulating sleeves conforming to JIS C 8303) and desktop power supplies, backed by official Statements of Conformity Assessment from accredited bodies such as TÜV SÜD (PSB-JP-2026-0719 under J61558) and CQC (PSE26093431 under J62368-1). All units undergo 100% full-load high-temperature burn-in testing, meet J55032 EMC noise standards, and come backed by our standard 2-year factory warranty. For more guidance on ordering samples and custom branding, visit our <a href="faq.html">Procurement FAQ Center</a>.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= Prev / Next Navigation ================= -->
+    <div class="prev-next-section">
+        <div class="detail-container">
+            <div class="prev-next-nav">
+                <a href="news-detail-ul-1310-ul-62368-1-fcc.html" class="prev">
+                    <i class="fa fa-angle-left"></i>
+                    <span>
+                        <span class="direction">Previous Article</span><br>
+                        <span class="title">UL 1310 vs. UL 62368-1 &amp; FCC: North America Compliance Guide</span>
+                    </span>
+                </a>
+                <a href="news-detail-manufacturing.html" class="next">
+                    <span>
+                        <span class="direction">Next Article</span><br>
+                        <span class="title">Built to Last: Inside Hua Yi Teng's Manufacturing Process</span>
+                    </span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= Contact / Inquiry Section ================= -->
+    <div class="contact-section" id="contactSection" style="padding: 60px 0; background: #F8FAFC;">
+        <div class="detail-container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="color: #0B2545; font-size: 28px; font-weight: 700; margin-bottom: 12px;">Consult Our Japanese Market Compliance Engineers</h2>
+                <p style="color: #6B7A8F; font-size: 15px; max-width: 650px; margin: 0 auto;">
+                    Planning to launch AC/DC power adapters in Japan? Contact Hua Yi Teng's technical support team for Diamond PSE certificates, sample evaluation, METI label guidance, and competitive factory pricing.
+                </p>
+            </div>
+
+            <div class="hyt-inquiry-wrapper" style="box-shadow: 0 4px 20px rgba(11, 37, 69, 0.08); border-radius: 12px; border: 1px solid #E2E8F0;">
+                <div class="hyt-inquiry-card">
+                    <div class="hyt-inquiry-header">
+                        <h3 class="hyt-inquiry-title">Request Diamond PSE Power Adapter Quotation</h3>
+                        <p class="hyt-inquiry-subtitle">Factory direct supply, MOQ from 100 pcs, and response within 24 hours.</p>
+                    </div>
+
+                    <form action="https://formspree.io/f/mykapkbz" method="POST" class="hyt-inquiry-form">
+                        <input type="text" name="_gotcha" style="display:none" />
+                        <div class="hyt-form-group">
+                            <label for="hyt-name" class="hyt-form-label">Contact Name <span class="hyt-required-star">*</span></label>
+                            <input type="text" id="hyt-name" name="name" class="hyt-form-input" placeholder="Your full name" required />
+                        </div>
+                        <div class="hyt-form-group">
+                            <label for="hyt-email" class="hyt-form-label">Business Email <span class="hyt-required-star">*</span></label>
+                            <input type="email" id="hyt-email" name="email" class="hyt-form-input" placeholder="name@company.com" required />
+                        </div>
+                        <div class="hyt-form-group">
+                            <label for="hyt-company" class="hyt-form-label">Company Name <span class="hyt-required-star">*</span></label>
+                            <input type="text" id="hyt-company" name="company" class="hyt-form-input" placeholder="Your company name" required />
+                        </div>
+                        <div class="hyt-form-group">
+                            <label for="hyt-message" class="hyt-form-label">Project Requirements (Japan Market) <span class="hyt-required-star">*</span></label>
+                            <textarea id="hyt-message" name="message" class="hyt-form-textarea" rows="4" placeholder="Please specify: Voltage, Current, Plug Type (Fixed JP plug / Desktop), Diamond PSE requirement, and Estimated Quantity." required></textarea>
+                        </div>
+                        <!-- GDPR Consent -->
+                        <div class="hyt-form-group" style="margin-top:16px;">
+                            <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#4A5568;cursor:pointer;">
+                                <input type="checkbox" name="consent" required style="margin-top:3px;width:16px;height:16px;flex-shrink:0;">
+                                <span>I agree to the <a href="privacy-policy.html" target="_blank" style="color:#1e7470;font-weight:600;">Privacy Policy</a> and consent to having Hua Yi Teng contact me regarding my inquiry.</span>
+                            </label>
+                        </div>
+                        <!-- Cloudflare Turnstile Verification -->
+                        <div class="form-group" style="margin-bottom: 16px;">
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAGLSFX-5dIfFDxgP" data-action="contact"></div>
+                        </div>
+                        <div class="hyt-form-action">
+                            <button type="submit" class="hyt-submit-btn">Submit Japanese Compliance Inquiry</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= Footer ================= -->
+    <div class="banq">© 2008-2026 Shenzhen Hua Yi Teng Technology Co., Ltd. | OEM/ODM Customization Available
+        <span style="margin: 0 10px;">|</span>
+        <a href="faq.html" style="color:#999;">FAQ</a>
+        <span style="margin: 0 10px;">|</span>
+        <a href="privacy-policy.html" style="color:#999;">Privacy Policy</a>
+        <span style="margin: 0 10px;">|</span>
+        <a href="terms.html" style="color:#999;">Terms of Use</a>
+    </div>
+
+    <div class="page-down"><i class="fa fa-angle-up"></i></div>
+
+</div><!-- nywebmain end -->
+
+<!-- Scripts -->
+<script defer type="text/javascript" src="js/web.js"></script>
+<script defer type="text/javascript" src="js/form-handler.js"></script>
+<script>
+    $(function(){
+        new WOW().init();
+    });
+</script>
+</body>
+</html>

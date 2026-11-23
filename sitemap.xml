@@ -78,6 +78,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- 2026-11-22 新增北美合规指南与日本PSE认证指南英文版 -->
+  <url>
+    <loc>https://hyteng.com/news-detail-ul-1310-ul-62368-1-fcc.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hyteng.com/news-detail-pse-certification-japan.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://hyteng.com/contact.html</loc>
     <changefreq>monthly</changefreq>
@@ -219,6 +230,17 @@
     <loc>https://hyteng.com/cn/news-detail-manufacturing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <!-- 2026-11-22 新增北美合规指南与日本PSE认证指南中文版 -->
+  <url>
+    <loc>https://hyteng.com/cn/news-detail-ul-1310-ul-62368-1-fcc.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hyteng.com/cn/news-detail-pse-certification-japan.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Chinese Product Detail Pages -->
